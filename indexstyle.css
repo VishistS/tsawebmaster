@@ -15,4 +15,10 @@ body {
     background-color: var(--primary_color);
     color: var(--text_color);
     text-align: center;
+    background-image: linear-gradient(white, var(--primary_color));
+    height:100vh;
+}
+
+.navbar {
+    background-color:red;
 }
