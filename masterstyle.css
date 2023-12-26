@@ -1,5 +1,8 @@
 /*global variables that can be used anywhere*/
 /*we'll apply this css file to every single webpage within our website, for standard theme + browsing*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&family=Rubik+Doodle+Shadow&display=swap');*/
+
 :root {
     /*website color scheme colors*/
     --primary_color: #D2E3C8;
@@ -19,4 +22,5 @@ body {
     background-image: linear-gradient(white, var(--primary_color));
     background-repeat: no-repeat;
     height:100vh;
+/*    font-family: 'Rubik Doodle Shadow';*/
 }
