@@ -1,4 +1,21 @@
-/*global variables that can be used for coloring elements [NATURE COLOR SCHEME]*/
+/*global variables that can be used anywhere*/
+:root {
+    /*website color scheme colors*/
+    --primary_color: #D2E3C8;
+    --secondary_color: #61ad35;
+    --third_color: #3a8d16;
+    --fourth_color: #1F5708;
+
+    /*text colors*/
+    --text_color: black;
+}
+
+/*main page styling*/
+body {
+    background-color: var(--primary_color);
+    color: var(--text_color);
+    text-align: center;
+}/*global variables that can be used for coloring elements [NATURE COLOR SCHEME]*/
 :root {
     --primary_color: #D2E3C8;
     --secondary_color: #61ad35;
