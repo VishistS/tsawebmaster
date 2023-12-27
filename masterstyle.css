@@ -1,7 +1,7 @@
 /*global variables that can be used anywhere*/
 /*we'll apply this css file to every single webpage within our website, for standard theme + browsing*/
 
-/*@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&family=Rubik+Doodle+Shadow&display=swap');*/
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 :root {
     /*website color scheme colors*/
@@ -22,5 +22,15 @@ body {
     background-repeat: no-repeat;
     background-image: linear-gradient(white, var(--primary_color));
     height:100vh;
-/*    font-family: 'Rubik Doodle Shadow';*/
+    font-family: 'Fira Sans'
 }
+
+.landing {
+    margin-top: 4%;
+}
+
+/*
+uncomment if we want to remove the transparent nav bar
+nav {
+    background-color: white;
+}*/
