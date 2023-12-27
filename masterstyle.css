@@ -25,12 +25,18 @@ body {
     font-family: 'Fira Sans'
 }
 
-.landing {
-    margin-top: 4%;
+/*code to create the banner*/
+.banner {
+    position: relative;
+    background: url(assets/leaf_droplet_clear.jpg); /* placeholder image */
+    min-height: 5vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+    color: white;
 }
 
-/*
-uncomment if we want to remove the transparent nav bar
+
 nav {
     background-color: white;
-}*/
+}
