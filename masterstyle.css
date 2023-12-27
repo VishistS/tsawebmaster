@@ -19,7 +19,6 @@ body {
     background-color: var(--primary_color);
     color: var(--text_color);
     text-align: center;
-    background-image: linear-gradient(white, var(--primary_color));
     background-repeat: no-repeat;
     height:100vh;
 /*    font-family: 'Rubik Doodle Shadow';*/
