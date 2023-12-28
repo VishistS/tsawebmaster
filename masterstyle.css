@@ -1,7 +1,8 @@
 /*global variables that can be used anywhere*/
 /*we'll apply this css file to every single webpage within our website, for standard theme + browsing*/
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
     /*website color scheme colors*/
@@ -37,7 +38,7 @@ body {
     background-repeat: no-repeat;
 /*    background-image: linear-gradient(white, var(--primary_color));* uncomment if we want the gradient */
     height:100vh;
-    font-family: 'Fira Sans'
+    font-family: 'Raleway'
 }
 
 /*code to create the banner*/
@@ -68,4 +69,8 @@ body {
 
 nav {
     background-color: white;
+}
+
+p {
+    font-size: 20px;
 }
