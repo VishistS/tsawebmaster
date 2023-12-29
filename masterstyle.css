@@ -63,9 +63,8 @@ body {
 .col-sm-6.bannertext {
     border-bottom-style:double;
     border-top-style:double;
-    margin-left:5%;
-    margin-right:50%;
     padding-top:1%;
+    margin: auto;
     padding-bottom:1%;
     opacity: 0;
     transform: translateY(80px);
@@ -73,7 +72,11 @@ body {
     border-width: 2px;
 }
 
-.aboutgreenenergy {
+.col-sm-6.bannertext > h1 {
+    font-size: 60px;
+}
+
+.aboutgreenenergy, .custreviews {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -85,10 +88,14 @@ body {
     transform: translateY(80px);
     animation: fadeInUp 1.5s ease-out forwards;
 }
+
 .aboutgreenenergy:hover {
     background-color: rgba(255, 255, 255, 1);
 }
 
+.custreviews:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
 
 .customerButton {
     background-color: rgba(255, 255, 255, 0.3);
@@ -96,6 +103,7 @@ body {
     border:none;
     border-radius:10px;
 }
+
 .customerButton:hover {
     background-color: rgba(255, 255, 255, 1);
 }
