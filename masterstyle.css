@@ -100,16 +100,40 @@ body {
     background-color: rgba(255, 255, 255, 1);
 }
 
-#customerCarousel .carousel-control-prev,
-#customerCarousel .carousel-control-next {
+.carousel-control-prev {
     background-color:  var(--secondary_color); 
-    height:20%;
-    margin-top: 30px;
+    height:10%;
+    margin-top: 40px;
+    margin-left: 5%;
+    border-radius: 10px;
 }
-#customerCarousel .carousel-inner .carousel-item {
+.carousel-control-next {
+    background-color:  var(--secondary_color); 
+    height:10%;
+    margin-top: 40px;
+    margin-right: 5%;
+    border-radius: 10px;
+}
+.carousel-item {
     height: 350px; 
     margin-top: 30px;
 }
-#customerCarousel .carousel-inner .carousel-item .card {
+.card {
     height: 350px; 
+    display:flex;
+    align-items:center;
+}
+.flex-container {
+    display: flex;
+}
+.left-half,
+.right-half {
+    flex: 1;
+}
+.card img{
+    height: 80%;
+    width: 80%;
+}
+.card p{
+    margin-top:5%;
 }
