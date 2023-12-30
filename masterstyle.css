@@ -18,6 +18,42 @@
     --text_color: black;
 }
 
+.loader {
+    z-index:10;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(79, 131, 63);
+    transition: opacity 1s, visibility 0.75s;
+}
+
+.loader--hidden {
+    z-index:-10;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.loader::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    border: 7px solid #dddddd;
+    border-top-color: var(--fourth_color);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0turn) }
+    to { transform: rotate(1turn) }
+}
+
 p {
     font-size: 20px;
 }
@@ -41,12 +77,28 @@ body {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(80px);
+        transform: translateY(160px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    z-index:9;
+    opacity:0;
+    animation: fadeInDown 1s ease-in-out forwards;
 }
 
 /*code to create the banner*/
@@ -58,6 +110,7 @@ body {
     background-position: center;
     padding: 250px 0 200px;
     color: black;
+    margin-top:-10%;
 }
 
 .col-sm-6.bannertext {
@@ -67,8 +120,8 @@ body {
     margin: auto;
     padding-bottom:1%;
     opacity: 0;
-    transform: translateY(80px);
-    animation: fadeInUp 1.5s ease-out forwards;
+    transform: translateY(160px);
+    animation: fadeInUp 0.7s ease-out forwards;
     border-width: 2px;
 }
 
@@ -76,7 +129,7 @@ body {
     font-size: 60px;
 }
 
-.aboutgreenenergy, .custreviews {
+.aboutgreenenergy, .customerreviews {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -85,27 +138,27 @@ body {
     width: 70%;
     border: none;
     border-radius: 30px;
-    transform: translateY(80px);
-    animation: fadeInUp 1.5s ease-out forwards;
+    transform: translateY(160px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .aboutgreenenergy:hover {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.custreviews:hover {
+.customerreviews:hover {
     background-color: rgba(255, 255, 255, 1);
 }
 
 .customerButton {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(146, 202, 149, 0.3);
     transition: background-color 0.5s ease-in-out;
     border:none;
     border-radius:10px;
 }
 
 .customerButton:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(146, 202, 149, 1);
 }
 
 .carousel {
