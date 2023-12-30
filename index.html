@@ -9,6 +9,17 @@
     <link href = "masterstyle.css" rel = "stylesheet">
   </head>
   <body>
+    <!-- loading bar effect-->
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loader--hidden");
+        loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+        });
+});
+    </script>
 
     <!-- nav bar-->
     <nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
@@ -66,7 +77,7 @@
         </div>
     </section>
 
-    <!-- aboutgreenenergy-->
+    <!-- aboutgreenenergy -->
     <section class = "aboutgreenenergy">
         <div class = "container-fluid">
             <div class = "row">
@@ -79,28 +90,18 @@
             </div>
         </div>
     </section>
-    <br>
-    <section class = "custreviews">
-        <div class = "container-fluid">
-            <div class = "row">
-                <div class = "col"></div>
-                <div class = "col-sm-12 col-md-10">
-                    <h1><b>Guaranteed Satisfaction</b></h1  >
-                    <p>At <b>Green Tomorrow</b>, your complete satisfaction is our guiding purpose. Our team of consultants has decades of experience guiding homeowners through the transition to clean energy solutions for their homes.</p>
-                </div>
-                <div class = col></div>
-            </div>
-        </div>
-    </section>
 
-    <br>
+    <br><br><br><br><br>
 
-    <!-- customerreviews-->
+    <!-- customerreviews -->
     <section class="customerreviews">
       <div class="container-fluid">
           <div class="row">
               <div class="col"></div>
               <div class="col-sm-12 col-md-10">
+                  <h1><b>Guaranteed Satisfaction</b></h1  >
+                  <p>At <b>Green Tomorrow</b>, your complete satisfaction is our guiding purpose. Our team of consultants have decades of experience guiding homeowners through the transition to clean energy solutions for their homes.</p>
+                  <br><br>
                   <h2>Don't believe us?</h2>
                   <button class="customerButton" type="button" data-bs-toggle="collapse" data-bs-target="#carouselExample" aria-expanded="false" aria-controls="carouselExample">
                       <p>Click to hear from our clients who were satisfied with their experience! </p>
