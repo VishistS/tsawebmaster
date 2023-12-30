@@ -129,7 +129,7 @@ body {
     font-size: 60px;
 }
 
-.aboutgreenenergy, .customerreviews {
+.aboutgreenenergy, .customerreviews, .introductiontoexploremore {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -201,5 +201,48 @@ body {
 }
 .card p{
     margin-top:5%;
+}
+
+/*option card styling*/
+
+.c1 {
+    background-image: url(assets/profile_pic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c2 {
+    background-image: url(assets/profile_pic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c3 {
+    background-image: url(assets/profile_pic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c4 {
+    background-image: url(assets/profile_pic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cbopt1,.cbopt2,.cbopt3,.cbopt4 {
+    color: black;
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.cbopt1:hover, .cbopt2:hover, .cbopt3:hover,.cbopt4:hover {
+    opacity: 1;
+    background-color: white;
+}
+
+
+.c1,.c2,.c3,.c4 {
+    height: 15rem;
+    border-radius: 20px;
 }
 
