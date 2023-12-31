@@ -213,7 +213,7 @@ Styling for the about section
 /*#####################################################
 Styling for the review button
 #####################################################*/
-/*
+/* old styling
 .custbutton {
     background-color: rgba(146, 202, 149, 0.3);
     transition: background-color 0.5s ease-in-out;
@@ -239,11 +239,12 @@ Styling for the footer of the review carousel
 #####################################################*/
 .carousel {
     margin:auto;
-    width:100%;
+    width:60%;
 }
 .carousel-control-prev {
     background-color:  var(--secondary_color);
     height:10%;
+    width: 5%;
     margin-top: 40px;
     margin-left: 5%;
     border-radius: 10px;
@@ -251,16 +252,17 @@ Styling for the footer of the review carousel
 .carousel-control-next {
     background-color:  var(--secondary_color);
     height:10%;
+    width: 5%;
     margin-top: 40px;
     margin-right: 5%;
     border-radius: 10px;
 }
 .carousel-item {
-    height: 350px;
+    height: 225px;
     margin-top: 30px;
 }
 .card {
-    height: 350px;
+    height: 225px;
     display:flex;
     align-items:center;
 }
