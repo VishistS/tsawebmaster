@@ -1,9 +1,7 @@
 
 /*#################################################################################################
-we'll apply this css file to every single webpage within our website, for standard theme + browsing
+we'll apply this css file to the homepage of the website (index.html)
 #################################################################################################*/
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 /*#####################################################
 Global Variables that can be used anywhere
@@ -21,76 +19,6 @@ Global Variables that can be used anywhere
     /*text colors*/
     --text_color: black;
 }
-
-/*#####################################################
-Scrollbar Customization
-#####################################################*/
-::-webkit-scrollbar {
-    width: 11px;
-}
-::-webkit-scrollbar-track{
-    background: #ffffff;
-}
-::-webkit-scrollbar-thumb{
-    background: var(--secondary_color);
-    background-image: -webkit-linear-gradient(20deg, rgba(255,255,255,.5) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.5) 50%, rgba(255,255,255,.5) 75%, transparent 75%);
-    border-radius: 5px;
-}
-
-/*#####################################################
-Styling for the loading page
-#####################################################*/
-.loader {
-    z-index:10;
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--primary_color);
-    transition: opacity 1s, visibility 0.75s;
-}
-
-.loader--hidden {
-    z-index:-10;
-    opacity: 0;
-    visibility: hidden;
-
-}
-
-.loader::after {
-    content: "";
-    width: 150px;
-    height: 150px;
-    border: 7px solid #dddddd;
-    border-top-color: var(--fourth_color);
-    border-radius: 50%;
-    animation: loading 0.75s ease infinite;
-}
-
-@keyframes loading {
-    from { transform: rotate(0turn) }
-    to { transform: rotate(1turn) }
-}
-
-/*#################################################################################################
-Styling for the main page
-#################################################################################################*/
-body {
-    background-color: var(--primary_color);
-    color: var(--text_color);
-    text-align: center;
-    background-repeat: no-repeat;
-    height:100vh;
-    font-family: 'Raleway'
-}
-p {
-    font-size: 20px;
-}
-
 /*#####################################################
 Animations for the website
 #####################################################*/
@@ -114,53 +42,6 @@ Animations for the website
         transform: translateY(0);
     }
 }
-
-/*#####################################################
-Styling for the navigation bar of the website
-#####################################################*/
-nav {
-    background-color: white;
-}
-.navbar {
-    z-index:9;
-    opacity:0;
-    animation: fadeInDown 1s ease-in-out forwards;
-}
-/* Animated underline for nav links */
-.navbar-nav a {
-    position: relative;
-    text-decoration: none;
-    color: var(--text_color);
-    transition: color 0.3s ease-in-out;
-}
-.navbar-nav a:hover {
-    color: black;
-}
-.navbar-nav a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--secondary_color);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-.navbar-nav a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-/* smooth scroll for anchor links */
-a[href^="#"] {
-    transition: color 0.3s ease-in-out;
-}
-
-a[href^="#"]:hover {
-    color: var(--secondary_color);
-}
-
 /*#####################################################
 Styling for the banner of the website
 #####################################################*/
@@ -319,95 +200,4 @@ Styling for the option card
 .c1,.c2,.c3,.c4 {
     height: 13rem;
     border-radius: 20px;
-}
-
-/*#################################################################################################
-Styling for the main page
-#################################################################################################*/
-
-
-/*#####################################################
-Styling for the footer of the website
-#####################################################*/
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-footer{
-    background-color: var(--secondary_color);
-}
-.footerContainer{
-    width: 100%;
-    padding: 70px 30px 20px;
-}
-.socialIcons{
-    display: flex;
-    justify-content: center;
-}
-.socialIcons a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialIcons a i{
-    font-size: 2em;
-    color: var(--fourth_color);
-    opacity: 0.9;
-}
-.socialIcons a:hover{
-    background-color: var(--fourth_color);
-    transition: 0.5s;
-}
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
-    transform: rotate(360deg);
-}
-.footerNav{
-    margin: 30px 0;
-}
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-.footerNav ul li a{
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-.footerNav ul li a:hover{
-    opacity: 1;
-}
-.footerBottom{
-    background-color: var(--third_color);
-    padding: 20px;
-    text-align: center;
-}
-.footerBottom p{
-    color: white;
-}
-.designer{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-}
-@media (max-width: 700px){
-    .footerNav ul{
-        flex-direction: column;
-    }
-    .footerNav ul li{
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-    }
 }
