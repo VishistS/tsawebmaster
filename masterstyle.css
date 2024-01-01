@@ -76,7 +76,7 @@ Styling for the loading page
 }
 
 /*#################################################################################################
-Styling for the main page
+Generl Styling for all pages
 #################################################################################################*/
 body {
     background-color: var(--primary_color);
@@ -159,15 +159,6 @@ a[href^="#"] {
 a[href^="#"]:hover {
     color: var(--secondary_color);
 }
-
-
-
-
-
-
-
-
-
 
 /*#####################################################
 Styling for the footer of the website
