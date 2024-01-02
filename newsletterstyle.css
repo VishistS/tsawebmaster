@@ -233,9 +233,6 @@ Styling for the left text and right image articles
         margin-top: -100px;
         margin-bottom: 50px;
     }
-    .hidden-content{
-        margin-bottom: 50px;
-    }
 }
 /*#####################################################
 Styling for the right text and left image articles
@@ -316,8 +313,11 @@ Styling for the right text and left image articles
         margin-top: -100px;
         margin-bottom: 50px;
     }
+}
+@media only screen and (max-width: 768px){
     .hidden-content{
         margin-bottom: 50px;
+        width: 90%;
     }
 }
 
