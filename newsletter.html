@@ -97,12 +97,18 @@
               <div class="content">
                 <h1>Cheap Green Energy</h1>
                 <p>Recent reports and studies have shown that the cheapest green energy resources come from wind and solar power! Read the article to see how you could engage in these opportunities!</p>
-                <a href="#" class="btn">Read More</a>
+                <button onclick="toggleContent('cheap-content')" class="btn" data-target="cheap-content">Read More</button>
               </div>
             </div>
             <div class="rightImgCheap"></div>
           </div>
         </section>
+        <div id="cheap-content" class="hidden-content">
+          <!-- Additional content for Cheap Green Energy -->
+          <p>The quest for sustainable and affordable energy sources has gained momentum in recent years, with a particular focus on harnessing the power of wind and solar resources. In the pursuit of a greener tomorrow, studies and reports have consistently highlighted the economic viability of wind and solar power as the most cost-effective green energy alternatives. The inexhaustible nature of these resources, coupled with advancements in technology, has led to a substantial decrease in the cost of harnessing energy from wind turbines and solar panels. As concerns about climate change and environmental degradation intensify, the affordability of green energy becomes a pivotal factor in driving widespread adoption.
+
+            The potential for individuals and businesses to actively engage in these opportunities is a compelling aspect of the shift towards cheap green energy. Investing in solar panels for homes or participating in community wind energy projects not only contributes to a sustainable future but also presents economic advantages. This essay delves into the significance of these recent findings, emphasizing the transformative impact of embracing cost-effective green energy solutions. As society continues to navigate the intricate intersection of economic feasibility and environmental responsibility, the pursuit of cheap green energy stands as a beacon of hope for a cleaner and more sustainable world.</p>
+        </div>
 
         <!--################################################
         2nd News Section
@@ -116,11 +122,18 @@
                 <p>This year, the Biden-Harris Administration have advanced 15 onshore clean energy projects across the nation with the potential to have enough energy to power millions of homes!
                   Read more to see further plans to progress toward the government's plans to permit 25 GW of renewables by 2025.
                 </p>
-                <a href="#" class="btn">Read More</a>
+                <button onclick="toggleContent('shore-content')" class="btn" data-target="shore-content">Read More</button>
               </div>
             </div>
           </div>
         </section>
+        <div id="shore-content" class="hidden-content">
+          <!-- Additional content for US Department -->
+          <p>
+            In a pivotal stride toward a cleaner and more sustainable energy landscape, the Biden-Harris Administration has spearheaded a remarkable initiative by advancing 15 onshore clean energy projects across the nation in the current year. This essay explores the significance of these projects, highlighting their potential to generate sufficient energy to power millions of homes. The commitment to onshore clean energy underscores a strategic move toward reducing carbon emissions, mitigating climate change impacts, and fostering a greener future for the United States.
+            
+            The narrative goes beyond the immediate accomplishments, delving into the intricate details of the Biden-Harris Administration's broader vision. By delving into the administration's plans to permit 25 gigawatts (GW) of renewable energy by 2025, the essay provides readers with a comprehensive understanding of the ambitious goals set to reshape the country's energy landscape. The exploration of these future plans sheds light on the administration's commitment to accelerating the transition to a more sustainable and resilient energy infrastructure, emphasizing the importance of renewable resources in achieving long-term environmental and economic objectives.</p>
+        </div>
 
         <!--################################################
         3rd News Section
@@ -133,12 +146,19 @@
                 <p>With rapid technological advancements occuring in the world, one idea grows to a huge speculation with many wondering about the future. Will electric vehicles take over the next
                   era in ground travel? Read more to see what experts have to say.
                 </p>
-                <a href="#" class="btn">Read More</a>
+                <button onclick="toggleContent('electric-content')" class="btn" data-target="electric-content">Read More</button>
               </div>
             </div>
             <div class="rightImgElectric"></div>
           </div>
         </section>
+        <div id="electric-content" class="hidden-content">
+          <!-- Additional content for Electric Cars -->
+          <p>
+            In the landscape of ground transportation, the question looming over the future is whether electric cars will spearhead the next era. With the world experiencing rapid technological advancements, the prospect of electric vehicles dominating the automotive industry has become a subject of considerable speculation. This essay explores the burgeoning era of electric cars, propelled by innovations that have reshaped the automotive landscape. As society grapples with environmental concerns and the need for sustainable alternatives, electric cars emerge as a promising solution to reduce carbon emissions and dependence on fossil fuels.
+            
+            The momentum gained by electric vehicles is not merely a technological shift but a transformative leap toward a greener and more efficient mode of transportation. The essay delves into the implications of this shift, examining the perspectives of experts who weigh in on the feasibility, challenges, and potential benefits of electric cars becoming the new norm. By shedding light on the transformative potential of electric vehicles, this exploration navigates the path towards a future where sustainable and electric transportation becomes synonymous with progress and environmental stewardship.</p>
+        </div>
 
         <!--################################################
         4th News Section
@@ -151,12 +171,29 @@
                 <h1>Microgrid Initiatives in Developing Countries</h1>
                 <p>If the world wants to advance in the new age of green, every part of the world must follow such procedures. Recently, developing countries around the world are now taking steps toward this path.
                   Read more to find out how these nations are taking this challenge. </p>
-                <a href="#" class="btn">Read More</a>
+                <button onclick="toggleContent('develop-content')" class="btn" data-target="develop-content">Read More</button>
               </div>
             </div>
           </div>
         </section>
+        <div id="develop-content" class="hidden-content">
+          <!-- Additional content for Developing Countries -->
+          <p>In the global pursuit of a sustainable and environmentally conscious future, the role of developing countries in adopting green technologies and practices has become increasingly significant. This essay focuses on the burgeoning trend of microgrid initiatives in developing nations, highlighting their pivotal role in advancing the new age of green energy. As the world collectively grapples with the imperative to reduce carbon footprints and transition towards renewable energy sources, it is essential for every corner of the globe to contribute to this paradigm shift.
+
+            The essay delves into the proactive measures undertaken by developing countries in recent times, shedding light on the innovative strategies employed to embrace the challenges of sustainable energy development. Through the exploration of microgrid initiatives, readers gain insights into how these nations are addressing the complex intersection of energy access, economic development, and environmental stewardship. By adopting microgrid technologies, these countries not only enhance energy resilience and reliability but also pave the way for inclusive and sustainable development. The narrative unfolds the stories of resilience and progress, showcasing how developing nations are emerging as key players in shaping a greener and more sustainable future for all.</p>
+        </div>
       </section>
+      <script>
+        // Function to toggle the visibility of the hidden content
+        function toggleContent(contentId) {
+          var content = document.getElementById(contentId);
+          if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+          } else {
+            content.style.display = "none";
+          }
+        }
+      </script>
 
       <br><br><br> 
 
