@@ -121,7 +121,7 @@ Styling for the review button
     text-transform: uppercase;
     background-color: white;
     color: black;
-    padding: 10px 10px 0px;
+    padding: 5px 5px -20px;
     display: inline-block;
     letter-spacing: 2px;
     transition: background-color 0.3s, color 0.3s;
@@ -136,12 +136,13 @@ Styling for the footer of the review carousel
 .carousel {
     margin:auto;
     width:70%;
+    height: 20%;
 }
 .carousel-control-prev {
     background-color:  var(--secondary_color);
     height:15%;
     width: 5%;
-    margin-top: 25%;
+    margin-top: 10%;
     margin-left: 5%;
     border-radius: 10px;
 }
@@ -149,7 +150,7 @@ Styling for the footer of the review carousel
     background-color:  var(--secondary_color);
     height:15%;
     width: 5%;
-    margin-top: 25%;
+    margin-top: 10%;
     margin-right: 5%;
     border-radius: 10px;
 }
