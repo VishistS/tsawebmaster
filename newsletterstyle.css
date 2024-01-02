@@ -139,6 +139,19 @@ General styling for all articles
     align-items: center;
     justify-content: center;
 }
+.hidden-content{
+    display:none;
+    margin: auto;
+    width: 70%;
+    background-color: white;   
+    border: double;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: black; 
+}
+.hidden-content p{
+    padding: 30px;
+}
 /*#####################################################
 Styling for the left text and right image articles
 #####################################################*/
@@ -183,7 +196,7 @@ Styling for the left text and right image articles
     font-weight: 500;
     line-height: 25px;
 }
-.leftText a{
+.leftText button{
     text-decoration: none;
     text-transform: uppercase;
     background-color: white;
@@ -191,6 +204,11 @@ Styling for the left text and right image articles
     padding: 20px 30px;
     display: inline-block;
     letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.leftText button:hover {
+    background-color: var(--secondary_color);
+    color: white;
 }
 @media only screen and (max-width: 900px){
     .container{
@@ -213,6 +231,9 @@ Styling for the left text and right image articles
         width: 80%;
         margin: 0;
         margin-top: -100px;
+        margin-bottom: 50px;
+    }
+    .hidden-content{
         margin-bottom: 50px;
     }
 }
@@ -244,7 +265,7 @@ Styling for the right text and left image articles
     font-weight: 500;
     line-height: 25px;
 }
-.rightText a{
+.rightText button{
     text-decoration: none;
     text-transform: uppercase;
     background-color: white;
@@ -252,6 +273,11 @@ Styling for the right text and left image articles
     padding: 20px 30px;
     display: inline-block;
     letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.rightText button:hover {
+    background-color: var(--secondary_color);
+    color: white;
 }
 .leftImgShore{
     width: 50%;
@@ -269,6 +295,7 @@ Styling for the right text and left image articles
     border-color: var(--secondary_color);
     border-width: 5px;
 }
+
 @media only screen and (max-width: 900px){
     .container{
         flex-direction: column;
@@ -287,6 +314,9 @@ Styling for the right text and left image articles
         width: 80%;
         margin: 0;
         margin-top: -100px;
+        margin-bottom: 50px;
+    }
+    .hidden-content{
         margin-bottom: 50px;
     }
 }
