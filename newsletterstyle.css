@@ -41,6 +41,26 @@ Animations for the website
         transform: translateY(0);
     }
 }
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /*#####################################################
 Styling for the title
 #####################################################*/
@@ -112,6 +132,15 @@ Styling for the title
        background: transparent;
     }
 }
+@media (max-width: 768px) {
+    .newsbanner{
+        width: 100%;
+    }
+    .newsbanner p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}
 
 /*#####################################################
 General styling for all articles
@@ -162,6 +191,8 @@ Styling for the left text and right image articles
     border: solid;
     border-color: var(--secondary_color);
     border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInLeft 1s ease-in-out forwards;
 }
 .rightImgElectric{
     width: 50%;
@@ -170,6 +201,8 @@ Styling for the left text and right image articles
     border: solid;
     border-color: var(--secondary_color);
     border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInLeft 1s ease-in-out forwards;
 }
 .leftText{
     z-index:5;
@@ -186,6 +219,8 @@ Styling for the left text and right image articles
     border-radius: 15px;
     color: black;
     margin-right: -150px;
+    transform: translateX(-160px);
+    animation: fadeInRight 1s ease-in-out forwards;
 }
 .leftText h1{
     font-size: 40px;
@@ -252,6 +287,8 @@ Styling for the right text and left image articles
     border-radius: 15px;
     color: black;
     margin-left: -150px;
+    transform: translateX(160px);
+    animation: fadeInLeft 1s ease-in-out forwards;
 }
 .rightText h1{
     font-size: 40px;
@@ -283,6 +320,8 @@ Styling for the right text and left image articles
     border: solid;
     border-color: var(--secondary_color);
     border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInRight 1s ease-in-out forwards;
 }
 .leftImgDevelop{
     width: 50%;
@@ -291,6 +330,8 @@ Styling for the right text and left image articles
     border: solid;
     border-color: var(--secondary_color);
     border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInRight 1s ease-in-out forwards;
 }
 
 @media only screen and (max-width: 900px){
@@ -313,7 +354,12 @@ Styling for the right text and left image articles
         margin-top: -100px;
         margin-bottom: 50px;
     }
+    .hidden-content{
+        margin-bottom: 50px;
+        width: 90%;
+    }
 }
+
 @media only screen and (max-width: 768px){
     .hidden-content{
         margin-bottom: 50px;
