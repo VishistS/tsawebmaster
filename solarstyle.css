@@ -25,4 +25,23 @@
 .col-sm-8.bannertext > p {
     font-size: 30px;
 }
+/* Overview Section */
+.overview {
+    background-color: #d2e3c8; /* Set the background color for the overview section */
+    position: relative;
+}
 
+/* Recommendation Section */
+.reccomendationsection {
+    background: linear-gradient(to bottom, #d2e3c8,#f2f7f4, white); /* Set the background gradient, remove the middle one if we want smth less gradual/faster transition */
+    position: relative;
+}
+
+img {
+    border-radius: 30px;
+    margin-top: 20%;
+}
+
+.introtofinancingpricing, .pricingandfinancing {
+    background-color: white;
+}
