@@ -47,23 +47,53 @@
 .col-sm-8.bannertext > p {
     font-size: 30px;
 }
-/* Overview Section */
-.overview {
-    background-color: #d2e3c8; /* Set the background color for the overview section */
-    position: relative;
-}
-
-/* Recommendation Section */
-.reccomendationsection {
-    background: linear-gradient(to bottom, #d2e3c8, white); /* Set the background gradient, remove the middle one if we want smth less gradual/faster transition */
-    position: relative;
-}
-
-img {
+/* Overview Section and Reccomendation Section */
+.overview,.reccomendationsection {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s ease-in-out;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:auto;
+    width: 80%;
+    border: none;
     border-radius: 30px;
-    /* margin-top: 20%; */
+    transform: translateY(160px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-.introtofinancingpricing, .pricingandfinancing {
-    background-color: white;
+.overview:hover, .reccomendationsection:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
+
+#image1 {
+    margin-top:10%;
+    margin: auto;
+    height: 42%;
+}
+#image2 {
+    margin-top: 1%;
+    height: 52%;
+}
+
+@media only screen and (max-width: 600px) {
+  #image1 {
+    margin-top: 0;
+  }
+  #image2 {
+    margin-top: 0;
+  }
+}
+
+  
+  /* Media query for zoom level 90% or less */
+@media (max-width: 90%) {
+    #image1 {
+        width: 50%;
+        height: 50%;
+    }
+    #image2 {
+        width: 50%;
+        height: 50%;
+    }
+ }
+  
