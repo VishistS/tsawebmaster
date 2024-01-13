@@ -48,9 +48,9 @@
     font-size: 30px;
 }
 
-/* Overview Section and Reccomendation Section */
+/* General Section Styling */
 
-.overview,.reccomendationsection {
+.overview,.reccomendationsection,.exploreoptions {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -63,9 +63,12 @@
     animation: fadeInUp 1s ease-out forwards;
 }
 
-.overview:hover, .reccomendationsection:hover {
+.overview:hover, .reccomendationsection:hover, .exploreoptions:hover {
     background-color: rgba(255, 255, 255, 1);
 }
+
+
+ /* Reccomendation Section Styling */
 
 #image1 {
     margin-top:10%;
@@ -100,7 +103,7 @@
  }
   
 
-/* Collapse On Reccomendation Section  */
+
 
 .btn.btn-collapse {
     padding-bottom: 0;
@@ -129,5 +132,9 @@
 
 #reccbottomtext {
     margin-top: 2%;
+}
+
+a {
+    color: antiquewhite;
 }
 

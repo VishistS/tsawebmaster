@@ -119,17 +119,18 @@ Styling for the review button
 .custbutton{
     text-decoration: none;
     text-transform: uppercase;
-    background-color: white;
-    color: black;
-    padding: 5px 5px -20px;
+    background-color: var(--secondary_color);
+    color: white;
+    padding: 10px 10px 10px;
     display: inline-block;
     letter-spacing: 2px;
     transition: background-color 0.3s, color 0.3s;
+
 }
-.custbutton:hover {
-    background-color: var(--secondary_color);
-    color: white;
-}
+
+
+
+
 /*#####################################################
 Styling for the footer of the review carousel
 #####################################################*/
