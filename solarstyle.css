@@ -50,7 +50,7 @@
 
 /* General Section Styling */
 
-.overview,.reccomendationsection,.exploreoptions {
+.overview,.reccomendationsection,.exploreoptions, .financingsection {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -63,7 +63,7 @@
     animation: fadeInUp 1s ease-out forwards;
 }
 
-.overview:hover, .reccomendationsection:hover, .exploreoptions:hover {
+.overview:hover, .reccomendationsection:hover, .exploreoptions:hover, .financingsection:hover {
     background-color: rgba(255, 255, 255, 1);
 }
 
