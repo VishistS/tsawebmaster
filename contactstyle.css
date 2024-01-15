@@ -117,9 +117,15 @@
     margin-bottom: 30px;
 }
 .input-group-text, .form-control, #inputGroupSelect01 {
-    padding: 18px;
-    font-size: 14px; 
+    padding: 1px;
+    font-size: 12px; 
 }
+.input-group-text, .form-control, #inputGroupSelect01 {
+    padding: 14px;
+    font-size: 16px; 
+}
+
+
 .input-group-text:first-child {
     background-color: var(--secondary_color); 
     color: white;
@@ -198,7 +204,9 @@
     justify-content: center;
     z-index: 9999; 
     font-size: 30px;
+    color: white;
 }
+
 .message{
     width: 50%;
 }

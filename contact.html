@@ -84,7 +84,7 @@
       #################################################-->
       <section class="contactIntro">
         <div class="contactBanner">
-            <h1>Lets Get In Touch.</h1>
+            <h1>LET'S GET IN TOUCH</h1>
         </div>
       </section>
 
@@ -96,8 +96,8 @@
           <div class="leftBox">
             <div class="leftContent">
               <div class="contactDescription">
-                <p>You're just one submission away from saving the planet. At Green Tomorrow, it is our job to make sure ALL our clients receive the best support they can get. Fill out the form attached
-                    to send direct feedback to our staff, and we will reply to you within 24 hours!
+                <p><b>Help us help you.</b> We want to ensure that we meet all of your energy needs, that's why you can contact our team of consultants on a 24/7 basis. <br><br> * <i>If you're interested in purchasing or learning more about a specific plan, please choose consultation as your type of inquiry.</i>
+      
                 </p>
               </div>
               <div class="directory">
@@ -111,26 +111,25 @@
                 <form id="contactForm">
                 <div class="input-group">
                     <span class="input-group-text">CLIENT NAME</span>
-                    <span class="input-group-text">First</span>
                     <input type="text" aria-label="First name" class="form-control form-control-lg">
-                    <span class="input-group-text">Last</span>
-                    <input type="text" aria-label="Last name" class="form-control form-control-lg">
+                   
                 </div>
         
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect01">TYPE</label>
                     <select class="form-select form-select-lg" id="inputGroupSelect01">
-                        <option selected >Review</option>
-                        <option value="1">Question</option>
-                        <option value="2">Complaint</option>
+                        <option selected >Consultation</option>
+                        <option value="1">Inquiry</option>
+                        <option value="2">Feedback</option>
+                        <option value="2">Other</option>
                     </select>
                 </div>
                     
                 <div class="input-group mb-3">
                   <label class="input-group-text" for="email">EMAIL</label>
-                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username">
+                    <input type="text" class="form-control form-control-lg" placeholder="Email" aria-label="Username">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control form-control-lg" placeholder="Server" aria-label="Server">
+                    <input type="text" class="form-control form-control-lg" placeholder="emailprovider.com" aria-label="Server">
                 </div>
 
                 <div class="input-group mb-3">
@@ -152,7 +151,7 @@
         
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="customReview">YOUR REVIEW</label>
-                    <textarea class="form-control form-control-lg" id="customReview" placeholder="Type your review here"></textarea>
+                    <textarea class="form-control form-control-lg" id="customReview" placeholder="Type your message here"></textarea>
                 </div>
         
                 <!-- Add submit button -->
@@ -191,7 +190,8 @@
                 // After 2 seconds, remove the fullPageSuccess element
                 setTimeout(function () {
                     successMessageContainer.innerHTML = "";
-                }, 1000);
+                    location.reload();
+                }, 3000);
             });
         });
       </script>
