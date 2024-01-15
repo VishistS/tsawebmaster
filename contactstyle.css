@@ -26,12 +26,12 @@
 
 .contactBanner h1::before{
     background: var(--primary_color);
-    animation: typewriter 2.5s steps(60) 1s forwards;
+    animation: typewriter 2s steps(60) 1s forwards;
 }
 .contactBanner h1::after{
     width: 0.125em;
     background: black;
-    animation: typewriter 2.5s steps(60) 1s forwards,
+    animation: typewriter 2s steps(60) 1s forwards,
         blink 1.1s steps(60) infinite;
 }
 @keyframes typewriter{
