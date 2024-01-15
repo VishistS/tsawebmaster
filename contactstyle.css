@@ -1,10 +1,48 @@
 .contactBanner {
-    text-align:left
+    text-align:left;
 }
-.contactBanner h1{
-    margin-left:10%;
-    margin-top:5%;
-    margin-bottom:5%;
+.contactBanner h1 {
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: arial;
+    font-size: 50px;
+    letter-spacing: 2px;
+    position: relative;
+    width: max-content;
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.contactBanner h1::before,
+.contactBanner h1::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.contactBanner h1::before{
+    background: var(--primary_color);
+    animation: typewriter 2.5s steps(60) 1s forwards;
+}
+.contactBanner h1::after{
+    width: 0.125em;
+    background: black;
+    animation: typewriter 2.5s steps(60) 1s forwards,
+        blink 1.1s steps(60) infinite;
+}
+@keyframes typewriter{
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink{
+    to{
+       background: transparent;
+    }
 }
 
 .contactblock{
@@ -49,6 +87,18 @@
     flex-direction: column; 
     justify-content: center; 
 }
+.rightContent {
+    margin-top: 30px; 
+}
+
+.custom-input-group,
+.input-group,
+.btn-primary,
+.form-control,
+#inputGroupSelect01,
+#customReview {
+    font-family: 'Arial', serif !important; 
+}
 .custom-input-group {
     width: 100%;
     margin-bottom: 15px;
@@ -62,6 +112,29 @@
 .custom-input-group .form-control {
     width: 70%;
     font-size: 1.2em;
+}
+.custom-input-group, .input-group, .btn-primary {
+    margin-bottom: 30px;
+}
+.input-group-text, .form-control, #inputGroupSelect01 {
+    padding: 18px;
+    font-size: 14px; 
+}
+.input-group-text:first-child {
+    background-color: var(--secondary_color); 
+    color: white;
+    letter-spacing: 1.2px;
+}
+.btn-primary {
+    background-color: white; 
+    border: none; 
+    color: black;
+    letter-spacing: 2px;
+    padding: 15px;
+}
+.btn-primary:hover {
+    background-color: var(--secondary_color); 
+    color: white;
 }
 @media only screen and (min-width: 200px){
     .leftBox p{
@@ -84,6 +157,9 @@
     }
 }
 @media only screen and (max-width: 900px){
+    .contactIntro h1{
+        font-size: 20px;
+    }
     .container{
         flex-direction: column;
         width: 100%;
@@ -92,13 +168,15 @@
     .leftBox{
         width: 80%;
         margin-right: 0;
+        margin-bottom: 5%;
         border-right: none;
         border-bottom: solid;
+        padding-bottom:0px;
     }
     .rightBox{
-        width: 80%;
+        width: 100%;
         margin: 0;
-        margin-top: 10px;
+        margin-top: 5%;
         padding: 10px;
         margin-bottom: 50px;
     }
@@ -106,4 +184,21 @@
         margin-bottom: 50px;
         width: 90%;
     }
+}
+
+#fullPageSuccess {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; 
+    font-size: 30px;
+}
+.message{
+    width: 50%;
 }
