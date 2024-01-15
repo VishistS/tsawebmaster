@@ -1,0 +1,34 @@
+.contactBanner {
+    text-align:left
+}
+.contactBanner h1{
+    margin-left:10%;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.contactblock{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftBox{
+    margin-top: 10px;
+    background-color:blue;
+    height:700px;
+}
+.rightBox{
+    margin-top: 10px;
+    background-color:red;
+    height:300px;
+}
