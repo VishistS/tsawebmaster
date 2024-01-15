@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Green Tomorrow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href = "masterstyle.css" rel = "stylesheet">
+    <link href = "windstyle.css" rel = "stylesheet">
+  </head>
+  <body>
+        <!--################################################
+    lLoading Bar and Effect
+    #################################################-->
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loader--hidden");
+        loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+        });
+      });
+    </script>
+
+    <!--################################################
+    Navigation Bar
+    #################################################-->
+    <nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32" class="d-inline-block align-text-right">
+            Green Tomorrow
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Your Options
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="solaroption.html">Solar Panels</a></li>
+                  <li><a class="dropdown-item" href="geothermal.html">Geothermal Systems</a></li>
+                  <li><a class="dropdown-item" href="wind.html">Wind Turbines</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="everyday.html">Everyday Strategies</a></li>
+                </ul>
+              </li>
+  <!--
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Financing
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Prices</a></li>
+                  <li><a class="dropdown-item" href="#">Tax Rebates</a></li>
+                </ul>
+              </li>
+  -->
+              <li class="nav-item">
+                <a class="nav-link" href="newsletter.html">Newsletter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class = "nav-item">
+                  <a class="nav-link" href="#">References</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--################################################
+    BANNER
+    #################################################-->
+    <section class = "banner">
+        <div class = "container-fluid">
+            <div class = "col-sm-8 bannertext">
+                    <h1 class = "centered"><b>WIND TURBINES</b></h1>
+                    <p class = "centered"><i>Spin into a Cleaner Planet with Wind Turbine Solutions.</i></p>
+            </div>
+        </div>
+    </section>
+
+    <!--################################################
+    OVERVIEW/HOW IT WORKS SECTION
+    #################################################-->
+    <section class = "overview">
+        <div class = "container-fluid">
+            <div class = "row">
+              <h1><b>Overview</b></h1>
+            </div>
+            <div class = "row">
+                <div class = "col"></div>
+                <div class = "col-md-auto col-lg-8" id = "descpoverview">
+                    <p>Wind Turbines are revolutionary structures that have the ability to harness the wind’s natural kinetic energy into essential electricity and power for us humans. Wind turns the blades of a turbine around a rotor, which spins a generator, which thus creates electricity. There are two basic types of wind turbines: Horizontal-axis turbines, and vertical-axis turbines, which can both be seen on the right and are both crucial energy producers. Although you are probably thinking about huge 400 feet structures in rural farmland when you think about wind turbines, there are actually many smaller accessible solutions for anyone who wants to take the initiative to make the Earth a more eco-friendly place.
+                    </p>
+                </div>
+                <div class = "col-md-auto col-lg-3">
+                    <img src="assets/horizontalwind.jpg" class = "img-thumbnail" alt="..." id = "image1">
+                    <figcaption class="figure-caption text-right">Horizontal Wind Turbines</figcaption>
+                    <img src="assets/verticalwind.jpg" class = "img-thumbnail " alt="..." id = "image2">
+                    <figcaption class="figure-caption text-right">Vertical Wind Turbines</figcaption>
+                </div>
+                <div class = "col"></div>
+            </div>
+        </div>
+    </section>
+    <br>
+  
+    <!--################################################
+    RECCOMENDATION/RIGHT FOR YOU SECTION
+    #################################################-->
+
+    <section class = "reccomendationsection">
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class = "col"></div>
+                <div class = "col-sm-auto col-md-10">
+                    <h1><b>Is It Right For You?</b></h1>
+                    <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <b>Have a lot of wind in your area?</b>
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                      <div class = "dropdownbox">
+                        <p>When it comes to wind turbines, there obviously needs to be a good amount of wind coming your way. It's in the name! </p>
+                      </div>
+                    </div>
+                    <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                      <b> Use a relatively large amount of energy everyday? </b>
+                    </button>
+                    <div class="collapse" id="collapseExample2">
+                      <div class = "dropdownbox">
+                        <p>With wind turbines, a lot of your energy consumption can be offset with installations of wind turbines.</p>
+                      </div>
+                    </div>
+                    <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                      <b>Planning on staying at your residence for a long time?</b>
+                    </button>
+                    <div class="collapse" id="collapseExample3">
+                      <div class = "dropdownbox">
+                        <p>As wind turbines are a long-term and worthwile investment, it is best to stay near it as long as possible. Optimally forever!</p>
+                      </div>
+                    </div>
+                    <p id = "reccbottomtext"><b>If you said yes to ANY of these questions,</b> wind turbines are likely an optimal long-term option for your home.</p>
+                </div>
+                <div class = "col"></div>
+              </div>
+      </section>
+      <br>
+   
+  
+   <!--################################################
+      EXPLORE PLANS SECTION
+      #################################################-->
+  
+    <section class = "exploreoptions">
+      <div class = "container-fluid">
+          <div class = "row">
+            <h1><b>Explore Our Plans</b></h1>
+          </div>
+          <div class = "row">
+            <div class = "col"></div>
+            <div class = "col-sm-auto col-md-10">
+              <p>Let's get you started, we reccomend three distinct plans for your transition to solar power.</p>
+              <div class = "row">
+                <div class = "col"></div>
+                <div class = "col-sm-auto col-md-3">
+                  <h2><b>Budget</b></h2>
+                  <p>For homeowners looking for an affordable solution for their energy.</p>
+                  <p style= "font-family: 'Courier New', Courier, monospace"><b>*$15,000-$25,000 USD</b></p>
+                </div>
+                <div class = "col-sm-auto col-md-3">
+                  <h2><b>Normal</b></h2>
+                  <p>For homeowners requiring that extra <i>bit</i>, while being price conscious.</p>
+                  <p style= "font-family: 'Courier New', Courier, monospace"><b>*$25,000-$45,000 USD</b></p>
+                </div>
+                <div class = "col-sm-auto col-md-3">
+                  <h2><b>Pro</b></h2>
+                  <p>For homeowners needing a premium solution to their energy needs.</p>
+                  <p style= "font-family: 'Courier New', Courier, monospace"><b>*$45,000-$70,000 USD</b></p>
+                </div>
+                <div class = "col"></div>
+              </div>
+              <p><i> * Price ranges are based off general calculations, prices can vary depending on specific installation needs and location. Book a one on one consultation for a specific price estimate.</i></p>
+              <button class="btn btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" id = "dropdownbut">
+              <p><b>COMPARE PLANS</b></p>
+              </button>
+              <div class="collapse" id="collapseExample4">
+                <div class = "dropdownbox">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Plan</th>
+                        <th scope="col">Energy Capacity</th>
+                        <th scope="col">Coverage</th>
+                        <th scope="col">Installation</th>
+                        <th scope="col">Monitoring System</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr>
+                        <th scope="row">Budget</th>
+                        <td>5kW</td>
+                        <td>None</td>
+                        <td>Standard</td>
+                        <td>None</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Normal</th>
+                        <td>5-10kW</td>
+                        <td>Yes</td>
+                        <td>Custom</td>
+                        <td>None</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Pro</th>
+                        <td>>10kw</td>
+                        <td>Yes</td>
+                        <td>Custom</td>
+                        <td>Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class = "col"></div>
+          
+          </div>
+      </div>
+    </section>
+    <br>
+  
+    <section class = "financingsection">
+      <div class = "container-fluid">
+        <div class = "row">
+          <div class = "col"></div> 
+          <div class = "col-sm-auto col-md-10">
+            <h1><b>Financing</b></h1>
+            <p>We make financing easy, because paying for your new wind turbine system shouldn't be complicated.</p>
+          </div>
+          <div class = "col"></div> 
+        </div>
+        <div class = "row">
+          <div class = "col"></div>
+          <div class = "col-sm-auto col-md-10">
+            <h2><b>Tax Information</b></h2>
+            <p>In August 2022, the 30% tax credit for home wind turbine installations was extended through 2032 and can be applied to installations placed in service anytime after 2022, meaning you can save thousands of dollars every year by investing in clean energy and earning money back in tax credit. Reach out to us now before you miss out!</p>
+          </div>
+          <div class = "col"></div>
+        </div>
+        <div class = "row">
+          <div class = "col"></div>
+          <div class = "col-sm-auto col-md-10">
+            <h2><b>Let's Finalize It</b></h2>
+            <p>Once you have decided on a plan, acknowledging the price range and specifications, you're all set. Let's get you started on the transition to clean energy by contacting one of our consultants.</p>
+            <a class="btn btn-collapse" href = "contact.html" role = "button" id = "dropdownbut"><p><b>I'M ON BOARD</b></p></a>
+            </button>
+          </div>
+          <div class = "col"></div>
+        </div>
+      </div>
+    </section>
+    <br><br>
+ 
+  <!--################################################
+    Footer Section
+    #################################################-->
+    <footer>
+      <div class="footerContainer">
+        <div class="socialIcons">
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+          <ul>
+              <li><a href="index.html ">Home</a></li>
+              <li><a href="newsletter.html">News</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Our Team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerBottom">
+          <p><span class="designer">Green Tomorrow Consulting</span><br>Copyright &copy;2024 </p>
+      </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
