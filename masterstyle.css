@@ -160,6 +160,11 @@ a[href^="#"]:hover {
     color: var(--secondary_color);
 }
 
+
+.navbar-brand > img {
+    margin-top: -2%;
+}
+
 /*#####################################################
 Styling for the footer of the website
 #####################################################*/

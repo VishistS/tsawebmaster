@@ -30,7 +30,10 @@
     #################################################-->
     <nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Green Tomorrow</a>
+          <a class="navbar-brand" href="#">
+            <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32" class="d-inline-block align-text-top">
+            Green Tomorrow
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -105,39 +108,94 @@
           <div class="rightBox">
             <div class="rightContent">
                 <!-- Insert bootstrap entry page here -->
+                <form id="contactForm">
                 <div class="input-group">
-                    <span class="input-group-text">First and last name</span>
+                    <span class="input-group-text">CLIENT NAME</span>
+                    <span class="input-group-text">First</span>
                     <input type="text" aria-label="First name" class="form-control form-control-lg">
+                    <span class="input-group-text">Last</span>
                     <input type="text" aria-label="Last name" class="form-control form-control-lg">
                 </div>
         
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    <label class="input-group-text" for="inputGroupSelect01">TYPE</label>
                     <select class="form-select form-select-lg" id="inputGroupSelect01">
-                        <option selected>Review</option>
+                        <option selected >Review</option>
                         <option value="1">Question</option>
                         <option value="2">Complaint</option>
                     </select>
                 </div>
                     
                 <div class="input-group mb-3">
+                  <label class="input-group-text" for="email">EMAIL</label>
                     <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username">
                     <span class="input-group-text">@</span>
                     <input type="text" class="form-control form-control-lg" placeholder="Server" aria-label="Server">
                 </div>
+
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="phoneNumber">PHONE NUMBER</label>
+                  <input type="tel" class="form-control form-control-lg" id="phoneNumber" placeholder="Enter your phone number">
+                </div>
+
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                      const phoneNumberInput = document.getElementById('phoneNumber');
+              
+                      phoneNumberInput.addEventListener('input', function (event) {
+                          let inputValue = event.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+                          inputValue = inputValue.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3'); // Add "-" after 3 and 6 digits
+                          event.target.value = inputValue;
+                      });
+                  });
+                </script>
         
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="customReview">Your Review</label>
+                    <label class="input-group-text" for="customReview">YOUR REVIEW</label>
                     <textarea class="form-control form-control-lg" id="customReview" placeholder="Type your review here"></textarea>
                 </div>
         
                 <!-- Add submit button -->
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                </form>
             </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!--################################################
+      Succesful Entry Section
+      #################################################-->
+      <div id="successMessage"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("#contactForm");
+            const successMessageContainer = document.querySelector("#successMessage");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+    
+                // Display success message covering the entire viewport
+                successMessageContainer.innerHTML = `
+                    <div id="fullPageSuccess" class="alert alert-success show" role="alert">
+                        <div class="message">
+                            Your submission has been entered! We will reach back to you shortly. Thank you for your cooperation.
+                        </div>
+                    </div>
+                `;
+    
+                // Reset the form after success message
+                form.reset();
+    
+                // After 2 seconds, remove the fullPageSuccess element
+                setTimeout(function () {
+                    successMessageContainer.innerHTML = "";
+                }, 1000);
+            });
+        });
+      </script>
+
 
       <!--################################################
         Footer Section
