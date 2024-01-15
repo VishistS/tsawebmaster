@@ -1,0 +1,148 @@
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.banner {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(assets/geothermalbanner.jpg) center center fixed;
+    min-height: vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+    color: black;
+    margin-top:-8%;
+}
+.col-sm-8.bannertext {
+    padding-top:1%;
+    border-bottom-style:double;
+    border-top-style:double;
+    margin: auto;
+    padding-bottom:1%;
+    opacity: 0;
+    transform: translateY(160px);
+    animation: fadeInUp 0.7s ease-out forwards;
+    border-width: 2px;
+}
+.col-sm-8.bannertext > h1 {
+    font-size: 60px;
+}
+.col-sm-8.bannertext > p {
+    font-size: 30px;
+}
+
+/* General Section Styling */
+
+.overview,.reccomendationsection,.exploreoptions, .financingsection {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s ease-in-out;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:auto;
+    width: 80%;
+    border: none;
+    border-radius: 30px;
+    transform: translateY(160px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.overview:hover, .reccomendationsection:hover, .exploreoptions:hover, .financingsection:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+ /* Reccomendation Section Styling */
+
+#image1 {
+    margin-top:10%;
+    margin: auto;
+    height: 42%;
+}
+#image2 {
+    margin-top: 1%;
+    height: 52%;
+}
+
+@media only screen and (max-width: 600px) {
+  #image1 {
+    margin-top: 0;
+  }
+  #image2 {
+    margin-top: 0;
+  }
+}
+
+  
+  /* Media query for zoom level 90% or less */
+@media (max-width: 90%) {
+    #image1 {
+        width: 50%;
+        height: 50%;
+    }
+    #image2 {
+        width: 50%;
+        height: 50%;
+    }
+ }
+  
+
+
+
+.btn.btn-collapse {
+    padding-bottom: 0;
+
+}
+
+.btn.btn-collapse:hover {
+    transform: scale(1.02);
+}
+
+.btn.btn-collapse{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--secondary_color);
+    color: white;
+    padding: 10px 10px 10px;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 1%;
+}
+
+#dropdownbut {
+    padding: 10px 10px 0px;
+}
+
+.dropdownbox {
+    margin-top:1%;
+}
+
+#reccbottomtext {
+    margin-top: 2%;
+}
+
+a {
+    color: antiquewhite;
+}
+
+
+.navbar-brand > p {
+    margin-top: 30%;
+}
