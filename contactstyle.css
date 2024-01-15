@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--primary_color);
 }
 .container{
     width: 90%;
@@ -22,13 +22,88 @@
     align-items: center;
     justify-content: center;
 }
-.leftBox{
+.leftBox {
     margin-top: 10px;
-    background-color:blue;
-    height:700px;
+    margin-right: 4%;
+    background-color: var(--primary_color);
+    width: 40%;
+    height: 80vh;
+    border-right: solid;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
 }
-.rightBox{
+.leftBox p{
+    font-size:5vw;
+}
+.leftBox h3{
+    font-size:5vw;
+}
+.rightBox {
     margin-top: 10px;
-    background-color:red;
-    height:300px;
+    margin-left: 4%;
+    background-color: var(--primary_color);
+    width: 40%;
+    height: 80vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+.custom-input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.custom-input-group .input-group-text {
+    width: 30%;
+    font-size: 1.2em;
+}
+
+.custom-input-group .form-control {
+    width: 70%;
+    font-size: 1.2em;
+}
+@media only screen and (min-width: 200px){
+    .leftBox p{
+        font-size:21px;
+    }
+    .leftBox h3{
+        font-size:21px;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .leftBox p{
+        width:300px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .leftBox h3{
+        width:300px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+@media only screen and (max-width: 900px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .leftBox{
+        width: 80%;
+        margin-right: 0;
+        border-right: none;
+        border-bottom: solid;
+    }
+    .rightBox{
+        width: 80%;
+        margin: 0;
+        margin-top: 10px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .hidden-content{
+        margin-bottom: 50px;
+        width: 90%;
+    }
 }
