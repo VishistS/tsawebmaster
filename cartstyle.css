@@ -19,6 +19,9 @@ header .shopping{
 header .shopping img{
     width: 40px;
 }
+header .shopping img:hover {
+    transform: scale(1.05);
+}
 header .shopping span{
     background-color: red;
     border-radius: 50%;
