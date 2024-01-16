@@ -140,7 +140,7 @@ nav {
     background-color: white;
 }
 .navbar {
-    z-index:9;
+    z-index:1000;
     opacity:0;
     animation: fadeInDown 1s ease-in-out forwards;
 }

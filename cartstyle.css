@@ -156,6 +156,13 @@ header .shopping span{
 .listCard .count{
     margin: 0 10px;
 }
+.listCard li .label {
+    width: 100%; /* Set labels to occupy 100% width */
+    text-align: center; /* Center text within labels */
+    font-weight: bold; /* Make labels bold if needed */
+    padding: 10px; /* Add some padding for better readability */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
 @media (max-width: 900px) {
     .list {

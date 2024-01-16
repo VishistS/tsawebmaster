@@ -83,15 +83,6 @@ function reloadCard(){
     let count = 0;
     let totalPrice = 0;
 
-    let labelsDiv = document.createElement('li');
-    labelsDiv.innerHTML = `
-        <div>Item</div>
-        <div>Name</div>
-        <div>Price</div>
-        <div>Quantity</div>
-    `;
-    listCard.appendChild(labelsDiv);
-
     listCards.forEach((value, key) => {
         totalPrice = totalPrice + products[key].price * value.quantity;
         count = count + value.quantity;
@@ -114,7 +105,22 @@ function reloadCard(){
 
     total.innerText = `$${totalDisplayedPrice.toLocaleString()}`;
     quantity.innerText = count;
+
+    // Check if listCards is not empty before adding labels
+    if (listCards.length > 0) {
+        // Add labels for "Item," "Name," "Price," and "Quantity" columns
+        let labelsDiv = document.createElement('li');
+        labelsDiv.innerHTML = `
+            <div class="label">Item</div>
+            <div class="label">Name</div>
+            <div class="label">Price</div>
+            <div class="label">Quantity</div>
+        `;
+        listCard.insertBefore(labelsDiv, listCard.firstChild);
+    }
 }
+
+
 function changeQuantityPlus(key, quantity){
     const product = listCards[key];
     if (!product) {
