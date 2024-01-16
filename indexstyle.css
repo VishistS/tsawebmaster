@@ -107,16 +107,16 @@ Styling for the review button
 }
 */
 
-.custbutton {
+.btn.btn-collapse {
     padding-bottom: 0;
-    border-radius: 15px;
+
 }
 
-.custbutton:hover {
+.btn.btn-collapse:hover {
     transform: scale(1.02);
 }
 
-.custbutton{
+.btn.btn-collapse{
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--secondary_color);
@@ -125,7 +125,7 @@ Styling for the review button
     display: inline-block;
     letter-spacing: 2px;
     transition: background-color 0.3s, color 0.3s;
-
+    margin-top: 1%;
 }
 
 
