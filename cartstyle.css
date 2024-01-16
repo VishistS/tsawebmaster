@@ -93,7 +93,7 @@ header .shopping span{
     left: calc(100% - 500px);
 }
 .active .card{
-    transform: translateX(-5%);
+    transform: translateX(-20px);
 }
 .list .item{
     text-align: center;
@@ -151,4 +151,45 @@ header .shopping span{
 }
 .listCard .count{
     margin: 0 10px;
+}
+
+@media (max-width: 900px) {
+    .list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        width: 90%;
+        max-width: 500px; 
+        left: 50%;
+        transform: translateX(-50%);
+        transition: left 0.5s ease; 
+        display: none;
+    }
+    
+    .active .card {
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        display: flex;
+        justify-content: flex-end; 
+        align-items: center;
+    }
+    
+    header .shopping {
+        margin-right: 30px;
+        text-align: left;
+    }
+    
+    header .shopping img {
+        width: 30px; 
+    }
+    
+    header .shopping span {
+        top: -8px; 
+    }
 }
