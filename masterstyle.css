@@ -185,28 +185,28 @@ Styling for the waves of the website
     background-size: 1000px 100px;
 }
 .waves .wave.wave1{
-    animation: tide 30s linear infinite;
+    animation: tide 20s linear infinite;
     z-index: 1000;
     opacity: 1;
     animation-delay: 0s;
     bottom: 0;
 }
 .waves .wave.wave2{
-    animation: tide2 15s linear infinite;
+    animation: tide2 7s linear infinite;
     z-index: 999;
     opacity: 0.5;
     animation-delay: -5s;
     bottom: 10px;
 }
 .waves .wave.wave3{
-    animation: tide 30s linear infinite;
+    animation: tide 20s linear infinite;
     z-index: 998;
     opacity: 0.2;
     animation-delay: -2s;
     bottom: 0;
 }
 .waves .wave.wave4{
-    animation: tide2 15s linear infinite;
+    animation: tide2 7s linear infinite;
     z-index: 997;
     opacity: 0.7;
     animation-delay: -5s;
