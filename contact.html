@@ -30,8 +30,8 @@
     #################################################-->
     <nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32" class="d-inline-block align-text-top">
+          <a class="navbar-brand" href="index.html" id ="navbaritems">
+            <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32" class="d-inline-block align-text-top" >
             Green Tomorrow
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,18 +40,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="index.html" id = "navbaritems">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id = "navbaritems">
                   Your Options
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="solaroption.html">Solar Panels</a></li>
-                  <li><a class="dropdown-item" href="geothermal.html">Geothermal Systems</a></li>
-                  <li><a class="dropdown-item" href="wind.html">Wind Turbines</a></li>
+                  <li><a class="dropdown-item" href="solaroption.html" id = "navbaritems">Solar Panels</a></li>
+                  <li><a class="dropdown-item" href="geothermal.html" id = "navbaritems">Geothermal Systems</a></li>
+                  <li><a class="dropdown-item" href="wind.html" id = "navbaritems">Wind Turbines</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="everyday.html">Everyday Strategies</a></li>
+                  <li><a class="dropdown-item" href="everyday.html" id = "navbaritems">Everyday Strategies</a></li>
                 </ul>
               </li>
   <!--
@@ -66,13 +66,13 @@
               </li>
   -->
               <li class="nav-item">
-                <a class="nav-link" href="newsletter.html">Newsletter</a>
+                <a class="nav-link" href="newsletter.html" id = "navbaritems">Newsletter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html" id = "navbaritems">Contact Us</a>
               </li>
               <li class = "nav-item">
-                  <a class="nav-link" href="#">References</a>
+                  <a class="nav-link" href="#" id = "navbaritems">References</a>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@
       #################################################-->
       <section class="contactIntro">
         <div class="contactBanner">
-            <h1>Lets Get In Touch.</h1>
+            <h1><b>GET IN TOUCH</b></h1>
         </div>
       </section>
 
@@ -96,8 +96,7 @@
           <div class="leftBox">
             <div class="leftContent">
               <div class="contactDescription">
-                <p>You're just one submission away from saving the planet. At Green Tomorrow, it is our job to make sure ALL our clients receive the best support they can get. Fill out the form attached
-                    to send direct feedback to our staff, and we will reply to you within 24 hours!
+                <p><b>Help us help you.</b> We want to ensure that we meet all of your energy needs, that's why you can contact our team of consultants on a 24/7 basis. <br><br> * <i>If you're interested in purchasing or learning more about a specific plan, please choose consultation as your type of inquiry.</i>
                 </p>
               </div>
               <div class="directory">
@@ -110,31 +109,28 @@
                 <!-- Insert bootstrap entry page here -->
                 <form id="contactForm">
                 <div class="input-group">
-                    <span class="input-group-text">CLIENT NAME</span>
-                    <span class="input-group-text">First</span>
-                    <input type="text" aria-label="First name" class="form-control form-control-lg">
-                    <span class="input-group-text">Last</span>
-                    <input type="text" aria-label="Last name" class="form-control form-control-lg">
+                    <span class="input-group-text"><b>YOUR NAME</b></span>
+                    <input type="text" aria-label="name" placeholder = "Enter your email" class="form-control form-control-lg">
                 </div>
-        
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01">TYPE</label>
+                    <label class="input-group-text" for="inputGroupSelect01"><b>OPTION</b></label>
                     <select class="form-select form-select-lg" id="inputGroupSelect01">
-                        <option selected >Review</option>
-                        <option value="1">Question</option>
-                        <option value="2">Complaint</option>
+                        <option selected >Consultation Booking</option>
+                        <option value="1">Inquiry</option>
+                        <option value="2">Feedback</option>
+                        <option value="2">Other</option>
                     </select>
                 </div>
                     
                 <div class="input-group mb-3">
-                  <label class="input-group-text" for="email">EMAIL</label>
-                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control form-control-lg" placeholder="Server" aria-label="Server">
+                  <label class="input-group-text" for="email"><b>EMAIL</b></label>
+                    <input type="text" class="form-control form-control-lg" placeholder="Enter your email" aria-label="Username">
+                    <!-- <span class="input-group-text">@</span>
+                    <input type="text" class="form-control form-control-lg" placeholder="emailprovider.com" aria-label="Server"> -->
                 </div>
 
                 <div class="input-group mb-3">
-                  <label class="input-group-text" for="phoneNumber">PHONE NUMBER</label>
+                  <label class="input-group-text" for="phoneNumber"><b>PHONE NUMBER</b></label>
                   <input type="tel" class="form-control form-control-lg" id="phoneNumber" placeholder="Enter your phone number">
                 </div>
 
@@ -151,12 +147,12 @@
                 </script>
         
                 <div class="input-group mb-3">
-                    <label class="input-group-text" for="customReview">YOUR REVIEW</label>
-                    <textarea class="form-control form-control-lg" id="customReview" placeholder="Type your review here"></textarea>
+                    <label class="input-group-text" for="customReview"><b>MESSAGE</b></label>
+                    <textarea class="form-control form-control-lg" id="customReview" placeholder="Type your message here"></textarea>
                 </div>
         
                 <!-- Add submit button -->
-                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                <button type="submit" class="btn btn-primary" id = "mybuttongoat"><b>SUBMIT</b></button>
                 </form>
             </div>
             </div>
@@ -180,7 +176,7 @@
                 successMessageContainer.innerHTML = `
                     <div id="fullPageSuccess" class="alert alert-success show" role="alert">
                         <div class="message">
-                            Your submission has been entered! We will reach back to you shortly. Thank you for your cooperation.
+                            Your submission has been entered! A member of our team will get back to you within a 72 hour time span. Thank you for your interest.
                         </div>
                     </div>
                 `;
@@ -191,7 +187,8 @@
                 // After 2 seconds, remove the fullPageSuccess element
                 setTimeout(function () {
                     successMessageContainer.innerHTML = "";
-                }, 1000);
+                    location.reload();
+                }, 3000);
             });
         });
       </script>
