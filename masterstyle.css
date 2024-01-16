@@ -152,11 +152,11 @@ nav {
     transform: scaleX(1);
 }
 /* smooth scroll for anchor links */
-a[href^="#"] {
+#navbaritems {
     transition: color 0.3s ease-in-out;
 }
 
-a[href^="#"]:hover {
+#navbaritems:hover {
     color: var(--secondary_color);
 }
 

@@ -5,7 +5,7 @@
     margin: auto;
     margin-left: 10%;
     margin-top: 5%;
-    font-family: arial;
+    font-family: 'Raleway';
     font-size: 50px;
     letter-spacing: 2px;
     position: relative;
@@ -52,7 +52,9 @@
     align-items: center;
     justify-content: center;
     background-color: var(--primary_color);
+    animation: fadeInUp 1s ease-out forwards;
 }
+
 .container{
     width: 90%;
     margin: 0 auto;
@@ -209,4 +211,14 @@
 
 .message{
     width: 50%;
+}
+#mybuttongoat {
+    background-color: var(--secondary_color);
+    color: white;
+}
+#mybuttongoat:hover {
+    transform: scale(1.02);
+}
+#mybuttongoat:active {
+    background-color: white;
 }
