@@ -1,5 +1,6 @@
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
+let checkOut = document.querySelector('.purchase')
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
@@ -13,6 +14,48 @@ openShopping.addEventListener('click', ()=>{
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
+checkOut.addEventListener('click', () => {
+    if (totalDisplayedPrice > 0) {
+        // Clear the cart
+        listCards = [];
+        totalDisplayedPrice = 0;
+
+        // Reload
+        reloadCard();
+
+        // Show success alert
+        const successAlert = document.querySelector('.successalert');
+        successAlert.classList.remove('hide');
+        successAlert.classList.add('show');
+    } else {
+        // If the cart is empty, display the custom alert
+        const customAlert = document.querySelector('.alert');
+        customAlert.classList.remove('hide');
+        customAlert.classList.add('show');
+    }
+});
+const customAlert = document.querySelector('.alert');
+const successAlert = document.querySelector('.successalert');
+
+const closeAlerts = () => {
+    customAlert.classList.remove('show');
+    customAlert.classList.add('hide');
+
+    successAlert.classList.remove('show');
+    successAlert.classList.add('hide');
+};
+
+const closeAlertBtn = document.querySelector('.close-btn');
+closeAlertBtn.addEventListener('click', closeAlerts);
+
+const successCloseBtn = document.querySelector('.successclose-btn');
+successCloseBtn.addEventListener('click', closeAlerts);
+
+// Set timeout for hiding alerts (e.g., 3 seconds)
+const timeoutDuration = 3000; // Adjust timeout duration in milliseconds
+setTimeout(() => {
+    closeAlerts();
+}, timeoutDuration);
 let products = [
     {
         id: 1,

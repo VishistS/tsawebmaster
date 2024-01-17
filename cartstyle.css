@@ -48,7 +48,7 @@ header .shopping span{
     left: 100%;
     width: 500px;
     background-color: var(--third_color);
-    height: 90vh;
+    height: 85vh;
     transition: 0.5s;
     margin-top: 70px;
     display: flex;
@@ -70,9 +70,31 @@ header .shopping span{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.checkOut{
+    border:solid;
+    border-color: var(--third_color);
+    border-radius: 5px;
+}
+.card .checkOut .total{
+    order: -1;
+    border-bottom: solid;
+    border-color: var(--third_color);
+    background-color: white;
+}
+.card .checkOut .total:hover{
+    background-color: white;
+}
+.exitContainer{
+    display: flex;
+}
+.closeShopping{
+    border-right: solid;
+    border-color: var(--third_color)
 }
 .card .checkOut div{
-    background-color: var(--secondary_color);
+    background-color: var(--primary_color);
     width: 100%;
     height: 70px;
     display: flex;
@@ -81,14 +103,19 @@ header .shopping span{
     font-weight: bold;
     cursor: pointer;
 }
-.card .checkOut div:nth-child(2){
-    background-color: #006400;
+.card .checkOut .closeShopping:hover{
+    background-color: var(--third_color);
+    color: white;
+}
+.card .checkOut .purchase:hover{
+    background-color: var(--third_color);
     color: white;
 }
 .card .listCard {
     max-height: 60vh;
     overflow-y: auto;
 }
+
 .active .card{
     left: calc(100% - 500px);
 }
@@ -186,9 +213,9 @@ header .shopping span{
 
 @media (max-width: 500px) {
     header {
-        display: flex;
-        justify-content: flex-end; 
-        align-items: center;
+        margin-left: 10px;
+        margin-right: auto;
+
     }
     
     header .shopping {
@@ -202,5 +229,160 @@ header .shopping span{
     
     header .shopping span {
         top: -8px; 
+    }
+}
+
+.alert{
+    background: rgb(251, 194, 90);
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 4px solid rgb(255, 166, 0);
+}
+.alert.show{
+    z-index: 1000;
+    animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+.alert.hide{
+    display: none;
+}
+
+.alert .fa-excalamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ce8500;
+    font-size: 30px;
+}
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+}
+.alert .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffd080;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+.close-btn:hover{
+    background: #fcc766;
+
+}
+.close-btn .fa-times{
+    color: #ce8500;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+
+
+
+
+
+.successalert{
+    background: #4CAF50; 
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 4px solid #45A049;
+}
+
+.successalert.show{
+    z-index: 1000;
+    animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.successalert.hide{
+    display: none;
+}
+
+.successalert .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2E7D32; 
+    font-size: 30px;
+}
+
+.successalert .successmsg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: black; 
+}
+
+.successalert .successclose-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #81C784; 
+    padding: 20px 18px;
+    cursor: pointer;
+}
+
+.successclose-btn:hover{
+    background: #4CAF50; 
+}
+
+.successclose-btn .fa-times{
+    color: #2E7D32; 
+    font-size: 22px;
+    line-height: 40px;
+}
+
+
+.alert,
+.successalert {
+    position: fixed;
+    top: 90px; 
+    left: 30%;
+    right: 30%;
+    z-index: 1000;
+}
+@media (max-width: 767px){
+    .alert,
+    .successalert {
+        width: 60%;
+        left: 10%;
+        right: 10%;
     }
 }
