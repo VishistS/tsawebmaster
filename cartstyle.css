@@ -127,11 +127,14 @@ header .shopping span{
 }
 .list .item{
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 10px var(--secondary_color);
     letter-spacing: 1px;
+}
+.list .item:hover {
+    background-color: white;
 }
 .list .item img{
     width: 90%;
