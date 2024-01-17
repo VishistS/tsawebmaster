@@ -93,6 +93,12 @@ let products = [
         image: 'stickers.jpg',
         price: 8.99
     },
+    {
+        id: 7,
+        name: 'placeholder',
+        image: 'stickers.jpg',
+        price: 20.99
+    },
 ];
 let listCards = [];
 function initApp() {

@@ -87,7 +87,6 @@ Styling for the about section
     transform: translateY(160px);
     animation: fadeInUp 1s ease-out forwards;
 }
-
 .aboutgreenenergy:hover,.customerreviews:hover,.introductiontoexploremore:hover {
     background-color: rgba(255, 255, 255, 1);
 }
