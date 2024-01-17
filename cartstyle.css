@@ -1,5 +1,5 @@
 body{
-    font-family: system-ui;
+    font-family: 'Raleway';
 }
 .container{
     text-align:left;
@@ -143,12 +143,12 @@ header .shopping span{
     margin: 10px;
 }
 .list .item button{
-    background-color: var(--third_color);
+    background-color: var(--secondary_color);
     color: white;
     border: none;
     padding: 10px;
     width: 80%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .list .item button:hover{
     background-color: var(--secondary_color);
@@ -156,6 +156,15 @@ header .shopping span{
     border: none;
     padding: 10px;
     width: 80%;
+    transform: scale(1.025);
+}
+.list .item button:active{
+    background-color: var(--third_color);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80%;
+    transform: scale(1.025);
 }
 
 .listCard li{
