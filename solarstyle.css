@@ -72,7 +72,8 @@
 #image1 {
     margin-top:10%;
     margin: auto;
-    height: 42%;
+    height: 80%;
+    border-radius: 20px;
 }
 #image2 {
     margin-top: 1%;
@@ -102,8 +103,13 @@
  }
   
 
+ .overview {
+    text-align: left;
+ }
 
-
+ .overview h1 {
+    text-align: center;
+ }
 .btn.btn-collapse {
     padding-bottom: 0;
 
