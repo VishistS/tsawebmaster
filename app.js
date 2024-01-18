@@ -33,6 +33,7 @@ checkOut.addEventListener('click', () => {
         customAlert.classList.remove('hide');
         customAlert.classList.add('show');
     }
+    body.classList.remove('active');
 });
 const customAlert = document.querySelector('.alert');
 const successAlert = document.querySelector('.successalert');
