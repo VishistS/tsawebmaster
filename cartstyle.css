@@ -155,12 +155,16 @@ header .shopping span{
     border-radius: 10px;
     transition: transform 0.2s ease-in-out, background-color 0.1s ease-in-out;
 }
-.list .item button:hover{
+/* .list .item button:hover{
     background-color: rgb(221, 255, 218);
     color: black;
     transform: scale(1.025);
-}
+} */
 
+.list .item button:active {
+    opacity: 20%;
+    transform: scale(1.025);
+}
 .listCard li{
     display: grid;
     grid-template-columns: 100px repeat(3, 1fr);
