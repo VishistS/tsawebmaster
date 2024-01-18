@@ -92,6 +92,10 @@ Styling for the about section
     background-color: rgba(255, 255, 255, 1);
 }
 
+.exploremore {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
 /*#####################################################
 Styling for the review button
 #####################################################*/
