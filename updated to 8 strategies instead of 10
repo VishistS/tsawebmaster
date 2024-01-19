@@ -98,7 +98,7 @@
     <section class = "overview">
         <div class = "container-fluid">
             <div class = "row">
-              <h1><b>Discover 10 Daily Strategies to Empower a Greener World!</b></h1>
+              <h1><b>Discover 8 Daily Strategies to Empower a Greener World!</b></h1>
             </div>
             <div class = "row">
               <div class = "col"></div>
@@ -117,6 +117,17 @@
 
                 <h2>5. Digital Detox</h2>
                 <p>Unplug your electronics when fully charged to reduce phantom power and save energy!</p>
+
+                <h2>6. Sustainable Dining</h2>
+                <p>Choose restaurants that prioritize sustainable practices, such as locally sourced ingredients and minimal food waste.</p>
+
+                <h2>7. Eco-Friendly Cleaning</h2>
+                <p>Opt for environmentally friendly cleaning products to minimize the use of harmful chemicals in your home.</p>
+
+                <h2>8. Community Engagement</h2>
+                <p>Get involved in local environmental initiatives and community clean-up events to contribute to a healthier planet.</p>
+
+                
               </div>
               <div class = "col"></div>   
             </div>
