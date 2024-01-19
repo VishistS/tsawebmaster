@@ -72,12 +72,8 @@
 #image1 {
     margin-top:10%;
     margin: auto;
-    height: 80%;
     border-radius: 20px;
-}
-#image2 {
-    margin-top: 1%;
-    height: 52%;
+    height: 80%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -103,8 +99,8 @@
  }
   
 
- .overview {
-    text-align: left;
+ #descpoverview {
+    text-align: center;
  }
 
  .overview h1 {
