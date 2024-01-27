@@ -1,11 +1,22 @@
-body{
-   font-family: Arial, sans-serif;
-   margin: 20px;
-   background-color: #fff;
+.calculatorTitle{
+    background-color: var(--primary_color);
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 100px;
+}
+.calculatorTitle h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+.calculator{
+    margin-bottom: 100px;
 }
 form {
+    letter-spacing: 1px;
     max-width: 400px;
     margin: auto;
+    margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 30px;
