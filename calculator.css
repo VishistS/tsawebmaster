@@ -1,12 +1,12 @@
 body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #fff; /* Match your background color */
+font-family: Arial, sans-serif;
+margin: 20px;
+background-color: #fff;
         }
         form {
             max-width: 400px;
             margin: auto;
-            background-color: rgba(255, 255, 255, 0.3); /* Match your background color */
+            background-color: rgba(255, 255, 255, 0.3);
             padding: 20px;
             border-radius: 30px;
             transform: translateY(160px);
@@ -35,5 +35,5 @@ body {
             background-color: #45a049;
         }
         #savingsResult {
-            color: black; /* Match your text color */
+            color: black;
         }
