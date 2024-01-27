@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Add your styles here */
-    </style>
 </head>
 
 <body>
@@ -22,22 +19,89 @@
     lLoading Bar and Effect 
     #################################################-->
     <div class="loader"></div>
-    <script src="calculator.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+            loader.classList.add("loader--hidden");
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
 
     <!--################################################
     Navigation Bar
     #################################################-->
     <nav class="navbar sticky-top navbar-expand-lg shadow" id="navbar">
-        <!-- Your navigation code here -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" id="navbaritems">
+                <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32"
+                    class="d-inline-block align-text-top">
+                Green Tomorrow
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="navbaritems">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="navbaritems">
+                            Your Options
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="solaroption.html" id="navbaritems">Solar Panels</a></li>
+                            <li><a class="dropdown-item" href="geothermal.html" id="navbaritems">Geothermal Systems</a></li>
+                            <li><a class="dropdown-item" href="wind.html" id="navbaritems">Wind Turbines</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="everyday.html" id="navbaritems">Everyday Strategies</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="navbaritems">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="newsletter.html" id="navbaritems">Newsletter</a></li>
+                            <li><a class="dropdown-item" href="cart.html" id="navbaritems">Shop</a></li>
+                            <li><a class="dropdown-item" href="calculator.html" id="navbaritems">Calculator</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" id="navbaritems">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="navbaritems">References</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <div class="calculatorTitle">
-        <!-- Your title code here -->
+        <h2>ENERGY SAVINGS CALCULATOR</h2>
+        <h3>Use our calculator to find out how much you can save using green energy!</h3>
     </div>
 
     <div class="calculator">
         <form id="savingsForm">
-            <!-- Your form code here -->
+            <label for="energySystem">Select Energy System:</label>
+            <select id="energySystem" required>
+                <option value="solar">Solar Panels</option>
+                <option value="geothermal">Geothermal System</option>
+                <option value="wind">Wind Turbine</option>
+            </select>
+
+            <label for="electricityBill">Monthly Electricity Bill ($):</label>
+            <input type="number" id="electricityBill" required>
+
+            <button type="button" onclick="calculateSavings()">Calculate Savings</button>
         </form>
         <h3 id="savingsResult"></h3>
     </div>
@@ -46,19 +110,27 @@
     Waves Section
     #################################################-->
     <section class="waves">
-        <!-- Your waves code here -->
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
     </section>
 
     <!--################################################
       Footer Section
       #################################################-->
     <footer>
-        <!-- Your footer code here -->
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html ">Home</a></li>
+                    <li><a href="newsletter.html">News</a></li>
+                    <li><a href="cart.html">Shop</a></li>
+                    <li><a href="contact.html">Contact Us</a></li
