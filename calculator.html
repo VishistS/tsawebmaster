@@ -11,6 +11,20 @@
 </head>
 <body>
     <!--################################################
+    lLoading Bar and Effect 
+    #################################################-->
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loader--hidden");
+        loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+        });
+      });
+    </script>
+    
+    <!--################################################
     Navigation Bar
     #################################################-->
     <nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
