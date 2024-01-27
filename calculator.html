@@ -1,47 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Green Tomorrow | Home</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Savings Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href = "masterstyle.css" rel = "stylesheet">
-    <link href = "cartstyle.css" rel = "stylesheet">
+    <link href = "calculator.css" rel = "stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="alert hide">
-      <span class="fas fa-exclamation-circle"></span>
-      <span class="msg">Warning: You must add at least one item to the cart!</span>
-      <span class="close-btn">
-        <span class="fas fa-times"></span>
-      </span>
-    </div>
-
-    <div class="successalert hide">
-      <span class="fas fa-exclamation-circle"></span>
-      <span class="successmsg">Thank you for shopping with us! Hope to see you again!</span>
-      <span class="successclose-btn">
-        <span class="fas fa-times"></span>
-      </span>
-    </div>
-
-
-    <!--################################################
-    lLoading Bar and Effect 
-    #################################################-->
-    <div class="loader"></div>
-    <script>
-      window.addEventListener("load", () => {
-        const loader = document.querySelector(".loader");
-        loader.classList.add("loader--hidden");
-        loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-        });
-      });
-    </script>
-
+</head>
+<body>
     <!--################################################
     Navigation Bar
     #################################################-->
@@ -71,17 +39,6 @@
                   <li><a class="dropdown-item" href="everyday.html" id = "navbaritems">Everyday Strategies</a></li>
                 </ul>
               </li>
-  <!--
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Financing
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Prices</a></li>
-                  <li><a class="dropdown-item" href="#">Tax Rebates</a></li>
-                </ul>
-              </li>
-  -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id = "navbaritems">
                   More
@@ -91,7 +48,7 @@
                   <li><a class="dropdown-item" href="cart.html" id = "navbaritems">Shop</a></li>
                   <li><a class="dropdown-item" href="calculator.html" id = "navbaritems">Calculator</a></li>
                 </ul>
-              </li> 
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html" id = "navbaritems">Contact Us</a>
               </li>
@@ -101,35 +58,32 @@
             </ul>
           </div>
         </div>
-    </nav>
+      </nav>
 
-    <!--################################################
-    Header Section
-    #################################################-->
-    <div class="container">
-        <header>
-            <h1><b>GREEN MART</b></h1>
-            
-            <div class="shopping">
-                <img src="assets/shopping.svg">
-                <span class="quantity">0</span>
-            </div>
-            <h3><i>Shop sustainably, shop green.</i></h3>
-        </header>
-        <div class="list"></div>
+    <div class="calculatorTitle">
+        <h2>Energy Savings Calculator</h2>
+        <h3>[Insert Calculator Description here]</h3>
     </div>
-    <div class="card">
-        <h1>CART</h1>
-        <ul class="listCard"></ul>
-        <div class="checkOut">
-            <div class="total">0</div>
-            <div class="exitContainer">
-              <div class="closeShopping">Close</div>
-              <div class="purchase">Checkout</div>
-            </div>
-        </div>
+
+    <div class="calculator">
+        <form id="savingsForm">
+            <label for="electricityBill">Monthly Electricity Bill ($):</label>
+            <input type="number" id="electricityBill" required>
+    
+            <label for="solarPanel">Solar Panels Efficiency (%):</label>
+            <input type="number" id="solarPanel" required>
+    
+            <label for="geothermalSystem">Geothermal System Efficiency (%):</label>
+            <input type="number" id="geothermalSystem" required>
+    
+            <label for="windTurbine">Wind Turbine Efficiency (%):</label>
+            <input type="number" id="windTurbine" required>
+    
+            <button type="button" onclick="calculateSavings()">Calculate Savings</button>
+        </form>
+        <h3 id="savingsResult"></h3>
     </div>
-    <br><br>
+
     <!--################################################
     Waves Section
     #################################################-->
@@ -140,17 +94,17 @@
         <div class="wave wave4"></div>
       </section>
   
-<!--################################################
-        Footer Section
-        #################################################-->
-        <footer>
-          <div class="footerContainer">
+      <!--################################################
+      Footer Section
+      #################################################-->
+      <footer>
+        <div class="footerContainer">
           <div class="socialIcons">
-              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
           </div>
           <div class="footerNav">
             <ul>
@@ -161,23 +115,21 @@
                 <li><a href = "">References</a></li>
             </ul>
           </div>
-          </div>
-          <div class="footerBottom">
-              <p><span class="designer">Green Tomorrow Consulting</span><br>Copyright &copy;2024 </p>
-          </div>
-      </footer>
-
-    <script src="app.js"></script>
+        </div>
+        <div class="footerBottom">
+            <p><span class="designer">Green Tomorrow Consulting</span><br>Copyright &copy;2024 </p>
+        </div>
+    
+        <script type="text/javascript">
+            window.__be = window.__be || {};
+            window.__be.id = "65a5d245a6efc4000758a87f";
+            (function() {
+                var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+                be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+            })();
+          </script>
+          <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      window.__be = window.__be || {};
-      window.__be.id = "65a5d245a6efc4000758a87f";
-      (function() {
-          var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
-          be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
-      })();
-    </script>
-    <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
-  </body>
-</html> 
+</body>
+</html>

@@ -33,6 +33,7 @@ checkOut.addEventListener('click', () => {
         customAlert.classList.remove('hide');
         customAlert.classList.add('show');
     }
+    body.classList.remove('active');
 });
 const customAlert = document.querySelector('.alert');
 const successAlert = document.querySelector('.successalert');
@@ -92,12 +93,6 @@ let products = [
         name: 'Green Energy Awareness Sticker Pack',
         image: 'stickers.jpg',
         price: 8.99
-    },
-    {
-        id: 7,
-        name: 'placeholder',
-        image: 'stickers.jpg',
-        price: 20.99
     },
 ];
 let listCards = [];

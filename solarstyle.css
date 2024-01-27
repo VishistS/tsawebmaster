@@ -72,11 +72,8 @@
 #image1 {
     margin-top:10%;
     margin: auto;
-    height: 42%;
-}
-#image2 {
-    margin-top: 1%;
-    height: 52%;
+    border-radius: 20px;
+    height: 80%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -102,8 +99,13 @@
  }
   
 
+ #descpoverview {
+    text-align: center;
+ }
 
-
+ .overview h1 {
+    text-align: center;
+ }
 .btn.btn-collapse {
     padding-bottom: 0;
 

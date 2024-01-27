@@ -75,7 +75,7 @@ Styling for the banner of the website
 Styling for the about section
 #####################################################*/
 
-.aboutgreenenergy, .customerreviews, .introductiontoexploremore {
+.aboutgreenenergy, .customerreviews, .introductiontoexploremore, .exploreshopnews {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -87,8 +87,13 @@ Styling for the about section
     transform: translateY(160px);
     animation: fadeInUp 1s ease-out forwards;
 }
-.aboutgreenenergy:hover,.customerreviews:hover,.introductiontoexploremore:hover {
+
+.aboutgreenenergy:hover,.customerreviews:hover,.introductiontoexploremore:hover, .exploreshopnews:hover {
     background-color: rgba(255, 255, 255, 1);
+}
+
+.exploremore {
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 /*#####################################################
@@ -217,4 +222,11 @@ Styling for the option card
 .c1,.c2,.c3,.c4 {
     height: 13rem;
     border-radius: 20px;
+}
+
+#explorebutton {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--secondary_color);
+    color: white;
 }
