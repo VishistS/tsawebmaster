@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Savings Calculator</title>
+</head>
 
+<body>
+    <h2>Energy Savings Calculator</h2>
+    <form id="savingsForm">
+        <label for="electricityBill">Monthly Electricity Bill ($):</label>
+        <input type="number" id="electricityBill" required>
+
+        <label for="solarPanel">Solar Panels Efficiency (%):</label>
+        <input type="number" id="solarPanel" required>
+
+        <label for="geothermalSystem">Geothermal System Efficiency (%):</label>
+        <input type="number" id="geothermalSystem" required>
+
+        <label for="windTurbine">Wind Turbine Efficiency (%):</label>
+        <input type="number" id="windTurbine" required>
+
+        <button type="button" onclick="calculateSavings()">Calculate Savings</button>
+    </form>
+    <h3 id="savingsResult"></h3>
