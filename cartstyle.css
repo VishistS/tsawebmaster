@@ -55,6 +55,12 @@ header .shopping span{
     flex-direction: column;
     align-items: center;
 }
+
+.energyop-dropdown{
+    border: none;
+    border-radius: 5px;
+}
+
 .card h1{
     color: white;
     font-weight: 100;
