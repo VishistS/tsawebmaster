@@ -15,7 +15,7 @@ background-color: #fff;
         label {
             display: block;
             margin-bottom: 8px;
-            color: black; /* Match your text color */
+            color: black;
         }
         input {
             width: 100%;
