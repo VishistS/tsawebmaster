@@ -1,14 +1,23 @@
 function calculateSavings() {
+  const energySystem = document.getElementById("energySystem").value;
   const electricityBill = parseFloat(document.getElementById("electricityBill").value);
-  const solarPanelEfficiency = parseFloat(document.getElementById("solarPanel").value) / 100;
-  const geothermalEfficiency = parseFloat(document.getElementById("geothermalSystem").value) / 100;
-  const windTurbineEfficiency = parseFloat(document.getElementById("windTurbine").value) / 100;
-  
-  const solarSavings = electricityBill * solarPanelEfficiency;
-  const geothermalSavings = electricityBill * geothermalEfficiency;
-  const windTurbineSavings = electricityBill * windTurbineEfficiency;
-  
-  const totalSavings = solarSavings + geothermalSavings + windTurbineSavings;
-  
-  document.getElementById("savingsResult").innerText = `Estimated Monthly Savings: $${totalSavings.toFixed(2)}`;
+
+  let efficiency;
+
+  switch (energySystem) {
+      case "solar":
+          efficiency = 0.18; // Median efficiency for solar panels
+          break;
+      case "geothermal":
+          efficiency = 0.35; // Median efficiency for geothermal systems
+          break;
+      case "wind":
+          efficiency = 0.30; // Median efficiency for wind turbines
+          break;
+      default:
+          efficiency = 0;
+  }
+
+  const savings = electricityBill * efficiency;
+  document.getElementById("savingsResult").innerText = `Estimated Monthly Savings: $${savings.toFixed(2)}`;
 }
