@@ -45,6 +45,13 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.energyop-dropdown{
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
 button:hover {
     background-color: #4CAF50;
     color: white;
