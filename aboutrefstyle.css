@@ -21,3 +21,7 @@
 .aboutstatements:hover,  .sourcecitations:hover, .documentationinfo:hover {
     background-color: rgba(255, 255, 255, 1);
 }
+
+p2 {
+    font-size: 0.75em;
+  }
