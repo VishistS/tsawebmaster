@@ -1,13 +1,13 @@
 .calculatorTitle{
     background-color: var(--primary_color);
-    text-align: left;
+    text-align: center;
     margin-top: 5%;
-    margin-left: 10%;
-    margin-bottom: 100px;
+    margin-bottom: 3%;
+    animation: fadeInUp 1s ease-out forwards;
 }
-.calculatorTitle h2{
-    font-weight: bold;
-    font-size: 50px;
+
+.calculatorTitle h1 {
+    margin-bottom: 1%;
 }
 .calculator{
     margin-bottom: 100px;
@@ -17,14 +17,15 @@ form {
     max-width: 400px;
     margin: auto;
     margin-top: 20px;
-    background-color: rgba(97, 173, 53, 0.4);
+    background-color: rgba(255, 255, 255, 0.3);
+
     padding: 20px;
     border-radius: 30px;
     transform: translateY(160px);
     animation: fadeInUp 1s ease-out forwards;
 }
 label {
-    text-align: left;
+    text-align: center;
     display: block;
     margin-bottom: 8px;
     color: black;
@@ -34,16 +35,19 @@ label {
 input {
     width: 100%;
     padding: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     box-sizing: border-box;
 }
 button {
-    background-color: white;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--secondary_color);
+    color: white;
+    padding: 10px 10px 10px;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: background-color 0.5s, color 0.5s;
+    margin-top: 1%;
 }
 
 .energyop-dropdown{
@@ -53,9 +57,21 @@ button {
 }
 
 button:hover {
-    background-color: #4CAF50;
-    color: white;
+    transform: scale(1.02);
+    border-radius: 0px;
+}
+button:active {
+    background-color: white;
 }
 #savingsResult {
     color: black;
+}
+
+.disclaimersection {
+    margin-top: -6%;
+    animation: fadeInUp 1s ease-out forwards;
+}
+select {
+    margin-bottom: 4%;
+    text-align: center;
 }

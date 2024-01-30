@@ -85,16 +85,8 @@
     </nav>
 
     <div class="calculatorTitle">
-        <h2>ENERGY SAVINGS CALCULATOR</h2>
-        <h3>Use our calculator to find out how much you can save using green energy!</h3>
-        <p>
-            <i>
-            * This calculator estimates potential monthly savings depending on your electricity bill and the efficiency of various energy solutions.
-            However, it does not account for upfront expenditures, prospective refunds, or system longevity. The exact savings you may enjoy will 
-            vary depending on several factors, including local conditions, installation quality, and the unique characteristics of the chosen energy 
-            conservation solution.
-            </i>
-        </p>
+        <h1><b>ENERGY SAVINGS CALCULATOR</b></h2>
+        <h4>* Use our calculator to find out how much you can save by making the switch to green energy!</h4>
     </div>
 
     <div class="calculator">
@@ -109,11 +101,28 @@
             <label for="electricityBill">Monthly Electricity Bill ($):</label>
             <input type="number" id="electricityBill" required>
 
-            <button type="button" onclick="calculateSavings()">Calculate Savings</button>
+            <button type="button" onclick="calculateSavings(event)">Calculate Savings</button>
         </form>
-        <h3 id="savingsResult"></h3>
+        <br>
+        <h4 id="savingsResult"></h4>
     </div> 
-
+    
+    <div class = "disclaimersection">
+        <div class = "row">
+            <div class = "col"></div>
+            <div class = "col-sm-auto col-md-10"><p>
+                <i>
+                * This calculator estimates potential monthly savings depending on your electricity bill and the efficiency of various energy solutions.
+                However, it does not account for upfront expenditures, prospective refunds, or system longevity. The exact savings you may enjoy will 
+                vary depending on several factors, including local conditions, installation quality, and the unique characteristics of the chosen energy 
+                conservation solution.
+                </i>
+            </p></div>
+            <div class = "col"></div>
+        </div>
+    </div>
+    <br><br>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
