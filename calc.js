@@ -1,14 +1,14 @@
 function calculateSavings(event) {
-  const energySystem = document.getElementById("energySystem").value;
+  const system = document.getElementById("energySystem").value;
   let electricityBill = parseFloat(document.getElementById("electricityBill").value);
 
   let efficiency;
   event.preventDefault();
   if (isNaN(electricityBill)) {
-    alert("Please enter your average monthly electricity bill as a numerical amount.")
+    alert("Please enter your average monthly electricity bill as a number.")
   }
   else {
-    switch (energySystem) {
+    switch (system) {
         case "solar":
             // efficiency for solar
             efficiency = 0.18;
