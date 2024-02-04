@@ -1,22 +1,25 @@
 function calculateSavings(event) {
-  const energySystem = document.getElementById("energySystem").value;
+  const system = document.getElementById("energySystem").value;
   let electricityBill = parseFloat(document.getElementById("electricityBill").value);
 
   let efficiency;
   event.preventDefault();
   if (isNaN(electricityBill)) {
-    alert("Please enter your average monthly electricity bill as a numerical amount.")
+    alert("Please enter your average monthly electricity bill as a number.")
   }
   else {
-    switch (energySystem) {
+    switch (system) {
         case "solar":
-            efficiency = 0.18; // Median efficiency for solar panels
+            // efficiency for solar
+            efficiency = 0.18;
             break;
         case "geothermal":
-            efficiency = 0.35; // Median efficiency for geothermal systems
+            // efficiency for geo
+            efficiency = 0.35;
             break;
         case "wind":
-            efficiency = 0.30; // Median efficiency for wind turbines
+            // efficiency for wind
+            efficiency = 0.30; 
             break;
         default:
             efficiency = 0;
