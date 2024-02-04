@@ -10,13 +10,16 @@ function calculateSavings(event) {
   else {
     switch (energySystem) {
         case "solar":
-            efficiency = 0.18; // Median efficiency for solar panels
+            // efficiency for solar
+            efficiency = 0.18;
             break;
         case "geothermal":
-            efficiency = 0.35; // Median efficiency for geothermal systems
+            // efficiency for geo
+            efficiency = 0.35;
             break;
         case "wind":
-            efficiency = 0.30; // Median efficiency for wind turbines
+            // efficiency for wind
+            efficiency = 0.30; 
             break;
         default:
             efficiency = 0;
