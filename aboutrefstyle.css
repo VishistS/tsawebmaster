@@ -1,0 +1,27 @@
+.banner {
+    margin-top: 3%;
+}
+
+.banner > h1 {
+    font-size: 50px;
+}
+.aboutstatements, .sourcecitations, .documentationinfo {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s ease-in-out;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:auto;
+    width: 70%;
+    border: none;
+    border-radius: 30px;
+    transform: translateY(160px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.aboutstatements:hover,  .sourcecitations:hover, .documentationinfo:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+p2 {
+    font-size: 0.85em;
+  }
