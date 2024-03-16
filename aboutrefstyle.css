@@ -18,6 +18,12 @@
     animation: fadeInUp 1s ease-out forwards;
 }
 
+@media (max-width: 576px) {
+    .sourcecitations p{
+        font-size: 0.5rem;
+    }
+  }
+
 .aboutstatements:hover,  .sourcecitations:hover, .documentationinfo:hover {
     background-color: rgba(255, 255, 255, 1);
 }
