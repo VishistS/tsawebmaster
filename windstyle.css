@@ -30,22 +30,23 @@
     color: black;
     margin-top:-8%;
 }
-.col-sm-8.bannertext {
-    padding-top:1%;
-    border-bottom-style:double;
-    border-top-style:double;
-    margin: auto;
-    padding-bottom:1%;
-    opacity: 0;
-    transform: translateY(160px);
-    animation: fadeInUp 0.7s ease-out forwards;
-    border-width: 2px;
+
+.overview_p .img_caption,
+.overview_p .img_caption2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
-.col-sm-8.bannertext > h1 {
-    font-size: 60px;
+
+.overview_p {
+    display: flex;
+    margin-bottom: 20px;
 }
-.col-sm-8.bannertext > p {
-    font-size: 30px;
+
+@media (max-width: 1024px) {
+    .overview_p{
+        flex-direction: column;
+    }
 }
 
 /* General Section Styling */
