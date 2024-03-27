@@ -25,7 +25,7 @@ function calculateSavings(event) {
             efficiency = 0;
     }
     const savings = electricityBill * efficiency;
-    document.getElementById("savingsResult").innerText = `Estimated Monthly Savings: $${savings.toFixed(2)}`;
+    document.getElementById("savingsResult").innerText = `You could save up to $${savings.toFixed(2)} per month!`;
   }
 
 

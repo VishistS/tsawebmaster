@@ -86,25 +86,23 @@
 
     <div class="calculatorTitle">
         <h1><b>ENERGY SAVINGS CALCULATOR</b></h2>
-        <h4>Use our calculator to find out how much you can save by making the switch to green energy with GreenTomorrow!</h4>
     </div>
 
     <div class="calculator">
         <form id="savingsForm">
-            <label for="energySystem">Select Energy System:</label>
-            <select id="energySystem" class="energyop-dropdown" required>
-                <option value="solar">Solar Panels</option>
+            <label for="energySystem">What are you interested in transitioning to?</label>
+            <select class="form-select form-select-lg" id="energySystem">
+                <option value = "solar">Solar Panels</option>
                 <option value="geothermal">Geothermal Systems</option>
                 <option value="wind">Wind Turbines</option>
             </select>
 
-            <label for="electricityBill">Monthly Electricity Bill ($):</label>
-            <input type="number" id="electricityBill" required>
-
-            <button type="button" onclick="calculateSavings(event)">Calculate Savings</button>
+            <label for="electricityBill">Current Monthly Electricity Bill ($):</label>
+            <input type="number" class="form-control form-control-lg" id="electricityBill">
+            <button type="submit" onclick= "calculateSavings(event)"class="btn btn-primary" id = "mybuttongoat"><b>CALCULATE SAVINGS</b></button>
         </form>
         <br>
-        <h4 id="savingsResult"></h4>
+        <h4 id="savingsResult">Find out how much you could save by making the transition to green energy!</h4>
     </div> 
     <br><br>
     

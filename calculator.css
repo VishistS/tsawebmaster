@@ -14,9 +14,9 @@
 }
 form {
     letter-spacing: 1px;
-    max-width: 400px;
+    max-width: 550px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0px;
     background-color: rgba(255, 255, 255, 0.3);
 
     padding: 20px;
@@ -31,14 +31,16 @@ label {
     color: black;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 18px;
 }
 input {
     width: 100%;
     padding: 8px;
     margin-bottom: 20px;
-    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
 }
-button {
+/* button {
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--secondary_color);
@@ -48,30 +50,58 @@ button {
     letter-spacing: 2px;
     transition: background-color 0.5s, color 0.5s;
     margin-top: 1%;
-}
+} */
 
 .energyop-dropdown{
     border: none;
     border-radius: 5px;
     font-size: 20px;
+    height: 20%;
+    
 }
 
-button:hover {
-    transform: scale(1.02);
-    border-radius: 0px;
-}
-button:active {
-    background-color: white;
-}
 #savingsResult {
     color: black;
 }
 
 .disclaimersection {
-    margin-top: -6%;
+    margin-top: -10%;
     animation: fadeInUp 1s ease-out forwards;
 }
 select {
     margin-bottom: 4%;
     text-align: center;
+}
+
+#energySystem {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+#electricityBill {
+    width: 60%;
+    margin: auto;
+}
+
+#mybuttongoat {
+    margin-top: 20px;
+    background-color: var(--secondary_color);
+    color: white;
+}
+#mybuttongoat:hover {
+    transform: scale(1.02);
+}
+#mybuttongoat:active {
+    background-color: white;
+}
+.btn-primary {
+    background-color: white; 
+    border: none; 
+    color: black;
+    letter-spacing: 2px;
+    padding: 15px;
+}
+.btn-primary:hover {
+    background-color: var(--secondary_color); 
+    color: white;
 }
