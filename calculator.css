@@ -116,7 +116,7 @@ select {
     color: white;
 }
 #disclaimer {
-    font-size: 17px;
+    font-size: 18px;
 }
 @media only screen and (max-width: 800px) {
     .calculatorTitle h1 {
