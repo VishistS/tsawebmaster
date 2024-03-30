@@ -19,7 +19,25 @@
     }
 }
 
+.col-sm-8.bannertext {
+    padding-top:1%;
+    border-bottom-style:double;
+    border-top-style:double;
+    margin: auto;
+    padding-bottom:1%;
+    opacity: 0;
+    transform: translateY(160px);
+    animation: fadeInUp 0.7s ease-out forwards;
+    border-width: 2px;
+}
 
+.col-sm-8.bannertext > h1 {
+    font-size: 60px;
+}
+
+.col-sm-8.bannertext > p {
+    font-size: 30px;
+}
 .banner {
     position: relative;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(assets/windturbinehomebanner.jpg) center center fixed;
@@ -130,9 +148,6 @@
     margin-top: 1%;
 }
 
-#dropdownbut {
-    padding: 10px 10px 0px;
-}
 
 .dropdownbox {
     margin-top:1%;
