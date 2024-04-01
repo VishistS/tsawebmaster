@@ -230,3 +230,14 @@ Styling for the option card
     background-color: var(--secondary_color);
     color: white;
 }
+
+@media only screen and (max-width: 900px){
+    #mobilefix {
+        margin-top: 20px;
+    }
+
+
+}    
+#mobilefix {
+
+}

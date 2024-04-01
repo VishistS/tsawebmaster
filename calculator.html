@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Tomorrow | Savings Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
     <link href="masterstyle.css" rel="stylesheet">
     <link href="calculator.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -85,42 +89,42 @@
     </nav>
 
     <div class="calculatorTitle">
-        <h1><b>ENERGY SAVINGS CALCULATOR</b></h2>
-        <h4>Use our calculator to find out how much you can save by making the switch to green energy with GreenTomorrow!</h4>
+        <div class = "row">
+            <div class = "col"></div>
+            <div class = "col-sm-auto col-md-8"><h1><b>ENERGY SAVINGS CALCULATOR</b></h1></div>
+            <div class = "col"></div>
+        </div>
+        <div class = "row">
+            <div class = "col"></div>
+            <div class = "col-sm-auto col-md-8">
+                <p id = "disclaimer"><i>This calculator estimates potential monthly savings depending on your electricity bill and the efficiency of the selected solution.
+                    It does not account for refunds, upfront expenditures, or any limiting factors. The exact savings you may earn will 
+                    vary depending on several factors, including where you live, installation provider, and much more.</i></p>
+            </div>
+            <div class = "col"></div>
+        </div>
+        
     </div>
 
     <div class="calculator">
         <form id="savingsForm">
-            <label for="energySystem">Select Energy System:</label>
-            <select id="energySystem" class="energyop-dropdown" required>
-                <option value="solar">Solar Panels</option>
+            <label for="energySystem">What are you interested in transitioning to?</label>
+            <select class="form-select form-select-lg" id="energySystem">
+                <option value = "solar">Solar Panels</option>
                 <option value="geothermal">Geothermal Systems</option>
                 <option value="wind">Wind Turbines</option>
             </select>
 
-            <label for="electricityBill">Monthly Electricity Bill ($):</label>
-            <input type="number" id="electricityBill" required>
-
-            <button type="button" onclick="calculateSavings(event)">Calculate Savings</button>
+            <label for="electricityBill">Current Monthly Electricity Bill ($):</label>
+            <input type="number" class="form-control form-control-lg" id="electricityBill">
+            <button type="submit" onclick= "calculateSavings(event)"class="btn btn-primary" id = "mybuttongoat"><b>CALCULATE SAVINGS</b></button>
         </form>
         <br>
-        <h4 id="savingsResult"></h4>
+        <h4 id="savingsResult">Find out how much you could save by making the transition to green energy!</h4>
     </div> 
     <br><br>
     
-    <div class = "disclaimersection">
-        <div class = "row">
-            <div class = "col"></div>
-            <div class = "col-sm-auto col-md-10"><p>
-                <i>
-                Note: This calculator estimates potential monthly savings depending on your electricity bill and the efficiency of the selected solution.
-                It does not account for refunds, upfront expenditures, or any limiting factors. The exact savings you may earn will 
-                vary depending on several factors, including where you live, installation provider, and much more.
-                </i>
-            </p></div>
-            <div class = "col"></div>
-        </div>
-    </div>
+
     <br><br>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -159,8 +163,21 @@
             </div>
         </div>
     </footer>
+    <div class="footerBottom">
+        <p><span class="designer">Green Tomorrow Consulting</span><br>Copyright &copy;2024 </p>
+    </div>
 
     <script src="calc.js"></script>
-    <script>(function(w, d) { w.CollectId = "65bfeb8556c8a5b9944dcf6b"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+    <script>
+        (function(w, d) { 
+            w.CollectId = "65bfeb8556c8a5b9944dcf6b"; 
+            var h = d.head || d.getElementsByTagName("head")[0]; 
+            var s = d.createElement("script"); 
+            s.setAttribute("type", "text/javascript"); 
+            s.async=true; 
+            s.setAttribute("src", "https://collectcdn.com/launcher.js"); 
+            h.appendChild(s); 
+        })(window, document);
+    </script>
 </body>
 </html>

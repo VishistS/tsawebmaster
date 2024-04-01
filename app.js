@@ -61,37 +61,37 @@ let products = [
     {
         id: 1,
         name: 'Eco-Friendly T-Shirt',
-        image: 'tShirt.jpg',
+        image: 'grntmrwshirt.png',
         price: 20.99
     },
     {
         id: 2,
         name: 'Reusable Stainless Steel Water Bottle',
-        image: 'waterbottle.jpg',
+        image: 'greentmrwwaterbottle.png',
         price: 15.50
     },
     {
         id: 3,
         name: 'Recycled Notebook with Eco-Friendly Pen',
-        image: 'notebook.jpg',
+        image: 'greentmrwnotebook.png',
         price: 12.75
     },
     {
         id: 4,
         name: 'Solar-Powered Phone Charger',
-        image: 'solarcharger.jpg',
+        image: 'greentmrwsolarpack.png',
         price: 30.99
     },
     {
         id: 5,
         name: 'Tree Travel Mug',
-        image: 'treemug.jpg',
+        image: 'greentmrwmug.png',
         price: 18.25
     },
     {
         id: 6,
         name: 'Green Energy Awareness Sticker Pack',
-        image: 'stickers.jpg',
+        image: 'greentmrwsticker.png',
         price: 8.99
     },
 ];
