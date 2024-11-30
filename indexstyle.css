@@ -134,6 +134,60 @@ Styling for the review button
 }
 
 
+/*#####################################################
+Styling for the Restuarant Joint Locations
+#####################################################*/
+
+.staff-locations {
+    padding: 4rem 2rem 8rem 2rem; 
+    text-align: center;
+}
+
+.staff-locations h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.map-instruction {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 3px solid #3a8d16; 
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+}
+
+.map-container svg {
+    width: 100%;
+    height: auto;
+}
+
+#employee-locations-dots circle {
+    fill: #3a8d16;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#employee-locations-dots text {
+    font-size: 1rem;
+    fill: #333;
+    text-anchor: middle;
+    pointer-events: none; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#employee-locations-dots g:hover text {
+    opacity: 1;
+}
 
 
 /*#####################################################
