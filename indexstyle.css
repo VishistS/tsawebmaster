@@ -72,6 +72,7 @@ Styling for the banner of the website
 }
 
 #ordernow {
+    animation: fadeInUp 0.7s ease-out forwards;
     margin:auto;
     text-align: center;
 }
@@ -156,10 +157,8 @@ Styling for the review button
 }
 
 .btn-order:hover {
-    transform:scale(1.0);
-    background-color: white; /* White background on hover */
-    color: rgba(97, 173, 53, 0.9); /* Green text on hover */
-    cursor: pointer; /* Pointer cursor on hover */
+    transform:scale(1.02);
+    border: 2px solid black; /* White border */
 }
 
 
