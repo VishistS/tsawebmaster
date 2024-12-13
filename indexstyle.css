@@ -71,6 +71,11 @@ Styling for the banner of the website
     font-size: 60px;
 }
 
+#ordernow {
+    margin:auto;
+    text-align: center;
+}
+
 /*#####################################################
 Styling for the about section
 #####################################################*/
@@ -132,6 +137,31 @@ Styling for the review button
     transition: background-color 0.3s, color 0.3s;
     margin-top: 1%;
 }
+
+
+.btn-order {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid black; /* White border */
+    color: black; /* White text */
+    padding: 10px 20px; /* Adjust padding for proper spacing */
+    display: inline-block;
+    letter-spacing: 2px; /* Slight letter spacing for style */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    margin-top: 1%;
+    font-weight: bold; /* Bold font for emphasis */
+    text-align: center; /* Center text inside the button */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn-order:hover {
+    transform:scale(1.0);
+    background-color: white; /* White background on hover */
+    color: rgba(97, 173, 53, 0.9); /* Green text on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
 
 
 /*#####################################################
