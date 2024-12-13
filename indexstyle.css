@@ -1,3 +1,4 @@
+
 /*#################################################################################################
 we'll apply this css file to the homepage of the website (index.html)
 #################################################################################################*/
@@ -46,34 +47,16 @@ Styling for the banner of the website
 #####################################################*/
 .banner {
     position: relative;
-    min-height: 400px;
-    padding: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(assets/leaf_droplet_clear.jpg) center center fixed;
+    min-height: vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
     color: black;
-    margin-top: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.video-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-    object-fit: cover;
-    object-position: center 40%;
-    z-index: 0;
+    margin-top:-4%;
 }
 
 .col-sm-6.bannertext {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    text-align: center;
     border-bottom-style:double;
     border-top-style:double;
     padding-top:1%;
@@ -86,7 +69,6 @@ Styling for the banner of the website
 }
 .col-sm-6.bannertext > h1 {
     font-size: 60px;
-    color: rgba(97, 173, 53, 0.7);
 }
 
 #ordernow {
