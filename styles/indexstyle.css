@@ -77,29 +77,18 @@ Styling for the banner of the website
     text-align: center;
 }
 
-/* #####################################################
-Styling for columns -- card like 
-#####################################################
 
-.applycard { 
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: background-color 0.5s ease-in-out;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: auto;
-    border: none;
-    border-radius: 30px;
-    transform: translateY(160px);
-    animation: fadeInUp 1s ease-out forwards;
-} 
-
-*/
 
 /*#####################################################
 Styling for the about section
 #####################################################*/
 
-.aboutgreenenergy, .customerreviews, .introductiontoexploremore, .exploreshopnews {
+.aboutgreeneats, .menuhighlights, .customerreviews, .additionalexplore {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+/* .aboutgreenenergy, .customerreviews, .introductiontoexploremore, .exploreshopnews {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
     padding-top: 20px;
@@ -118,23 +107,11 @@ Styling for the about section
 
 .exploremore {
     animation: fadeInUp 1s ease-out forwards;
-}
+} */
 
 /*#####################################################
-Styling for the review button
+Styling for buttons
 #####################################################*/
-/* old styling
-.custbutton {
-    background-color: rgba(146, 202, 149, 0.3);
-    transition: background-color 0.5s ease-in-out;
-    border:none;
-    border-radius:10px;
-}
-
-.customerButton:hover {
-    background-color: rgba(146, 202, 149, 1);
-}
-*/
 
 .btn.btn-collapse {
     padding-bottom: 0;

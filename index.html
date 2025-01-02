@@ -9,8 +9,8 @@
       rel="stylesheet" 
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
       crossorigin="anonymous">
-    <link href = "masterstyle.css" rel = "stylesheet">
-    <link href = "indexstyle.css" rel = "stylesheet">
+    <link href = "styles/masterstyle.css" rel = "stylesheet">
+    <link href = "styles/indexstyle.css" rel = "stylesheet">
     <link rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
@@ -47,20 +47,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="index.html" id = "navbaritems">Home</a>
+                <a class="nav-link" href="" id = "navbaritems">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" id = "navbaritems">About Us</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id = "navbaritems">
                 More
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="newsletter.html" id = "navbaritems">Newsletter</a></li>
-                <li><a class="dropdown-item" href="cart.html" id = "navbaritems">Merchandise</a></li>
-                <li><a class="dropdown-item" href="menu.html" id = "navbaritems">Menu</a></li>
+                <li><a class="dropdown-item" href="" id = "navbaritems">Careers</a></li>
+                <li><a class="dropdown-item" href="" id = "navbaritems">Newsletter</a></li>
+                <li><a class="dropdown-item" href="" id = "navbaritems">Contact Us</a></li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html" id = "navbaritems">Contact Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="aboutref.html" id="navbaritems">References</a>
@@ -120,7 +120,7 @@
       </div>
     </section>
 
-        <!--################################################
+    <!--################################################
         Menu Highlights Section
     #################################################-->
 
@@ -170,10 +170,17 @@
             <p>Explore our delicious plant-based dishes that are both healthy and satisfying. Our menu offers a variety of options to suit every taste.</p>
           </div>
           <div class = "col"></div>
-        </div>      
+        </div>
+        <div class = "row">
+          <div class = "col"></div>
+          <div class = "col-sm-8">
+            <a class="btn btn-collapse" href = "newsletter.html " role = "button" id = ><b>Learn More</b></a>
+          </div>
+          <div class = "col"></div>
+        </div>
       </div>
     </section>
-
+    <br>
     <!--################################################
     Customer Review Section
     #################################################-->
@@ -182,10 +189,10 @@
           <div class="row">
               <div class="col"></div>
               <div class="col-sm-12 col-md-10">
-                  <h1><b>Customer Reviews</b></h1  >
-                  <p>At <b>Green Tomorrow</b>, your complete satisfaction is our guiding purpose. Our team of consultants have decades of experience guiding homeowners through the transition to clean energy solutions for their homes.</p>
+                  <h1><b>Reviews</b></h1  >
+                  <h4><i>Quality food. Guaranteed satisfaction.</i></h4>
                   <button class="btn btn-collapse custbutton" type="button" data-bs-toggle="collapse" data-bs-target="#carouselExample" aria-expanded="false" aria-controls="carouselExample">
-                      <b>&nbsp Don't believe us? &nbsp</b>
+                      <b>&nbsp Hear from customers &nbsp</b>
                   </button>
                   <!--################################################
                   Carousel Review
@@ -312,7 +319,7 @@
     Shop/News Discovery Section
     #################################################-->
 
-    <section class = "exploreshopnews">
+    <section class = "additionalexplore">
       <div class = "container-fluid">
         <div class = "row">
           <div class = "col"></div>
@@ -324,14 +331,26 @@
         </div>
         <div class = "row">
           <div class = "col"></div>
-          <div class = "col-sm-auto col-md-5">
-            <h2><b>Stay Informed</b></h2>
+          <div class = "col-sm-auto col-md-2">
+            <h2><b>Careers</b></h2>
             <p>Our in house newsletter empowers homeowners, just like you, with information regarding green energy advancements.</p>
             <a class="btn btn-collapse" href = "newsletter.html " role = "button" id = ><b>Green News</b></a>
           </button>
           </div>
-          <div class = "col-sm-auto col-md-5" id = "mobilefix">
-            <h2><b>Shop With Us</b></h2>
+          <div class = "col-sm-auto col-md-2" id = "mobilefix">
+            <h2><b>About Us</b></h2>
+            <p>Our in house consumer brand allows homeowners, just like you, to buy sustainable items that help preserve our planet.</p>
+            <a class="btn btn-collapse" href = "cart.html" role = "button" id = ><b>Green Mart</b></a>
+          </button>
+          </div>
+          <div class = "col-sm-auto col-md-2" id = "mobilefix">
+            <h2><b>Newsletter</b></h2>
+            <p>Our in house consumer brand allows homeowners, just like you, to buy sustainable items that help preserve our planet.</p>
+            <a class="btn btn-collapse" href = "cart.html" role = "button" id = ><b>Green Mart</b></a>
+          </button>
+          </div>
+          <div class = "col-sm-auto col-md-2" id = "mobilefix">
+            <h2><b>Contact Us</b></h2>
             <p>Our in house consumer brand allows homeowners, just like you, to buy sustainable items that help preserve our planet.</p>
             <a class="btn btn-collapse" href = "cart.html" role = "button" id = ><b>Green Mart</b></a>
           </button>
@@ -369,15 +388,17 @@
         <div class="footerNav">
           <ul>
               <li><a href="index.html ">Home</a></li>
-              <li><a href="newsletter.html">News</a></li>
-              <li><a href="cart.html">Shop</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="newsletter.html">Careers</a></li>
+              <li><a href="cart.html">About</a></li>
+              <li><a href="contact.html">News</a></li>
+              <li><a href = "aboutref.html">Contact</a></li>
               <li><a href = "aboutref.html">References</a></li>
+
           </ul>
         </div>
       </div>
       <div class="footerBottom">
-          <p><span class="designer">Green Eats Restaurants</span><br>Copyright &copy;2025 </p>
+          <p><span class="designer">Green Eats</span><br>Copyright &copy;2025 </p>
       </div>
   </footer>
     <script>

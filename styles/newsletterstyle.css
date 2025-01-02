@@ -1,0 +1,376 @@
+/*#################################################################################################
+we'll apply this css file to the newsletter of the website (newsletter.html)
+#################################################################################################*/
+
+/*#####################################################
+Global Variables that can be used anywhere
+#####################################################*/
+:root {
+    /*website color scheme colors*/
+    --primary_color: #D2E3C8;
+    --secondary_color: #61ad35;
+    --third_color: #3a8d16;
+    --fourth_color: #1F5708;
+
+    /*contrasting colors*/
+    --light_brown: #e0f9c4;
+
+    /*text colors*/
+    --text_color: black;
+}
+/*#####################################################
+Animations for the website
+#####################################################*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*#####################################################
+Styling for the title
+#####################################################*/
+.newsbanner {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    background-color: rgb(188, 211, 176);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.newsbanner::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.newsbanner h1{
+    font-weight: bold;
+}
+
+.newsbanner p {
+    margin: auto;
+    font-family: 'Raleway';
+    font-size: 18px;
+    letter-spacing: 2px;
+    position: relative;
+    width: max-content;
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.newsbanner p::before,
+.newsbanner p::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.newsbanner p::before{
+    background: rgb(188, 211, 176);
+    animation: typewriter 2.5s steps(60) 1s forwards;
+}
+.newsbanner p::after{
+    width: 0.125em;
+    background: black;
+    animation: typewriter 2.5s steps(60) 1s forwards,
+        blink 1.1s steps(60) infinite;
+}
+
+@keyframes typewriter{
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink{
+    to{
+       background: transparent;
+    }
+}
+@media (max-width: 768px) {
+    .newsbanner{
+        width: 100%;
+    }
+    .newsbanner p {
+        font-size: 10px;
+        margin-top: -60px;
+        margin-bottom: 15px;
+    }
+}
+/*#####################################################
+General styling for all articles
+#####################################################*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.newsarticles{
+    width: 100%;
+}
+.newsblock{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary_color);
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hidden-content{
+    display:none;
+    margin: auto;
+    width: 70%;
+    background-color: white;   
+    border: double;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: black; 
+}
+.hidden-content p{
+    padding: 30px;
+}
+/*#####################################################
+Styling for the left text and right image articles
+#####################################################*/
+.rightImgCheap{
+    width: 50%;
+    height: 600px;
+    background:url(assets/cheapnews.jpg) no-repeat center / cover;
+    border: solid;
+    border-color: var(--secondary_color);
+    border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+.rightImgElectric{
+    width: 50%;
+    height: 600px;
+    background:url(assets/electricnews.jpg) no-repeat center / cover;
+    border: solid;
+    border-color: var(--secondary_color);
+    border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+.leftText{
+    z-index:5;
+    width: 50%;
+    min-height: 400px;
+    background-color: var(--light_brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: solid;
+    border-color: var(--third_color);
+    border-width: 10px;
+    border-radius: 15px;
+    color: black;
+    margin-right: -150px;
+    transform: translateX(-160px);
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+.leftText h1{
+    font-size: 40px;
+    font-weight: lighter;
+}
+.leftText p{
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 25px;
+}
+.leftText button{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.leftText button:hover {
+    background-color: var(--secondary_color);
+    color: white;
+}
+@media only screen and (max-width: 900px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .rightImgCheap{
+        order: 1;
+        height:400px;
+        width: 100%;
+    }
+    .rightImgElectric{
+        order: 1;
+        height:400px;
+        width: 100%;
+    }
+    .leftText{
+        order: 2;
+        width: 80%;
+        margin: 0;
+        margin-top: -100px;
+        margin-bottom: 50px;
+    }
+}
+/*#####################################################
+Styling for the right text and left image articles
+#####################################################*/
+.rightText{
+    z-index:5;
+    width: 50%;
+    min-height: 400px;
+    background-color: var(--light_brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: solid;
+    border-color: var(--third_color);
+    border-width: 10px;
+    border-radius: 15px;
+    color: black;
+    margin-left: -150px;
+    transform: translateX(160px);
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+.rightText h1{
+    font-size: 40px;
+    font-weight: lighter;
+}
+.rightText p{
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 25px;
+}
+.rightText button{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.rightText button:hover {
+    background-color: var(--secondary_color);
+    color: white;
+}
+.leftImgShore{
+    width: 50%;
+    height: 600px;
+    background:url(assets/millionnews.jpg) no-repeat center / cover;
+    border: solid;
+    border-color: var(--secondary_color);
+    border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+.leftImgDevelop{
+    width: 50%;
+    height: 600px;
+    background:url(assets/developingnews.jpg) no-repeat center / cover;
+    border: solid;
+    border-color: var(--secondary_color);
+    border-width: 5px;
+    transform: translateX(160px);
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 900px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .leftImgShore{
+        height: 400px;
+        width: 100%;
+    }
+    .leftImgDevelop{
+        height: 400px;
+        width: 100%;
+    }
+    .rightText{
+        width: 80%;
+        margin: 0;
+        margin-top: -100px;
+        margin-bottom: 50px;
+    }
+    .hidden-content{
+        margin-bottom: 50px;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .hidden-content{
+        margin-bottom: 50px;
+        width: 90%;
+    }
+}
+
+.stayTuned{
+    background-color: rgb(188, 211, 176);
+    margin: auto;
+    width: 70%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+} 
