@@ -364,9 +364,21 @@ Styling for the option card
     font-size: 0.9rem;
 }    
 
-.background-image {
-    background-image: url('bruschetta.jpg'); /* Replace with your image path */
-    background-size: cover; /* Cover the entire card */
-    background-position: center; /* Center the image */
-    color: white; /* Change text color for better contrast, if needed */
-}    
+.background-clip{
+    position: absolute;
+    right:0;
+    bottom:0;
+    z-index:-1;
+}
+@media (min-aspect-ratio:16/9) {
+    .background-clip{
+        width:100%;
+        height:auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .background-clip{
+        width:auto;
+        height:100%;
+    }
+}
