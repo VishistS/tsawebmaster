@@ -242,7 +242,7 @@ Styling for the footer of the review carousel
     margin-top: 30px;
 }
 .card {
-    height: 250px;
+    height: 300px;
     display:flex;
     align-items:center;
 }
@@ -343,4 +343,15 @@ Styling for the option card
     text-align: center; 
     background-color: rgba(191, 230, 155, 0.233); 
     border-radius: 5px; 
+}    
+
+.card-text {
+    font-size: 0.9rem;
+}    
+
+.background-image {
+    background-image: url('bruschetta.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+    color: white; /* Change text color for better contrast, if needed */
 }    
