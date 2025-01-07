@@ -60,41 +60,44 @@ setTimeout(() => {
 let products = [
     {
         id: 1,
-        name: 'Eco-Friendly T-Shirt',
-        image: 'grntmrwshirt.png',
-        price: 20.99
+        name: 'Bruschetta with tomato and basil',
+        image: 'bruschetta.jpg',
+        price: 8.99
     },
     {
         id: 2,
-        name: 'Reusable Stainless Steel Water Bottle',
-        image: 'greentmrwwaterbottle.png',
-        price: 15.50
+        name: 'Roasted Red pepper hummus ',
+        image: 'RRP-hummus.jpg',
+        price: 7.99
     },
     {
         id: 3,
-        name: 'Recycled Notebook with Eco-Friendly Pen',
-        image: 'greentmrwnotebook.png',
-        price: 12.75
+        name: 'Vegan Stuffed Mushroom',
+        image: 'mushroom.jpg',
+        price: 10.75
     },
     {
         id: 4,
-        name: 'Solar-Powered Phone Charger',
-        image: 'greentmrwsolarpack.png',
-        price: 30.99
+        name: 'Spiced Cauliflower Wings',
+        image: 'cauliflower.jpg',
+        price: 6.99
     },
     {
         id: 5,
-        name: 'Tree Travel Mug',
-        image: 'greentmrwmug.png',
-        price: 18.25
+        name: 'Zucchini Fritters',
+        image: 'zuch.jpg',
+        price: 7.49
     },
     {
         id: 6,
-        name: 'Green Energy Awareness Sticker Pack',
-        image: 'greentmrwsticker.png',
+        name: 'Spinach Dip',
+        image: 'spinach-dip.jpg',
         price: 8.99
     },
 ];
+let entrees = [];
+let desserts = [];
+let drinks = [];
 let listCards = [];
 function initApp() {
     products.forEach((value, key) => {
