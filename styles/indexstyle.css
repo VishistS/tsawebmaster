@@ -314,6 +314,7 @@ Styling for the option card
 .c1,.c2,.c3,.c4 {
     height: 13rem;
     border-radius: 20px;
+    border: 2px solid #2f800f;
 }
 
 #explorebutton {
@@ -327,8 +328,6 @@ Styling for the option card
     #mobilefix {
         margin-top: 20px;
     }
-
-
 }    
 .title-border {
     border: 2px solid transparent; 
