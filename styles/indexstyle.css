@@ -301,7 +301,7 @@ Styling for the option card
 .cbopt1,.cbopt2,.cbopt3,.cbopt4 {
     color: black;
     opacity: 0;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     border-radius: 20px;
 }
 
