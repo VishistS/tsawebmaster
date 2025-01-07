@@ -1,0 +1,65 @@
+/* Banner Section */
+.banner {
+background: url('assets/careers-banner.jpg') no-repeat center center/cover;
+color: white;
+padding: 50px 0;
+}
+
+.banner h1 {
+font-size: 3rem;
+}
+
+.banner p {
+font-size: 1.2rem;
+}
+
+/* Why Work With Us Section */
+.why-work h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+}
+
+.icon-box img {
+width: 100px;
+height: 100px;
+margin-bottom: 10px;
+}
+
+.icon-box p {
+font-size: 1rem;
+font-weight: bold;
+}
+
+/* Find Opportunities Section */
+.opportunities h2 {
+margin-bottom: 20px;
+}
+
+.job-listing {
+border: 1px solid #ddd;
+padding: 15px;
+border-radius: 5px;
+}
+
+/* Benefits Section */
+.benefit-box {
+background-color: #f9f9f9;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-box h4 {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.accordion-button {
+background-color: #61ad35;
+color: white;
+}
+
+.accordion-button:not(.collapsed) {
+background-color: #3a8d16;
+}
