@@ -1,37 +1,268 @@
-<nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html" id ="navbaritems">
-        <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32" class="d-inline-block align-text-top" >
-        Green Eats
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-              <a class="nav-link" href="index.html" id = "navbaritems">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="order.html" id = "navbaritems">Order</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html" id = "navbaritems">About Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id = "navbaritems">
-              More
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="careers.html" id = "navbaritems">Careers</a></li>
-              <li><a class="dropdown-item" href="newsletter.html" id = "navbaritems">Newsletter</a></li>
-              <li><a class="dropdown-item" href="contact.html" id = "navbaritems">Contact Us</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutref.html" id="navbaritems">References</a>
-          </li>
-        </ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Green Tomorrow | About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+      crossorigin="anonymous">
+    <link href = "styles/masterstyle.css" rel = "stylesheet">
+    <link href = "styles/about.css" rel = "stylesheet">
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+      integrity="sha512-2nfn3okTjsY5+ALpU+3GHgIiQUCfHOrLCO0Ol8rcYdbx+g6LrPE8tYJ8gvoVH5CQrNrXiEqmV9qUq6uH3o2Www==" 
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <!--################################################
+    Loading Bar and Effect
+    #################################################-->
+    <div class="loader"></div>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loader--hidden");
+        loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+        });
+      });
+    </script>
+
+    <!--################################################
+    Navigation Bar
+    #################################################-->
+    <nav class="navbar sticky-top navbar-expand-lg shadow" id = "navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" id ="navbaritems">
+          <img src="assets/geentmrwlogo.png" alt="Bootstrap" width="40" height="32" class="d-inline-block align-text-top" >
+          Green Eats
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" id = "navbaritems">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order.html" id = "navbaritems">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" id = "navbaritems">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id = "navbaritems">
+                More
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="careers.html" id = "navbaritems">Careers</a></li>
+                <li><a class="dropdown-item" href="newsletter.html" id = "navbaritems">Newsletter</a></li>
+                <li><a class="dropdown-item" href="contact.html" id = "navbaritems">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutref.html" id="navbaritems">References</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    
+      <br><br><br>
+    <!--################################################
+    Title Section
+    #################################################-->
+    <div class="newsbanner">
+        <h1> About Us </h1><br>
+        <p>Scroll down to check out who we are!</p>
     </div>
-  </nav>
+
+    <br><br><br>
+
+    <section class="newsarticles">
+        <!--################################################
+        1st News Section
+        #################################################-->
+        <section class="newsblock">
+          <div class="container">
+            <div class="leftText">
+              <div class="content">
+                <h1>The Benefits of Plant-Based Dining</h1>
+                <p>Recent studies highlight how plant-based meals contribute to a healthier lifestyle and a more sustainable planet. Explore how choosing vegan options can make a difference for you and the environment!</p>
+                <button onclick="toggleContent('cheap-content')" class="btn" data-target="cheap-content" id = "dropdownbtn">Read More</button>
+              </div>
+            </div>
+            <div class="rightImgCheap">
+                <img src="assets/plant-based.jpg" alt="Cheap Green Energy" style="width: 100%; height:590px; object-fit: cover;">
+            </div>
+          </div>
+        </section>
+        <div id="cheap-content" class="hidden-content">
+          <!-- Additional content for Cheap Green Energy -->
+          <p>The quest for sustainable and mindful dining has gained momentum in recent years, with a particular focus on embracing plant-based diets for health, ethics, and the environment. In the pursuit of a greener future, studies and reports have consistently highlighted the economic and ecological benefits of plant-based eating as a cost-effective and impactful lifestyle choice. The abundant availability of plant-based ingredients, coupled with culinary innovation, has made vegan dining more accessible and appealing than ever.
+
+            As concerns about climate change, resource depletion, and personal health intensify, the affordability and sustainability of vegan meals play a pivotal role in driving their widespread adoption. The potential for individuals and communities to engage in this shift is a compelling aspect of the growing movement toward plant-based living. Choosing vegan options at restaurants or incorporating more plant-based meals at home not only contributes to environmental preservation but also fosters personal well-being.
+            
+            This article delves into the significance of these recent trends, emphasizing the transformative impact of adopting a plant-based lifestyle. As society continues to navigate the delicate balance between affordability, health, and sustainability, the rise of plant-based dining stands as a beacon of hope for a more compassionate and sustainable world.</p>
+        </div>
+
+        <!--################################################
+        2nd News Section
+        #################################################-->
+        <section class="newsblock">
+          <div class="container">
+            <div class="leftImgShore">
+                <img src="assets/green-economy.jpg" alt="Plant-Based Initiatives" style="width: 100%; height: 590px; object-fit: cover;">
+            </div>            
+            <div class="rightText">
+              <div class="content">
+                <h1>Plant-Based Initiatives Nourish Communities Nationwide</h1>
+                <p>This year, plant-based dining has gained momentum with innovative projects and restaurants offering sustainable meal options to nourish communities across the nation. Discover how these efforts align with the growing movement toward a more compassionate, eco-conscious future and explore plans to make plant-based meals more accessible to all!</p>
+                <button onclick="toggleContent('shore-content')" class="btn" data-target="shore-content" id = "dropdownbtn2">Read More</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="shore-content" class="hidden-content">
+          <!-- Additional content for US Department -->
+          <p>
+            In a pivotal stride toward a cleaner and more sustainable energy landscape, the Biden-Harris Administration has spearheaded a remarkable initiative by advancing 15 onshore clean energy projects across the nation in the current year. This project truly has the potential to generate sufficient energy to power millions of homes. The commitment to onshore clean energy underscores a strategic move toward reducing carbon emissions, mitigating climate change impacts, and fostering a greener future for the United States.
+            
+            The narrative goes beyond the immediate accomplishments, delving into the intricate details of the Biden-Harris Administration's broader vision. By delving into the administration's plans to permit 25 gigawatts (GW) of renewable energy by 2025, readers can leave with a comprehensive understanding of the ambitious goals set to reshape the country's energy landscape. The exploration of these future plans sheds light on the administration's commitment to accelerating the transition to a more sustainable and resilient energy infrastructure, emphasizing the importance of renewable resources in achieving long-term environmental and economic objectives.</p>
+        </div>
+
+        <!--################################################
+        3rd News Section
+        #################################################-->
+        <section class="newsblock">
+          <div class="container">
+            <div class="leftText">
+              <div class="content">
+                <h1>Is Food Tech Driving the Plant-Based Revolution?</h1>
+                <p>Advancements in food technology are reshaping plant-based dining, making it more innovative and accessible than ever. From lab-grown proteins to AI-crafted recipes, explore how cutting-edge technology is revolutionizing the way we approach sustainable eating and what it means for the future of food.
+                </p>
+                <button onclick="toggleContent('electric-content')" class="btn" data-target="electric-content" id = "dropdownbtn3">Read More</button>
+              </div>
+            </div>
+            <div class="rightImgElectric">
+                <img src="assets/food-tech.jpg" alt="Food Technology" style="width: 100%; height: 590px; object-fit: cover;">
+            </div>
+          </div>
+        </section>
+        <div id="electric-content" class="hidden-content">
+          <!-- Additional content for Electric Cars -->
+          <p>
+            In the evolving world of food technology, the question shaping the future is whether advancements in plant-based innovations will define the next era of dining. With rapid progress in food science and technology, the rise of plant-based alternatives has become a focal point of speculation and excitement.  
+
+In this transformative era, innovations such as lab-grown meats, AI-crafted recipes, and plant-based proteins are revolutionizing the culinary landscape. As society grapples with environmental concerns and the demand for sustainable food options, these advancements offer promising solutions to reduce carbon footprints, conserve resources, and promote health-conscious lifestyles.  
+
+The momentum behind plant-based food technology represents more than a dietary trend—it’s a pivotal leap toward a greener and more sustainable future. This exploration delves into the implications of these breakthroughs, examining expert insights on the feasibility, challenges, and benefits of food technology shaping the future of dining. By highlighting the transformative potential of these innovations, we navigate a future where sustainability and technology intertwine to redefine how and what we eat.</p>
+        </div>
+
+        <!--################################################
+        4th News Section
+        #################################################-->
+        <section class="newsblock">
+          <div class="container">
+            <div class="leftImgDevelop">
+                <img src="assets/diverse-eating.jpg" alt="Diverse Eating" style="width: 100%; height: 590px; object-fit: cover;">
+            </div>
+            <div class="rightText">
+              <div class="content">
+                <h1>Plant-Based Dining in Emerging Markets</h1>
+                <p>As the world moves toward a more sustainable future, every region has a role to play in the shift to eco-friendly practices. Recently, emerging markets have begun embracing plant-based dining as part of this transformation. Read more to discover how these regions are rising to the challenge and redefining food culture. </p>
+                <button onclick="toggleContent('develop-content')" class="btn" data-target="develop-content" id = "dropdownbtn4">Read More</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="develop-content" class="hidden-content">
+          <!-- Additional content for Developing Countries -->
+          <p>In the global movement toward a sustainable future, the role of emerging markets in adopting plant-based dining and food technologies has become increasingly significant. This week, we focus on the growing trend of plant-based initiatives in these regions, showcasing their efforts to embrace eco-conscious and health-driven food practices.  
+
+            As the world collectively strives to reduce environmental impacts and transition toward more sustainable lifestyles, it is essential for every region to contribute to this shift. Recent efforts in emerging markets highlight innovative approaches to overcoming challenges and adopting plant-based solutions. By exploring these initiatives, readers gain insights into how these regions are addressing the intersection of food security, economic growth, and environmental responsibility.  
+            
+            From improving access to sustainable ingredients to fostering local plant-based innovation, these markets are driving progress while paving the way for healthier and more sustainable communities. This narrative highlights their stories of adaptation and leadership, illustrating how they are becoming key players in shaping a more equitable and eco-conscious future.  </p>
+        </div>
+      </section>
+      <script>
+        // Function to toggle the visibility of the hidden content
+        function toggleContent(contentId) {
+          var content = document.getElementById(contentId);
+          if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+          } else {
+            content.style.display = "none";
+          }
+        }
+      </script>
+
+      <br><br><br> 
+
+      <section class="stayTuned">
+          <h1> Stay tuned for more updates, we publish every week! </h1>
+      </section>
+
+      <br><br><br> 
+
+      <!--################################################
+      Waves Section
+      #################################################-->
+      <section class="waves">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+      </section>
+
+      <!--################################################
+      Footer Section
+      #################################################-->
+      <footer>
+          <div class="footerContainer">
+            <div class="socialIcons">
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+              <ul>
+                <li><a href="index.html ">Home</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="newsletter.html">News</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+                <li><a href = "aboutref.html">References</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footerBottom">
+            <p><span class="designer">Green Fury Consulting</span><br>Copyright &copy;2024</p>
+          </div>
+      </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src ="newsletter.js"></script>
+    <script>
+      (function(w, d) { 
+        w.CollectId = "65bfeb8556c8a5b9944dcf6b"; 
+        var h = d.head || d.getElementsByTagName("head")[0]; 
+        var s = d.createElement("script"); 
+        s.setAttribute("type", "text/javascript"); 
+        s.async=true; 
+        s.setAttribute("src", "https://collectcdn.com/launcher.js"); 
+        h.appendChild(s); 
+      })(window, document);
+    </script>
+  </body>
+</html>
