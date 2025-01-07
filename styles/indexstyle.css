@@ -301,7 +301,7 @@ Styling for the option card
 .cbopt1,.cbopt2,.cbopt3,.cbopt4 {
     color: black;
     opacity: 0;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     border-radius: 20px;
 }
 
@@ -314,6 +314,7 @@ Styling for the option card
 .c1,.c2,.c3,.c4 {
     height: 13rem;
     border-radius: 20px;
+    border: 2px solid #2f800f;
 }
 
 #explorebutton {
@@ -327,8 +328,6 @@ Styling for the option card
     #mobilefix {
         margin-top: 20px;
     }
-
-
 }    
 .title-border {
     border: 2px solid transparent; 
@@ -344,21 +343,22 @@ Styling for the option card
     font-size: 0.9rem;
 }    
 
-.background-clip{
+.background-clip {
     position: absolute;
-    right:0;
-    bottom:0;
-    z-index:-1;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
+
 @media (min-aspect-ratio:16/9) {
-    .background-clip{
-        width:100%;
-        height:auto;
+    .background-clip {
+        width: 100%;
+        height: auto;
     }
 }
-@media(max-aspect-ratio:16/9){
-    .background-clip{
-        width:auto;
-        height:100%;
+@media(max-aspect-ratio:16/9) {
+    .background-clip {
+        width: auto;
+        height: 100%;
     }
 }
