@@ -159,7 +159,7 @@ Styling for buttons
     bottom:0;
     opacity:0;
     content:'';
-     background-color: black;
+     background-color: var(--secondary_color);
      z-index: -1;
 }
 .btn-order:hover, .btn-order:focus{
