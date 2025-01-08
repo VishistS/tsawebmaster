@@ -175,6 +175,9 @@ Styling for buttons
     transform: scale(.9);
 }
 
+#placeorderbtn {
+    margin-top: 2%;
+}
 
 /*#####################################################
 Styling for the Restuarant Joint Locations
