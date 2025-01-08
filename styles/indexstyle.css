@@ -141,12 +141,32 @@ Styling for buttons
     color: black; /* White text */
     padding: 10px 20px; /* Adjust padding for proper spacing */
     display: inline-block;
-    letter-spacing: 2px; /* Slight letter spacing for style */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-    margin-top: 1%;
-    font-weight: bold; /* Bold font for emphasis */
-    text-align: center; /* Center text inside the button */
-    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid black;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba (0,0,0,.16), 0 3px 6px rgba (0,0,0,.1);
+    color: black;
+    text-decoration: none;
+    transition: .3s ease all;
+    z-index:1;
+}
+.btn-order:before{
+    transition: .5s all ease;
+    position: absolute;
+    top:0;
+    left:50%;
+    right:50%;
+    bottom:0;
+    opacity:0;
+    content:'';
+     background-color: black;
+     z-index: -1;
+}
+.btn-order:hover, .btn-order:focus{
+    color: white;
 }
 .btn-order:hover {
     transform:scale(1.02);
@@ -154,6 +174,9 @@ Styling for buttons
 }
 
 
+#placeorderbtn {
+    margin-top: 2%;
+}
 
 /*#####################################################
 Styling for the Restuarant Joint Locations
@@ -208,64 +231,6 @@ Styling for the Restuarant Joint Locations
 
 #employee-locations-dots g:hover text {
     opacity: 1;
-}
-
-
-/*#####################################################
-Styling for the footer of the review carousel
-#####################################################*/
-.carousel {
-    margin:auto;
-    width:70%;
-    height: 20%;
-}
-.carousel-control-prev {
-    background-color:  var(--secondary_color);
-    height:15%;
-    width: 5%;
-    margin-top: 10%;
-    margin-left: 5%;
-    border-radius: 10px;
-}
-.carousel-control-next {
-    background-color:  var(--secondary_color);
-    height:15%;
-    width: 5%;
-    margin-top: 10%;
-    margin-right: 5%;
-    border-radius: 10px;
-}
-.carousel-item {
-    height: 250px;
-    margin-top: 30px;
-}
-.card {
-    height: 300px; 
-    overflow: hidden; 
-    border: 2px solid #ccc; 
-    transition: none; 
-}
-
-.card-body {
-    background-color: rgb(255, 255, 255); 
-    padding: 10px; 
-    height: 100%; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.card-title, .card-text {
-    margin: 0; 
-}
-
-.card img{
-    height: 30%;
-    width: 75%;
-}
-.card p{
-    margin-top:5%;
 }
 
 /*#####################################################
@@ -358,5 +323,144 @@ Styling for the option card
     .background-clip {
         width: auto;
         height: 100%;
+    }
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+    padding-bottom: 120px;
+    padding-top: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.testimonials .section-title {
+    font-size: 2.7rem;
+    font-weight: 600;
+    margin-bottom: 75px;
+    color: #000;
+}
+
+.testimonial {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.testimonial .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.testimonial .author {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0000FF;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #e95500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 18px;
+    content: '';
+    color: #e95500;
+    transition: color 0.3s ease;
+}
+
+.carousel-control-prev-icon::before {
+    content: '\f104';
+}
+
+.carousel-control-next-icon::before {
+    content: '\f105';
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #e95500;
+}
+
+.carousel-control-prev-icon:hover::before,
+.carousel-control-next-icon:hover::before {
+    color: #fff;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1 !important;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 275px;
+}
+
+.carousel-control-next {
+    right: 275px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none !important;
+}
+
+.carousel.carousel-fade .carousel-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .carousel-control-prev {
+        left: -50px;
+    }
+
+    .carousel-control-next {
+        right: -50px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .testimonial {
+        padding: 15px;
+    }
+
+    .testimonials .section-title {
+        font-size: 2rem;
     }
 }
