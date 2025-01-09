@@ -330,7 +330,6 @@ Styling for the option card
 .testimonials {
     padding-bottom: 120px;
     padding-top: 50px;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -342,7 +341,6 @@ Styling for the option card
 }
 
 .testimonial {
-    background: #fff;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
