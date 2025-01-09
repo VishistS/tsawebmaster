@@ -94,6 +94,42 @@ let products = [
         image: 'spinach-dip.jpg',
         price: 8.99
     },
+    {
+        id: 7,
+        name: 'Vegetable Stir Fry with Ginger and Garlic',
+        image: 'Stir-Fry.jpg',
+        price: 13.99
+    },
+    {
+        id: 8,
+        name: 'Stuffed Eggplant with Couscous and Herbs',
+        image: 'Stuffed-Couscous.jpg',
+        price: 12.99
+    },
+    {
+        id: 9,
+        name: 'Creamy Coconut Curry with Tofu and Vegetables',
+        image: 'Cocunut-Curry.jpg',
+        price: 12.99
+    },
+    {
+        id: 10,
+        name: 'Mushroom and Spinach Risotto',
+        image: 'Spinach-Risotto.jpg',
+        price: 6.99
+    },
+    {
+        id: 11,
+        name: 'Gluten-Free Pad Thai',
+        image: 'pad-thai.jpg',
+        price: 14.49
+    },
+    {
+        id: 12,
+        name: 'Lentil and Sweet Potato Curry',
+        image: 'lentil-curry.jpg',
+        price: 13.99
+    },
 ];
 let entrees = [];
 let desserts = [];
