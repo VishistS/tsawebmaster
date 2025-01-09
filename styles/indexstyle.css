@@ -134,9 +134,12 @@ Styling for buttons
 
 
 .btn-order {
-    font-size:18px;
-    letter-spacing: 2px;
+    text-decoration: none;
     text-transform: uppercase;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid black; /* White border */
+    color: black; /* White text */
+    padding: 10px 20px; /* Adjust padding for proper spacing */
     display: inline-block;
     text-align: center;
     font-weight: bold;
@@ -159,21 +162,17 @@ Styling for buttons
     bottom:0;
     opacity:0;
     content:'';
-     background-color: var(--secondary_color);
+     background-color: black;
      z-index: -1;
 }
 .btn-order:hover, .btn-order:focus{
     color: white;
 }
-.btn-order:hover:before, .btn-order:focus:before{
-   transition: .5s all ease;
-   left:0;
-   right:0;
-   opacity:1; 
+.btn-order:hover {
+    transform:scale(1.02);
+    border: 2px solid black; /* White border */
 }
-.btn-order:active{
-    transform: scale(.9);
-}
+
 
 #placeorderbtn {
     margin-top: 2%;
