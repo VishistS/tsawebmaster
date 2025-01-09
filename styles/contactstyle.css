@@ -243,3 +243,7 @@
 #mybuttongoat:active {
     background-color: white;
 }
+
+.contactDescription {
+    text-align: left;
+}
