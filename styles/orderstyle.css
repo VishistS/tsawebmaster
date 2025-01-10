@@ -402,3 +402,43 @@ header .shopping span{
     font-weight: bold;
     margin: 35px 0;
 }
+
+.dining-option {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dining-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for spacing */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.dining-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.to-go {
+    background-color: #2196F3; /* Blue background for To-Go */
+}
+
+.to-go:hover {
+    background-color: #0b7dda; /* Darker blue on hover */
+}
+
+.dine-in {
+    background-color: #FF9800; /* Orange background for Dine-In */
+}
+
+.dine-in:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
