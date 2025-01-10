@@ -82,7 +82,7 @@ Styling for the banner of the website
 Styling for the about section
 #####################################################*/
 
-.aboutgreeneats, .menuhighlights, .introductiontomenuhighlights, .customerreviews, .additionalexplore {
+.aboutgreeneats, .menuhighlights, .introductiontomenuhighlights, .customerreviews, .additionalexplore, .testimonials {
     animation: fadeInUp 1s ease-out forwards;
 }
 
