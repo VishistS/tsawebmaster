@@ -18,22 +18,21 @@ checkOut.addEventListener('click', () => {
     if (totalDisplayedPrice > 0) {
         // Clear the cart
         listCards = [];
-        totalDisplayedPrice = 0;
 
         // Reload
         reloadCard();
 
-        // Show success alert
-        const successAlert = document.querySelector('.successalert');
-        successAlert.classList.remove('hide');
-        successAlert.classList.add('show');
+        // Show option for To-Go or Dine-In
+        showDiningOption();
     } else {
         // If the cart is empty, display the custom alert
         const customAlert = document.querySelector('.alert');
         customAlert.classList.remove('hide');
         customAlert.classList.add('show');
+
+        // Close the cart if empty
+        body.classList.remove('active');
     }
-    body.classList.remove('active');
 });
 const customAlert = document.querySelector('.alert');
 const successAlert = document.querySelector('.successalert');
@@ -129,6 +128,42 @@ let products = [
         name: 'Lentil and Sweet Potato Curry',
         image: 'lentil-curry.jpg',
         price: 13.99
+    },
+    {
+        id: 13,
+        name: 'Chocolate Strawberries',
+        image: 'Chocolate-Strawberries.jpg',
+        price: 7.99
+    },
+    {
+        id: 14,
+        name: 'Mango Sorbet',
+        image: 'Mango-sorbet.jpg',
+        price: 8.49
+    },
+    {
+        id: 15,
+        name: 'Oatmeal Cookies',
+        image: 'oatmeal-cookies.jpg',
+        price: 5.99
+    },
+    {
+        id: 16,
+        name: 'Coconut Water',
+        image: 'Coconut-water.jpg',
+        price: 3.99
+    },
+    {
+        id: 17,
+        name: 'Lemonade',
+        image: 'Lemonade.jpg',
+        price: 3.49
+    },
+    {
+        id: 18,
+        name: 'Kombucha',
+        image: 'Kombucha.jpg',
+        price: 3.99
     },
 ];
 let entrees = [];
@@ -232,4 +267,60 @@ function changeQuantityMinus(key) {
     }
 
     reloadCard();
+}
+
+// New function to show dining options
+function showDiningOption() {
+    const diningOptionDiv = document.createElement('div');
+    diningOptionDiv.innerHTML = `
+        <div class="dining-option">
+            <p>Choose your option:</p>
+            <button onclick="selectDiningOption('To-Go')">To-Go</button>
+            <button onclick="selectDiningOption('Dine-In')">Dine-In</button>
+        </div>
+    `;
+    listCard.appendChild(diningOptionDiv);
+}
+
+// New function to handle dining option selection
+function selectDiningOption(option) {
+    // Generate a random number between 15 and 45
+    const estimatedTime = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
+
+    // Prepare the thank you message
+    let message = '';
+    if (option === 'To-Go') {
+        message = `Your order has been processed and has an estimated time of ${estimatedTime} minutes before arrival. Thank you for your order!`;
+    } else if (option === 'Dine-In') {
+        message = `Thank you for your order!`;
+    }
+
+    // Log the selection
+    console.log(message);
+    
+    // Show thank you message
+    const successAlert = document.querySelector('.successalert');
+    successAlert.classList.remove('hide');
+    successAlert.classList.add('show');
+    successAlert.innerText = message; // Set the message text
+
+    // Reset the price counter
+    totalDisplayedPrice = 0; // Reset the total price
+
+    // Reload the cart to reflect the reset total
+    reloadCard(); // Call reloadCard to update the displayed total and quantity
+
+    // Automatically close the success alert after 6 seconds
+    setTimeout(() => {
+        successAlert.classList.remove('show');
+        successAlert.classList.add('hide');
+    }, 6000); // 6000 milliseconds = 6 seconds
+
+    // Remove the dining option after selection
+    const diningOptionDiv = document.querySelector('.dining-option');
+    diningOptionDiv.remove(); 
+
+    // Automatically close the cart after selection
+    body.classList.remove('active'); // Close the cart
+    console.log('Cart closed'); // Debugging log
 }

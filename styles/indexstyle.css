@@ -82,14 +82,13 @@ Styling for the banner of the website
 Styling for the about section
 #####################################################*/
 
-.introductiontomenuhighlights_background {
-    background-color: white;
-}
-
-.aboutgreeneats, .menuhighlights, .introductiontomenuhighlights, .customerreviews, .additionalexplore {
+.aboutgreeneats, .menuhighlights, .introductiontomenuhighlights, .customerreviews, .additionalexplore, .testimonials {
     animation: fadeInUp 1s ease-out forwards;
 }
 
+.additionalexplore {
+    margin-top: -5%;
+}
 
 /* .aboutgreenenergy, .customerreviews, .introductiontoexploremore, .exploreshopnews {
     background-color: rgba(255, 255, 255, 0.3);
@@ -392,21 +391,18 @@ Styling for the option card
 
 .carousel-control-prev,
 .carousel-control-next {
-    opacity: 1 !important;
-    width: auto;
-    height: auto;
-    position: absolute;
+    width: 5%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 }
 
 .carousel-control-prev {
-    left: 275px;
+    left: -10px; /* Reduced from -20px to bring the arrow closer */
 }
 
 .carousel-control-next {
-    right: 275px;
+    right: -10px; /* Reduced from -20px to bring the arrow closer */
 }
 
 .carousel-control-prev:hover,
@@ -417,6 +413,7 @@ Styling for the option card
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-image: none !important;
+    padding: 10px;
 }
 
 .carousel.carousel-fade .carousel-item {
@@ -429,11 +426,11 @@ Styling for the option card
 
 @media (max-width: 768px) {
     .carousel-control-prev {
-        left: -50px;
+        left: -30px; /* Adjusted for smaller screens */
     }
 
     .carousel-control-next {
-        right: -50px;
+        right: -30px; /* Adjusted for smaller screens */
     }
 
     .carousel-control-prev,
@@ -449,3 +446,51 @@ Styling for the option card
         font-size: 2rem;
     }
 }
+
+#testimonialCarousel { 
+    margin-top: 2%;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
