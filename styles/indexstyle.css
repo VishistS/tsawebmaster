@@ -82,6 +82,10 @@ Styling for the banner of the website
 Styling for the about section
 #####################################################*/
 
+.introductiontomenuhighlights_background {
+    background-color: white;
+}
+
 .aboutgreeneats, .menuhighlights, .introductiontomenuhighlights, .customerreviews, .additionalexplore {
     animation: fadeInUp 1s ease-out forwards;
 }
