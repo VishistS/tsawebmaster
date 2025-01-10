@@ -32,11 +32,16 @@ checkOut.addEventListener('click', () => {
 
         // Close the cart if empty
         body.classList.remove('active');
+
+        // Automatically close the custom alert after 6 seconds
+        setTimeout(() => {
+            customAlert.classList.remove('show');
+            customAlert.classList.add('hide');
+        }, 6000); // 6000 milliseconds = 6 seconds
     }
 });
-const customAlert = document.querySelector('.alert');
-const successAlert = document.querySelector('.successalert');
 
+// New function to close alerts
 const closeAlerts = () => {
     customAlert.classList.remove('show');
     customAlert.classList.add('hide');
@@ -51,11 +56,13 @@ closeAlertBtn.addEventListener('click', closeAlerts);
 const successCloseBtn = document.querySelector('.successclose-btn');
 successCloseBtn.addEventListener('click', closeAlerts);
 
-// Set timeout for hiding alerts (e.g., 3 seconds)
-const timeoutDuration = 3000; // Adjust timeout duration in milliseconds
+// Set timeout for hiding success alerts (6 seconds)
+const successTimeoutDuration = 6000; // Adjust timeout duration in milliseconds
 setTimeout(() => {
-    closeAlerts();
-}, timeoutDuration);
+    successAlert.classList.remove('show');
+    successAlert.classList.add('hide');
+}, successTimeoutDuration);
+
 let products = [
     {
         id: 1,
