@@ -130,6 +130,42 @@ let products = [
         image: 'lentil-curry.jpg',
         price: 13.99
     },
+    {
+        id: 13,
+        name: 'Chocolate Strawberries',
+        image: 'Chocolate-Strawberries.jpg',
+        price: 7.99
+    },
+    {
+        id: 14,
+        name: 'Mango Sorbet',
+        image: 'Mango-sorbet.jpg',
+        price: 8.49
+    },
+    {
+        id: 15,
+        name: 'Oatmeal Cookies',
+        image: 'oatmeal-cookies.jpg',
+        price: 5.99
+    },
+    {
+        id: 16,
+        name: 'Coconut Water',
+        image: 'Coconut-water.jpg',
+        price: 3.99
+    },
+    {
+        id: 17,
+        name: 'Lemonade',
+        image: 'Lemonade.jpg',
+        price: 3.49
+    },
+    {
+        id: 18,
+        name: 'Kombucha',
+        image: 'Kombucha.jpg',
+        price: 3.99
+    },
 ];
 let entrees = [];
 let desserts = [];
