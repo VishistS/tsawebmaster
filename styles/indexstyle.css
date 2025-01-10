@@ -453,12 +453,12 @@ Styling for the option card
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
+    perspective: 1000px; /* Enables 3D flip effect */
+    display: inline-block; /* Ensures proper alignment */
+    width: 100%; /* Match the parent container width */
+    height: auto; /* Adjust height dynamically */
 }
-  
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -467,26 +467,45 @@ Styling for the option card
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-  
+
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Flip effect */
 }
-  
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; /* Safari compatibility */
     backface-visibility: hidden;
 }
-  
+
+/* Front side styling (original image) */
 .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e8f5e9, #f9fbe7); /* Original gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Original shadow */
+    transform: rotate(0deg); /* Ensure front is visible by default */
 }
-  
+
+.flip-card-front img {
+    max-width: 70%; /* Original max-width */
+    height: auto; /* Ensure proportional scaling */
+    transform: rotate(-1deg); /* Slight rotation for aesthetics */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Back side styling */
 .flip-card-back {
     background-color: dodgerblue;
     color: white;
-    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg); /* Hidden by default */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    border-radius: 10px;
 }
