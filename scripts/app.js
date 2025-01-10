@@ -14,6 +14,7 @@ openShopping.addEventListener('click', ()=>{
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
+// Event listener to show the custom alert and handle the case when the cart is empty
 checkOut.addEventListener('click', () => {
     if (totalDisplayedPrice > 0) {
         // Clear the cart
@@ -43,6 +44,8 @@ checkOut.addEventListener('click', () => {
 
 // New function to close alerts
 const closeAlerts = () => {
+    const customAlert = document.querySelector('.alert');
+    const successAlert = document.querySelector('.successalert');
     customAlert.classList.remove('show');
     customAlert.classList.add('hide');
 
@@ -51,14 +54,23 @@ const closeAlerts = () => {
 };
 
 const closeAlertBtn = document.querySelector('.close-btn');
-closeAlertBtn.addEventListener('click', closeAlerts);
+closeAlertBtn.addEventListener('click', () => {
+    const customAlert = document.querySelector('.alert');
+    customAlert.classList.remove('show');
+    customAlert.classList.add('hide');
+});
 
 const successCloseBtn = document.querySelector('.successclose-btn');
-successCloseBtn.addEventListener('click', closeAlerts);
+successCloseBtn.addEventListener('click', () => {
+    const successAlert = document.querySelector('.successalert');
+    successAlert.classList.remove('show');
+    successAlert.classList.add('hide');
+});
 
 // Set timeout for hiding success alerts (6 seconds)
 const successTimeoutDuration = 6000; // Adjust timeout duration in milliseconds
 setTimeout(() => {
+    const successAlert = document.querySelector('.successalert');
     successAlert.classList.remove('show');
     successAlert.classList.add('hide');
 }, successTimeoutDuration);
@@ -325,7 +337,9 @@ function selectDiningOption(option) {
 
     // Remove the dining option after selection
     const diningOptionDiv = document.querySelector('.dining-option');
-    diningOptionDiv.remove(); 
+    if (diningOptionDiv) {
+        diningOptionDiv.remove();
+    }
 
     // Automatically close the cart after selection
     body.classList.remove('active'); // Close the cart
