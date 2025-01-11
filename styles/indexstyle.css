@@ -450,47 +450,60 @@ Styling for the option card
 #testimonialCarousel { 
     margin-top: 2%;
 }
+
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
+    perspective: 1000px;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+}
+
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; /* Safari compatibility */
     backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
+}
+
+.flip-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e8f5e9, #f9fbe7); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(0deg);
+}
+
+.flip-card-front img {
+    max-width: 70%;
+    height: auto;
+    transform: rotate(-1deg);
+    border-radius: 10px;
+}
+
+.flip-card-back {
     background-color: dodgerblue;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: rotateY(180deg);
-  }
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
