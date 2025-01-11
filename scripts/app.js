@@ -289,22 +289,23 @@ function changeQuantityMinus(key) {
 }
 
 // New function to show dining options
+// New function to show dining options with styling
 function showDiningOption() {
     const diningOptionDiv = document.createElement('div');
+    diningOptionDiv.classList.add('dining-option');
     diningOptionDiv.innerHTML = `
-        <div class="dining-option">
-            <p>Choose your option:</p>
-            <button onclick="selectDiningOption('To-Go')">To-Go</button>
-            <button onclick="selectDiningOption('Dine-In')">Dine-In</button>
-        </div>
+        <p>Choose your option:</p>
+        <button class="dining-button to-go" onclick="selectDiningOption('To-Go')">To-Go</button>
+        <button class="dining-button dine-in" onclick="selectDiningOption('Dine-In')">Dine-In</button>
     `;
     listCard.appendChild(diningOptionDiv);
 }
 
+
 // New function to handle dining option selection
 function selectDiningOption(option) {
     // Generate a random number between 15 and 45
-    const estimatedTime = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
+    const estimatedTime = Math.floor(Math.random() * (55 - 15 + 1)) + 15;
 
     // Prepare the thank you message
     let message = '';
