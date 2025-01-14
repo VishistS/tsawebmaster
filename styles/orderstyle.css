@@ -408,6 +408,12 @@ header .shopping span{
     margin: 20px 0;
 }
 
+.dining-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .dining-button {
     background-color: #4CAF50; /* Green background */
     border: none; /* Remove borders */

@@ -14,6 +14,7 @@ openShopping.addEventListener('click', ()=>{
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
+// Event listener to show the custom alert and handle the case when the cart is empty
 checkOut.addEventListener('click', () => {
     if (totalDisplayedPrice > 0) {
         // Clear the cart
@@ -32,12 +33,19 @@ checkOut.addEventListener('click', () => {
 
         // Close the cart if empty
         body.classList.remove('active');
+
+        // Automatically close the custom alert after 6 seconds
+        setTimeout(() => {
+            customAlert.classList.remove('show');
+            customAlert.classList.add('hide');
+        }, 6000); // 6000 milliseconds = 6 seconds
     }
 });
-const customAlert = document.querySelector('.alert');
-const successAlert = document.querySelector('.successalert');
 
+// New function to close alerts
 const closeAlerts = () => {
+    const customAlert = document.querySelector('.alert');
+    const successAlert = document.querySelector('.successalert');
     customAlert.classList.remove('show');
     customAlert.classList.add('hide');
 
@@ -46,16 +54,27 @@ const closeAlerts = () => {
 };
 
 const closeAlertBtn = document.querySelector('.close-btn');
-closeAlertBtn.addEventListener('click', closeAlerts);
+closeAlertBtn.addEventListener('click', () => {
+    const customAlert = document.querySelector('.alert');
+    customAlert.classList.remove('show');
+    customAlert.classList.add('hide');
+});
 
 const successCloseBtn = document.querySelector('.successclose-btn');
-successCloseBtn.addEventListener('click', closeAlerts);
+successCloseBtn.addEventListener('click', () => {
+    const successAlert = document.querySelector('.successalert');
+    successAlert.classList.remove('show');
+    successAlert.classList.add('hide');
+});
 
-// Set timeout for hiding alerts (e.g., 3 seconds)
-const timeoutDuration = 3000; // Adjust timeout duration in milliseconds
+// Set timeout for hiding success alerts (6 seconds)
+const successTimeoutDuration = 6000; // Adjust timeout duration in milliseconds
 setTimeout(() => {
-    closeAlerts();
-}, timeoutDuration);
+    const successAlert = document.querySelector('.successalert');
+    successAlert.classList.remove('show');
+    successAlert.classList.add('hide');
+}, successTimeoutDuration);
+
 let products = [
     {
         id: 1,
@@ -270,22 +289,23 @@ function changeQuantityMinus(key) {
 }
 
 // New function to show dining options
+// New function to show dining options with styling
 function showDiningOption() {
     const diningOptionDiv = document.createElement('div');
+    diningOptionDiv.classList.add('dining-option');
     diningOptionDiv.innerHTML = `
-        <div class="dining-option">
-            <p>Choose your option:</p>
-            <button onclick="selectDiningOption('To-Go')">To-Go</button>
-            <button onclick="selectDiningOption('Dine-In')">Dine-In</button>
-        </div>
+        <p>Choose your option:</p>
+        <button class="dining-button to-go" onclick="selectDiningOption('To-Go')">To-Go</button>
+        <button class="dining-button dine-in" onclick="selectDiningOption('Dine-In')">Dine-In</button>
     `;
     listCard.appendChild(diningOptionDiv);
 }
 
+
 // New function to handle dining option selection
 function selectDiningOption(option) {
     // Generate a random number between 15 and 45
-    const estimatedTime = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
+    const estimatedTime = Math.floor(Math.random() * (55 - 15 + 1)) + 15;
 
     // Prepare the thank you message
     let message = '';
@@ -318,7 +338,9 @@ function selectDiningOption(option) {
 
     // Remove the dining option after selection
     const diningOptionDiv = document.querySelector('.dining-option');
-    diningOptionDiv.remove(); 
+    if (diningOptionDiv) {
+        diningOptionDiv.remove();
+    }
 
     // Automatically close the cart after selection
     body.classList.remove('active'); // Close the cart
