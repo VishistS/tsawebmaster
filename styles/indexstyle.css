@@ -425,6 +425,27 @@ Styling for the option card
     transition: opacity 0.5s ease-in-out;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 10px; /* Bring closer to the carousel content */
+}
+
+.carousel-control-next {
+    right: 10px; /* Bring closer to the carousel content */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important;
+}
+
 @media (max-width: 768px) {
     .carousel-control-prev {
         left: -30px; /* Adjusted for smaller screens */
