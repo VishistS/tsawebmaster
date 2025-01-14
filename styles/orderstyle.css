@@ -410,8 +410,8 @@ header .shopping span{
 
 .dining-buttons {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between buttons */
 }
 
 .dining-button {
