@@ -394,9 +394,10 @@ Styling for the right text and left image articles
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    font-family: 'Times New Roman', Times, serif; /* Updated font-family */
+    font-family: 'Times New Roman', Times, serif;
     transform: translateY(-5px);
     transform: translateX(50px);
+    font-weight: 900;
 }
 
 
