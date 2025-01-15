@@ -477,7 +477,7 @@ Styling for the option card
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari compatibility */
+    -webkit-backface-visibility: hidden; /* Safari compatibility 
     backface-visibility: hidden;
 }
 
