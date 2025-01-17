@@ -185,10 +185,11 @@ let products = [
         price: 3.99
     },
 ];
-let entrees = [];
-let desserts = [];
-let drinks = [];
+let listEntrees = [];
+let listDesserts = [];
+let listDrinks = [];
 let listCards = [];
+
 function initApp() {
     products.forEach((value, key) => {
         let newDiv = document.createElement('div');
