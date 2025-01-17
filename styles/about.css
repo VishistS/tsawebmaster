@@ -62,85 +62,33 @@ Animations for the website
     }
 }
 /*#####################################################
-Styling for the title
+Styling for the banner
 #####################################################*/
-.newsbanner {
+
+.banner {
     position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(/assets/windbanner.jpg ) center center fixed;
+    min-height: vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+    color: black;
+    margin-top:-4%;
+}
+
+.col-sm-6.bannertext {
+    border-bottom-style:double;
+    border-top-style:double;
+    padding-top:1%;
     margin: auto;
-    width: 70%;
-    background-color: rgb(188, 211, 176);
-    padding-top: 5%;
-    padding-bottom: 5%;
-    overflow: hidden;
-    text-align: center;
+    padding-bottom:1%;
+    opacity: 0;
+    transform: translateY(160px);
+    animation: fadeInUp 0.7s ease-out forwards;
+    border-width: 2px;
 }
-
-.newsbanner::after {
-    content: '\f107';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    font-size: 30px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.newsbanner h1{
-    font-weight: bold;
-}
-
-.newsbanner p {
-    margin: auto;
-    font-family: 'Raleway';
-    font-size: 18px;
-    letter-spacing: 2px;
-    position: relative;
-    width: max-content;
-    display: inline-block;
-    white-space: nowrap;
-    text-transform: uppercase;
-}
-.newsbanner p::before,
-.newsbanner p::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.newsbanner p::before{
-    background: rgb(188, 211, 176);
-    animation: typewriter 2.5s steps(60) 1s forwards;
-}
-.newsbanner p::after{
-    width: 0.125em;
-    background: black;
-    animation: typewriter 2.5s steps(60) 1s forwards,
-        blink 1.1s steps(60) infinite;
-}
-
-@keyframes typewriter{
-    to {
-        left: 100%;
-    }
-}
-@keyframes blink{
-    to{
-       background: transparent;
-    }
-}
-@media (max-width: 768px) {
-    .newsbanner{
-        width: 100%;
-    }
-    .newsbanner p {
-        font-size: 10px;
-        margin-top: -60px;
-        margin-bottom: 15px;
-    }
+.col-sm-6.bannertext > h1 {
+    font-size: 60px;
 }
 /*#####################################################
 General styling for all articles
