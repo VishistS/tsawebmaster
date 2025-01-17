@@ -370,3 +370,81 @@ Styling for the right text and left image articles
 .map-dot:nth-child(2) { animation-delay: 0.5s; }
 .map-dot:nth-child(3) { animation-delay: 1s; }
 .map-dot:nth-child(4) { animation-delay: 1.5s; }
+
+.map-instruction {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Map Container */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* SVG Map Styles */
+svg {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    display: block;
+}
+
+/* State Paths */
+path {
+    fill: #f9f9f9;
+    stroke: #000;
+    stroke-width: 0.97;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+    cursor: pointer;
+}
+
+path:hover, path:focus {
+    fill: #ccc;
+    stroke: #333;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .map-instruction {
+        font-size: 1rem;
+    }
+    
+    path {
+        stroke-width: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .map-instruction {
+        font-size: 0.9rem;
+    }
+}
+
