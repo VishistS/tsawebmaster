@@ -336,3 +336,12 @@ footer{
         margin: 10px;
     }
 }
+
+hr { 
+    /* Sleek and Apparent Horizontal Line Style */
+    border: none;
+    border-top: 5px solid rgba(0, 0, 0, 0.3); /* Increased thickness to 5px and made the color darker */
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+}
