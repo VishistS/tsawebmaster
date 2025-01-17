@@ -498,11 +498,7 @@ Styling for the option card
     position: absolute;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
-    -webkit-backface-visibility: hidden; /* Safari compatibility 
-=======
     -webkit-backface-visibility: hidden; 
->>>>>>> 78fddc5be70ee235ff33162e63382310654fc23a
     backface-visibility: hidden;
 }
 
