@@ -325,7 +325,7 @@ Styling for the right text and left image articles
 /* Map dot styling */
 .map-dot {
     fill: #24a50a;
-    stroke: white;
+    stroke: rgb(190, 243, 120);
     stroke-width: 2;
     cursor: pointer;
     transition: all 0.3s ease;
