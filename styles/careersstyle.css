@@ -1,65 +1,72 @@
-/* Banner Section */
-.banner {
-background: url('assets/careers-banner.jpg') no-repeat center center/cover;
-color: white;
-padding: 50px 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
-
-.banner h1 {
-font-size: 3rem;
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
-
-.banner p {
-font-size: 1.2rem;
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
 }
-
-/* Why Work With Us Section */
-.why-work h2 {
-font-size: 2.5rem;
-margin-bottom: 20px;
+header p {
+    font-size: 1.2rem;
+    color: #555;
 }
-
-.icon-box img {
-width: 100px;
-height: 100px;
-margin-bottom: 10px;
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
 }
-
-.icon-box p {
-font-size: 1rem;
-font-weight: bold;
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
 }
-
-/* Find Opportunities Section */
-.opportunities h2 {
-margin-bottom: 20px;
+.carousel-item {
+    min-width: 25%;
+    text-align: center;
+    padding: 10px;
 }
-
-.job-listing {
-border: 1px solid #ddd;
-padding: 15px;
-border-radius: 5px;
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 50%;
 }
-
-/* Benefits Section */
-.benefit-box {
-background-color: #f9f9f9;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
 }
-
-.benefit-box h4 {
-font-size: 1.2rem;
-margin-bottom: 10px;
+.opportunities {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #eef;
 }
-
-/* FAQ Section */
-.accordion-button {
-background-color: #61ad35;
-color: white;
+.dropdown {
+    margin-right: 20px;
 }
-
-.accordion-button:not(.collapsed) {
-background-color: #3a8d16;
+.dropdown label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+.dropdown select {
+    padding: 5px;
+    font-size: 1rem;
+}
+.careers {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    max-width: 400px;
+}
+.careers h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
