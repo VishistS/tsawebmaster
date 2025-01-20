@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers at Grean Eats</title>
-    <link href = "styles/masterstyle.css" rel = "stylesheet">
-    <link href = "styles/careersstyle.css" rel = "stylesheet">
+    <link rel="stylesheet" href="styles/masterstyle.css">
+    <link rel="stylesheet" href="styles/careersstyle.css">
 </head>
 <body>
     <header>
@@ -50,6 +50,10 @@
                     <p>Employee Support</p>
                 </div>
             </div>
+            <div class="carousel-buttons">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
         </div>
     </section>
 
@@ -72,10 +76,26 @@
 
     <script>
         const careersData = {
-            nyc: ["Sous Chef", "Server", "Dishwasher"],
-            la: ["Barista", "Line Cook", "Host/Hostess"],
-            sf: ["Manager", "Pastry Chef", "Cashier"],
-            chi: ["Prep Cook", "Waiter", "Busser"]
+            nyc: [
+                { title: "Sous Chef", description: "Lead kitchen operations", url: "#" },
+                { title: "Server", description: "Provide excellent customer service", url: "#" },
+                { title: "Dishwasher", description: "Maintain kitchen cleanliness", url: "#" }
+            ],
+            la: [
+                { title: "Barista", description: "Craft specialty coffee", url: "#" },
+                { title: "Line Cook", description: "Prepare fresh dishes", url: "#" },
+                { title: "Host/Hostess", description: "Greet and seat guests", url: "#" }
+            ],
+            sf: [
+                { title: "Manager", description: "Oversee daily operations", url: "#" },
+                { title: "Pastry Chef", description: "Create delicious desserts", url: "#" },
+                { title: "Cashier", description: "Handle transactions", url: "#" }
+            ],
+            chi: [
+                { title: "Prep Cook", description: "Assist in meal preparation", url: "#" },
+                { title: "Waiter", description: "Serve guests with a smile", url: "#" },
+                { title: "Busser", description: "Maintain dining area", url: "#" }
+            ]
         };
 
         function showCareers() {
@@ -84,11 +104,18 @@
 
             if (location && careersData[location]) {
                 const careersList = careersData[location]
-                    .map(career => `<li>${career}</li>`)
+                    .map(career => `
+                        <div class="job">
+                            <h3>${career.title}</h3>
+                            <p>${career.description}</p>
+                            <button onclick="window.location.href='${career.url}'">More Info</button>
+                            <button onclick="alert('Application form for ${career.title}')">Apply Now</button>
+                        </div>
+                    `)
                     .join("");
                 careersDiv.innerHTML = `
                     <h2>Careers Available</h2>
-                    <ul>${careersList}</ul>
+                    ${careersList}
                 `;
             } else {
                 careersDiv.innerHTML = `
@@ -97,6 +124,30 @@
                 `;
             }
         }
+
+        // Carousel Functionality
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        let index = 0;
+
+        document.getElementById('prev').addEventListener('click', () => {
+            index = (index - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            index = (index + 1) % items.length;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 25}%)`;
+        }
+
+        setInterval(() => {
+            index = (index + 1) % items.length;
+            updateCarousel();
+        }, 5000);
     </script>
 </body>
 </html>
