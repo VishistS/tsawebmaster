@@ -3,100 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers at Grean Eats</title>
-    <link href = "styles/masterstyle.css" rel = "stylesheet">
-    <link href = "styles/careersstyle.css" rel = "stylesheet">
+    <title>Careers at Green Eats</title>
+    <link rel="stylesheet" href="styles/masterstyle.css">
+    <link rel="stylesheet" href="styles/careersstyle.css">
 </head>
 <body>
-    <header>
-        <h1>Careers at Grean Eats</h1>
-        <p>Join us in spreading compassion and flavor, one plate at a time.</p>
-    </header>
+    <h1>Careers at Green Eats</h1>
+    <h2>Join us in spreading compassion and flavor, one plate at a time</h2>
 
-    <section>
-        <h2 style="text-align: center;">Why Work With Us</h2>
-        <div class="carousel">
-            <div class="carousel-track">
-                <div class="carousel-item">
-                    <img src="image1.jpg" alt="Career Growth">
-                    <p>Career Growth</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image2.jpg" alt="Sustainability">
-                    <p>Sustainability</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image3.jpg" alt="Community">
-                    <p>Community</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image4.jpg" alt="Positivity">
-                    <p>Positivity</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image5.jpg" alt="Innovation">
-                    <p>Innovation</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image6.jpg" alt="Diversity">
-                    <p>Diversity</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image7.jpg" alt="Work-Life Balance">
-                    <p>Work-Life Balance</p>
-                </div>
-                <div class="carousel-item">
-                    <img src="image8.jpg" alt="Employee Support">
-                    <p>Employee Support</p>
-                </div>
-            </div>
+    <section class="carousel">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-item"><img src="image1.jpg" alt="Career Growth"><p>Career Growth</p></div>
+            <div class="carousel-item"><img src="image2.jpg" alt="Sustainability"><p>Sustainability</p></div>
+            <div class="carousel-item"><img src="image3.jpg" alt="Community"><p>Community</p></div>
+            <div class="carousel-item"><img src="image4.jpg" alt="Positivity"><p>Positivity</p></div>
+            <div class="carousel-item"><img src="image5.jpg" alt="Innovation"><p>Innovation</p></div>
+            <div class="carousel-item"><img src="image6.jpg" alt="Diversity"><p>Diversity</p></div>
+            <div class="carousel-item"><img src="image7.jpg" alt="Wellness"><p>Wellness</p></div>
+            <div class="carousel-item"><img src="image8.jpg" alt="Teamwork"><p>Teamwork</p></div>
+        </div>
+        <div class="carousel-controls">
+            <button id="prev">&#9664;</button>
+            <button id="next">&#9654;</button>
         </div>
     </section>
 
     <section class="opportunities">
-        <div class="dropdown">
-            <label for="location">Find opportunities near you:</label>
-            <select id="location" onchange="showCareers()">
-                <option value="">Select a location</option>
-                <option value="nyc">New York City</option>
-                <option value="la">Los Angeles</option>
-                <option value="sf">San Francisco</option>
-                <option value="chi">Chicago</option>
-            </select>
-        </div>
-        <div class="careers" id="careers">
-            <h2>Careers Available</h2>
-            <p>Select a location to see available opportunities.</p>
-        </div>
+        <select id="location" onchange="showCareers()">
+            <option value="">Select Location</option>
+            <option value="newyork">New York</option>
+            <option value="losangeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+        </select>
+
+        <div class="careers-available" id="careersAvailable"></div>
     </section>
 
-    <script>
-        const careersData = {
-            nyc: ["Sous Chef", "Server", "Dishwasher"],
-            la: ["Barista", "Line Cook", "Host/Hostess"],
-            sf: ["Manager", "Pastry Chef", "Cashier"],
-            chi: ["Prep Cook", "Waiter", "Busser"]
-        };
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="careerModal">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
 
-        function showCareers() {
-            const location = document.getElementById("location").value;
-            const careersDiv = document.getElementById("careers");
-
-            if (location && careersData[location]) {
-                const careersList = careersData[location]
-                    .map(career => `<li>${career}</li>`)
-                    .join("");
-                careersDiv.innerHTML = `
-                    <h2>Careers Available</h2>
-                    <ul>${careersList}</ul>
-                `;
-            } else {
-                careersDiv.innerHTML = `
-                    <h2>Careers Available</h2>
-                    <p>Select a location to see available opportunities.</p>
-                `;
-            }
-        }
-    </script>
+    <script src="careers.js"></script>
 </body>
 </html>
