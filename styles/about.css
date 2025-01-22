@@ -150,20 +150,30 @@ General styling for all articles
 .city-label {
     font-size: 18px;
     fill: #333;
-    text-anchor: middle;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
     font-family: 'Times New Roman', Times, serif;
-    transform: translateY(-5px);
-    transform: translateX(50px);
     font-weight: 900;
+
+}
+#employee-locations-dots g {
+    position: relative;
 }
 
-
+.city-label {
+    background-color: white;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+    transform: translate(50px, -15px);  
+}
 
 /* Show label on dot hover */
-.map-dot:hover + .city-label {
+#employee-locations-dots g:hover .city-label {
     opacity: 1;
 }
 
