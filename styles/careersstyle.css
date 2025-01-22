@@ -1,3 +1,46 @@
+/*#################################################################################################
+we'll apply this css file to the homepage of the website (index.html)
+#################################################################################################*/
+
+/*#####################################################
+Global Variables that can be used anywhere
+#####################################################*/
+:root {
+    /*website color scheme colors*/
+    --primary_color: #D2E3C8;
+    --secondary_color: #61ad35;
+    --third_color: #3a8d16;
+    --fourth_color: #1F5708;
+
+    /*contrasting colors*/
+    --light_brown: #e0f9c4;
+
+    /*text colors yo john*/
+    --text_color: black;
+}
+/*#####################################################
+Animations for the website
+#####################################################*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
