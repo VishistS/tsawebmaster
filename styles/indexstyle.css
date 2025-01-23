@@ -396,14 +396,15 @@ Styling for the option card
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    opacity: 1;
 }
 
 .carousel-control-prev {
-    left: -10px; /* Reduced from -20px to bring the arrow closer */
+    left: -10px; /* Adjusted to bring much closer */
 }
 
 .carousel-control-next {
-    right: -10px; /* Reduced from -20px to bring the arrow closer */
+    right: -10px; /* Adjusted to bring much closer */
 }
 
 .carousel-control-prev:hover,
@@ -448,16 +449,16 @@ Styling for the option card
 
 @media (max-width: 768px) {
     .carousel-control-prev {
-        left: -30px; /* Adjusted for smaller screens */
+        left: 0; /* Adjusted for mobile to be even closer */
     }
 
     .carousel-control-next {
-        right: -30px; /* Adjusted for smaller screens */
+        right: 0; /* Adjusted for mobile to be even closer */
     }
 
     .carousel-control-prev,
     .carousel-control-next {
-        display: none;
+        display: block;
     }
 
     .testimonial {
