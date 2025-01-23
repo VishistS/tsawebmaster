@@ -47,6 +47,7 @@ body {
     padding: 0;
     background-color: var(--primary_color);
     color: var(--text_color);
+    overflow-x: hidden;
 }
 
 /*#####################################################
