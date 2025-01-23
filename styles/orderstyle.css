@@ -136,12 +136,16 @@ header .shopping span{
     transition: transform 0.2s ease-in-out;
 }
 .list .item:hover{
-    transform: scale(1.06);
+    transform: scale(1.02);
 }
+
 .list .item img{
     width:95%;
     height: 260px;
+    border-radius: 20px;
+    object-fit: cover;
 }
+
 .list .item .title{
    font-weight: 600; 
 }

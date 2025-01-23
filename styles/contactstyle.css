@@ -81,10 +81,12 @@
     width: 40%;
     height: 80vh;
     border-right: solid;
+    border-color: var(--secondary_color);
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
 }
+
 .leftBox p{
     font-size:5vw;
 }
