@@ -266,3 +266,8 @@ Styling for the banner
 #placeorderbtn {
     margin-top: 3%;
 }
+
+.previewbenefits, .opportunities {
+    animation: fadeInUp 1s ease-out forwards;
+
+}

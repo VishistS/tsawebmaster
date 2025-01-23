@@ -104,7 +104,7 @@ citySelector.addEventListener('click', (e) => {
                     <h3>${job.icon} ${job.title}</h3>
                     <p>${job.description}</p>
                     <button class="more-info">More Info</button>
-                    <button class="apply-now">Apply Now</button>
+                    <button class="apply-now">Apply Now</button> 
                 </div>
                 <div class="job-card-back">
                     <p>${job.details}</p>
