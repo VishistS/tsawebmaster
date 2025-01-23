@@ -240,8 +240,6 @@ Styling for the banner
 .job-card button:hover {
     background: var(--third_color);
 }
-<<<<<<< HEAD
-=======
 
 .btn.btn-collapse {
     padding-bottom: 0;
@@ -267,4 +265,3 @@ Styling for the banner
 #placeorderbtn {
     margin-top: 3%;
 }
->>>>>>> 845ed75b6820bbd0116db1fc90bba97b881e4504
