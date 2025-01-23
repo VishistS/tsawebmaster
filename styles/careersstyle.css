@@ -83,9 +83,6 @@ Styling for the banner
     margin: auto;
 }
 
-h1, h2 {
-    color: var(--fourth_color);
-}
 
 .carousel {
     position: relative;
@@ -242,4 +239,29 @@ h1, h2 {
 
 .job-card button:hover {
     background: var(--third_color);
+}
+
+.btn.btn-collapse {
+    padding-bottom: 0;
+
+}
+
+.btn.btn-collapse:hover {
+    transform: scale(1.02);
+}
+
+.btn.btn-collapse{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--secondary_color);
+    color: white;
+    padding: 10px 10px 10px;
+    display: inline-block;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 1%;
+}
+
+#placeorderbtn {
+    margin-top: 3%;
 }
