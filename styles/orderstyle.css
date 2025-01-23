@@ -448,3 +448,17 @@ header .shopping span{
 .dine-in:hover {
     background-color: #e68a00; /* Darker orange on hover */
 }
+.dining-button to-go{
+    background-color: #4CAF50; /* Green bckground */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    /*display: inline-block; /* Inline-block for spacing */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
