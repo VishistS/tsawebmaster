@@ -33,6 +33,18 @@ const jobData = {
         { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
         { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
     ],
+    'chicago': [
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+    ],
+    'houston': [
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+    ],
+    'miami': [
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+    ],
     // Add more cities and jobs as needed
 };
 
