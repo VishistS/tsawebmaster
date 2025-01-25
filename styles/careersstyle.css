@@ -225,7 +225,7 @@ Styling for the banner
     color: var(--text_color);
 }
 
-.job-card button {
+.job-card button , .job-card a {
     font-size: 17px;
     background: var(--secondary_color);
     border: none;
@@ -236,6 +236,10 @@ Styling for the banner
     transition: 0.3s;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.job-card a {
+    text-decoration: none;
 }
 
 .job-card button:hover {
