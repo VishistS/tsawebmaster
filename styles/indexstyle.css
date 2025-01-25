@@ -76,8 +76,6 @@ Styling for the banner of the website
     text-align: center;
 }
 
-
-
 /*#####################################################
 Styling for the about section
 #####################################################*/
@@ -146,7 +144,7 @@ Styling for buttons
     padding: 10px 20px; /* Adjust padding for proper spacing */
     display: inline-block;
     letter-spacing: 2px; /* Slight letter spacing for style */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    transition: 0.2s ease-in-out; /* Smooth transition */
     margin-top: 1%;
     font-weight: bold; /* Bold font for emphasis */
     text-align: center; /* Center text inside the button */
@@ -154,8 +152,10 @@ Styling for buttons
 }
 
 .btn-order:hover {
-    transform:scale(1.02);
-    border: 2px solid black; /* White border */
+    transform: scale(1.03);
+    border: 2px solid var(--fourth_color);
+    background-color: var(--fourth_color);
+    color: var(--light_brown);
 }
 
 
