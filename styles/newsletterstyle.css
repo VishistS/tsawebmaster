@@ -195,6 +195,7 @@ Styling for the left text and right image articles
     transform: translateX(160px);
     animation: fadeInLeft 1s ease-in-out forwards;
 }
+
 .rightImgElectric{
     width: 50%;
     height: 600px;
@@ -217,7 +218,7 @@ Styling for the left text and right image articles
     border: solid;
     border-color: var(--third_color);
     border-width: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
     color: black;
     margin-right: -150px;
     transform: translateX(-160px);
@@ -285,7 +286,7 @@ Styling for the right text and left image articles
     border: solid;
     border-color: var(--third_color);
     border-width: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
     color: black;
     margin-left: -150px;
     transform: translateX(160px);
