@@ -256,6 +256,8 @@ function reloadCard(){
         `;
         listCard.insertBefore(labelsDiv, listCard.firstChild);
     }
+
+   
 }
 
 

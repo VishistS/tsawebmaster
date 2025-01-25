@@ -157,6 +157,10 @@ General styling for all articles
     font-weight: 900;
 
 }
+
+.spacemargin {
+    margin-top: 2%;
+}
 #employee-locations-dots g {
     position: relative;
 }
