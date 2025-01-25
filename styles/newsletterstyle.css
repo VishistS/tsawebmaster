@@ -178,6 +178,7 @@ General styling for all articles
     border-width: 5px;
     border-color: black; 
 }
+
 .hidden-content p{
     padding: 30px;
 }
@@ -367,10 +368,33 @@ Styling for the right text and left image articles
     }
 }
 
-.stayTuned{
-    background-color: rgb(188, 211, 176);
+.stayTuned {
+    position: relative;
     margin: auto;
-    width: 70%;
+    width: 55%;
     padding-top: 30px;
     padding-bottom: 30px;
-} 
+    border-radius: 15px;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(90deg, #7ad049, #123704); 
+    background-size: 200% 100%; 
+    transition: 0.15s ease-in-out;
+}
+
+.stayTuned:hover {
+    transform: scale(1.03);
+}
+
+.stayTuned h1 {
+    font-size: 2.4rem;
+    color: #fff;
+    z-index: 1;
+    margin: 0;
+}
+
+
+
+
+
+
