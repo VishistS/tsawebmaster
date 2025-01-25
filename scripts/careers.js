@@ -26,71 +26,71 @@ const jobsContainer = document.getElementById('jobs-container');
 
 const jobData = {
     'new-york': [
-        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position with competitive salary, health insurance, and opportunities for career growth.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with comprehensive benefits, including paid time off, 401(k), and team leadership training.' }
     ],
     'los-angeles': [
-        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time position, evening shifts, tips included, and employee discounts on meals.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours with mileage reimbursement and opportunities for bonuses based on performance.' }
     ],
     'chicago': [
-        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available, friendly environment, and tips included.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time position with health benefits, annual bonuses, and professional development opportunities.' }
     ],
     'houston': [
-        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position with flexible scheduling, paid vacation, and culinary training programs.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Part-time role with a fuel stipend, flexible hours, and end-of-year bonuses.' }
     ],
     'miami': [
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours, weekly pay, and performance-based incentives.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with relocation assistance, retirement plan, and team-building workshops.' }
     ],
     'san-francisco': [
-        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position, competitive salary, and profit-sharing opportunities.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with transportation stipend, stock options, and health benefits.' }
     ],
     'portland': [
-        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time with morning shifts, tips included, and employee meal discounts.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours, eco-friendly vehicle bonuses, and weekly incentives.' }
     ],
     'san-diego': [
-        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time role with tips, weekend shifts, and an opportunity to grow into a full-time role.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with health insurance, profit-sharing, and leadership workshops.' }
     ],
     'austin': [
-        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position with paid vacation, a supportive work environment, and professional development opportunities.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible schedule, fuel discounts, and performance bonuses.' }
     ],
     'seattle': [
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible schedule, eco-friendly bonuses, and opportunity for overtime pay.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time position with stock options, paid parental leave, and professional development workshops.' }
     ],
     'denver': [
-        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time role with meal preparation training, competitive wages, and health insurance.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with paid sick leave, team management coaching, and quarterly performance bonuses.' }
     ],
     'washington-dc': [
-        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time with high tips, evening shifts, and flexible schedules.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible shifts, mileage reimbursement, and safety training provided.' }
     ],
     'boston': [
-        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time available.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Server', description: 'Serve customers.', icon: '🍽️', details: 'Part-time role with tips, employee discounts, and a supportive team environment.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with paid training, health insurance, and annual bonus opportunities.' }
     ],
     'atlanta': [
-        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time position.' },
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' }
+        { title: 'Chef', description: 'Prepare plant-based meals.', icon: '👨‍🍳', details: 'Full-time role with culinary training, health benefits, and competitive wages.' },
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours, weekly pay, and performance bonuses.' }
     ],
     'las-vegas': [
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible schedule, tips, and bonuses for on-time delivery.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with paid time off, retirement plan, and quarterly team-building events.' }
     ],
     'philadelphia': [
-        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible hours.' },
-        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with benefits.' }
-    ],
-    // Add more cities and jobs as needed
+        { title: 'Delivery Driver', description: 'Deliver orders.', icon: '🚗', details: 'Flexible shifts, performance incentives, and fuel reimbursement.' },
+        { title: 'Manager', description: 'Oversee operations.', icon: '📋', details: 'Full-time with comprehensive benefits, annual bonuses, and career advancement opportunities.' }
+    ]
 };
+
 
 citySelector.addEventListener('click', (e) => {
     const city = e.target.dataset.city;

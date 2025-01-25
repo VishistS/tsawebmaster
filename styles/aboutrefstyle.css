@@ -1,9 +1,27 @@
 .banner {
-    margin-top: 3%;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(assets/leaf_droplet_clear.jpg) center center fixed;
+    min-height: vh;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 50px;
+    color: black;
+    margin-top:-4%;
 }
 
-.banner > h1 {
-    font-size: 50px;
+.col-sm-6.bannertext {
+    border-bottom-style:double;
+    border-top-style:double;
+    padding-top:1%;
+    margin: auto;
+    padding-bottom:1%;
+    opacity: 0;
+    transform: translateY(160px);
+    animation: fadeInUp 0.7s ease-out forwards;
+    border-width: 2px;
+}
+.col-sm-6.bannertext > h1 {
+    font-size: 60px;
 }
 .aboutstatements, .sourcecitations, .documentationinfo {
     background-color: rgba(255, 255, 255, 0.3);

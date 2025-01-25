@@ -78,13 +78,13 @@ setTimeout(() => {
 let products = [
     {
         id: 1,
-        name: 'Bruschetta with tomato and basil',
+        name: 'Bruschetta with Tomato and Basil',
         image: 'bruschetta.jpg',
         price: 8.99
     },
     {
         id: 2,
-        name: 'Roasted Red pepper hummus ',
+        name: 'Roasted Red Pepper Hummus',
         image: 'RRP-hummus.jpg',
         price: 7.99
     },
