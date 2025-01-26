@@ -136,26 +136,24 @@ General styling for all articles
 }
 /* Map dot styling */
 .map-dot {
-    fill: #24a50a;
-    stroke: rgb(190, 243, 120);
+    fill: #c83d3d;
+    stroke: #b52b2b;
     stroke-width: 2;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .map-dot:hover {
-    fill: #24a50a;
+    fill: #952d2d;
 }
 
 .city-label {
     font-size: 14px;
-    fill: #333;
+    fill: #000;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
-
 }
 
 .spacemargin {
@@ -224,16 +222,16 @@ svg {
 
 /* State Paths */
 path {
-    fill: #f9f9f9;
-    stroke: #000;
-    stroke-width: 0.97;
+    fill: #ffffff !important;
+    stroke: #70b770;
+    stroke-width: 1;
     transition: fill 0.3s ease, stroke 0.3s ease;
     cursor: pointer;
 }
 
 path:hover, path:focus {
-    fill: #ccc;
-    stroke: #333;
+    fill: #f7f7f7 !important;
+    stroke: #29821f;
 }
 
 /* Tooltip Styles */
