@@ -130,3 +130,7 @@ citySelector.addEventListener('click', (e) => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadJobs('new-york');
+});
