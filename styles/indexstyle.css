@@ -310,6 +310,15 @@ Styling for the option card
     }
 }
 
+/* Fixing phone dimensions */
+@media (max-width: 768px) {
+    .background-clip {
+        width: 120%; 
+        left: -10%; 
+        height: auto; 
+    }
+}
+
 /* TESTIMONIALS SECTION */
 .testimonials {
     padding-bottom: 6%;

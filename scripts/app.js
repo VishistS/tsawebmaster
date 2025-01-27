@@ -24,7 +24,7 @@ checkOut.addEventListener('click', () => {
         reloadCard();
 
         // Show option for To-Go or Dine-In
-        showDiningOption();
+        selectDiningOption();
     } else {
         // If the cart is empty, display the custom alert
         const customAlert = document.querySelector('.alert');
@@ -308,18 +308,18 @@ function showDiningOption() {
 
 
 // New function to handle dining option selection
-function selectDiningOption(option) {
+function selectDiningOption() {
     
     // Generate a random number between 15 and 45
     const estimatedTime = Math.floor(Math.random() * (55 - 15 + 1)) + 15;
 
     // Prepare the thank you message
     let message = '';
-    if (option === 'To-Go') {
-        message = `Your order has been processed and has an estimated time of ${estimatedTime} minutes before arrival. Thank you for your order!`;
-    } else if (option === 'Dine-In') {
-        message = `Thank you for your order!`;
-    }
+  //  if (option === 'To-Go') {
+    message = `Your order has been processed and has an estimated time of ${estimatedTime} minutes before arrival. Thank you for your order!`;
+  //  } else if (option === 'Dine-In') {
+        //message = `Thank you for your order!`;
+  //  }
 
     // Log the selection
     console.log(message);
