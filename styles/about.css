@@ -136,15 +136,15 @@ General styling for all articles
 }
 /* Map dot styling */
 .map-dot {
-    fill: #c83d3d;
-    stroke: #b52b2b;
+    fill: #24a50a;
+    stroke: rgb(190, 243, 120);
     stroke-width: 2;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .map-dot:hover {
-    fill: #952d2d;
+    fill: #1c7a09;
 }
 
 .city-label {
