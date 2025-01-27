@@ -114,6 +114,14 @@ citySelector.addEventListener('click', (e) => {
         </div>
     `).join('');
 
+    // Highlight the active city button
+    const allCityButtons = document.querySelectorAll('.city-selector li');
+    allCityButtons.forEach(button => button.classList.remove('active')); 
+    const activeButton = document.querySelector(`[data-city="${city}"]`);
+    if (activeButton) {
+        activeButton.classList.add('active'); 
+    }
+
     // Add flip functionality
     const cards = document.querySelectorAll('.job-card');
     cards.forEach(card => {
@@ -133,4 +141,8 @@ citySelector.addEventListener('click', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadJobs('new-york');
+    const newYorkButton = document.querySelector(`[data-city="new-york"]`);
+    if (newYorkButton) {
+        newYorkButton.classList.add('active');
+    }
 });

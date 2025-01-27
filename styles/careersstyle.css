@@ -275,3 +275,12 @@ Styling for the banner
     animation: fadeInUp 1s ease-out forwards;
 
 }
+
+/* Highlighting current city */
+.city-selector li.active {
+    background-color: var(--secondary_color);
+    color: white; 
+    font-weight: bold; 
+    border: 2px solid var(--third_color); 
+}
+
