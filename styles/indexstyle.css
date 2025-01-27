@@ -76,8 +76,6 @@ Styling for the banner of the website
     text-align: center;
 }
 
-
-
 /*#####################################################
 Styling for the about section
 #####################################################*/
@@ -146,7 +144,7 @@ Styling for buttons
     padding: 10px 20px; /* Adjust padding for proper spacing */
     display: inline-block;
     letter-spacing: 2px; /* Slight letter spacing for style */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    transition: 0.2s ease-in-out; /* Smooth transition */
     margin-top: 1%;
     font-weight: bold; /* Bold font for emphasis */
     text-align: center; /* Center text inside the button */
@@ -154,8 +152,8 @@ Styling for buttons
 }
 
 .btn-order:hover {
-    transform:scale(1.02);
-    border: 2px solid black; /* White border */
+    transform: scale(1.03);
+
 }
 
 
@@ -396,14 +394,15 @@ Styling for the option card
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    opacity: 1;
 }
 
 .carousel-control-prev {
-    left: -10px; /* Reduced from -20px to bring the arrow closer */
+    left: -10px; /* Adjusted to bring much closer */
 }
 
 .carousel-control-next {
-    right: -10px; /* Reduced from -20px to bring the arrow closer */
+    right: -10px; /* Adjusted to bring much closer */
 }
 
 .carousel-control-prev:hover,
@@ -448,16 +447,16 @@ Styling for the option card
 
 @media (max-width: 768px) {
     .carousel-control-prev {
-        left: -30px; /* Adjusted for smaller screens */
+        left: 0; /* Adjusted for mobile to be even closer */
     }
 
     .carousel-control-next {
-        right: -30px; /* Adjusted for smaller screens */
+        right: 0; /* Adjusted for mobile to be even closer */
     }
 
     .carousel-control-prev,
     .carousel-control-next {
-        display: none;
+        display: block;
     }
 
     .testimonial {

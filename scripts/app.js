@@ -78,13 +78,13 @@ setTimeout(() => {
 let products = [
     {
         id: 1,
-        name: 'Bruschetta with tomato and basil',
+        name: 'Bruschetta with Tomato and Basil',
         image: 'bruschetta.jpg',
         price: 8.99
     },
     {
         id: 2,
-        name: 'Roasted Red pepper hummus ',
+        name: 'Roasted Red Pepper Hummus',
         image: 'RRP-hummus.jpg',
         price: 7.99
     },
@@ -256,6 +256,8 @@ function reloadCard(){
         `;
         listCard.insertBefore(labelsDiv, listCard.firstChild);
     }
+
+   
 }
 
 
@@ -291,20 +293,23 @@ function changeQuantityMinus(key) {
 
 // New function to show dining options
 // New function to show dining options with styling
+
 function showDiningOption() {
     const diningOptionDiv = document.createElement('div');
     diningOptionDiv.classList.add('dining-option');
     diningOptionDiv.innerHTML = `
         <p>Choose your option:</p>
         <button class="dining-button to-go" onclick="selectDiningOption('To-Go')">To-Go</button>
-        <button class="dining-button dine-in" onclick="selectDiningOption('Dine-In')">Dine-In</button>
-    `;
-    listCard.appendChild(diningOptionDiv);
+        <button class="dining-button dine-in" onclick="selectDiningOption('Dine-In')">Catering</button>
+   `;
+   listCard.appendChild(diningOptionDiv);
 }
+
 
 
 // New function to handle dining option selection
 function selectDiningOption(option) {
+    
     // Generate a random number between 15 and 45
     const estimatedTime = Math.floor(Math.random() * (55 - 15 + 1)) + 15;
 
@@ -318,6 +323,7 @@ function selectDiningOption(option) {
 
     // Log the selection
     console.log(message);
+    
     
     // Show thank you message
     const successAlert = document.querySelector('.successalert');

@@ -67,7 +67,7 @@ Styling for the banner
 
 .banner {
     position: relative;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(/assets/windbanner.jpg ) center center fixed;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(/assets/vegan_backdrop.jpg) center center fixed;
     min-height: vh;
     background-size: cover;
     background-position: center;
@@ -129,199 +129,11 @@ General styling for all articles
 .hidden-content p{
     padding: 30px;
 }
-/*#####################################################
-Styling for the left text and right image articles
-#####################################################*/
-.rightImgCheap{
-    width: 50%;
-    height: 600px;
-    background:url(assets/cheapnews.jpg) no-repeat center / cover;
-    border: solid;
-    border-color: var(--secondary_color);
-    border-width: 5px;
-    transform: translateX(160px);
-    animation: fadeInLeft 1s ease-in-out forwards;
-}
-.rightImgElectric{
-    width: 50%;
-    height: 600px;
-    background:url(assets/electricnews.jpg) no-repeat center / cover;
-    border: solid;
-    border-color: var(--secondary_color);
-    border-width: 5px;
-    transform: translateX(160px);
-    animation: fadeInLeft 1s ease-in-out forwards;
-}
-.leftText{
-    z-index:5;
-    width: 50%;
-    min-height: 400px;
-    background-color: var(--light_brown);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    border: solid;
-    border-color: var(--third_color);
-    border-width: 10px;
-    border-radius: 15px;
-    color: black;
-    margin-right: -150px;
-    transform: translateX(-160px);
-    animation: fadeInRight 1s ease-in-out forwards;
-}
-.leftText h1{
-    font-size: 40px;
-    font-weight: lighter;
-}
-.leftText p{
-    margin: 20px 0;
-    font-weight: 500;
-    line-height: 25px;
-}
-.leftText button{
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: white;
-    color: black;
-    padding: 20px 30px;
-    display: inline-block;
-    letter-spacing: 2px;
-    transition: background-color 0.3s, color 0.3s;
-}
-.leftText button:hover {
-    background-color: var(--secondary_color);
-    color: white;
-}
-@media only screen and (max-width: 900px){
-    .container{
-        flex-direction: column;
-        width: 100%;
-        margin: 0 10px;
-    }
-    .rightImgCheap{
-        order: 1;
-        height:400px;
-        width: 100%;
-    }
-    .rightImgElectric{
-        order: 1;
-        height:400px;
-        width: 100%;
-    }
-    .leftText{
-        order: 2;
-        width: 80%;
-        margin: 0;
-        margin-top: -100px;
-        margin-bottom: 50px;
-    }
-}
-/*#####################################################
-Styling for the right text and left image articles
-#####################################################*/
-.rightText{
-    z-index:5;
-    width: 50%;
-    min-height: 400px;
-    background-color: var(--light_brown);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    border: solid;
-    border-color: var(--third_color);
-    border-width: 10px;
-    border-radius: 15px;
-    color: black;
-    margin-left: -150px;
-    transform: translateX(160px);
-    animation: fadeInLeft 1s ease-in-out forwards;
-}
-.rightText h1{
-    font-size: 40px;
-    font-weight: lighter;
-}
-.rightText p{
-    margin: 20px 0;
-    font-weight: 500;
-    line-height: 25px;
-}
-.rightText button{
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: white;
-    color: black;
-    padding: 20px 30px;
-    display: inline-block;
-    letter-spacing: 2px;
-    transition: background-color 0.3s, color 0.3s;
-}
-.rightText button:hover {
-    background-color: var(--secondary_color);
-    color: white;
-}
-.leftImgShore{
-    width: 50%;
-    height: 600px;
-    background:url(assets/millionnews.jpg) no-repeat center / cover;
-    border: solid;
-    border-color: var(--secondary_color);
-    border-width: 5px;
-    transform: translateX(160px);
-    animation: fadeInRight 1s ease-in-out forwards;
-}
-.leftImgDevelop{
-    width: 50%;
-    height: 600px;
-    background:url(assets/developingnews.jpg) no-repeat center / cover;
-    border: solid;
-    border-color: var(--secondary_color);
-    border-width: 5px;
-    transform: translateX(160px);
-    animation: fadeInRight 1s ease-in-out forwards;
-}
 
-@media only screen and (max-width: 900px){
-    .container{
-        flex-direction: column;
-        width: 100%;
-        margin: 0 10px;
-    }
-    .leftImgShore{
-        height: 400px;
-        width: 100%;
-    }
-    .leftImgDevelop{
-        height: 400px;
-        width: 100%;
-    }
-    .rightText{
-        width: 80%;
-        margin: 0;
-        margin-top: -100px;
-        margin-bottom: 50px;
-    }
-    .hidden-content{
-        margin-bottom: 50px;
-        width: 90%;
-    }
+/* Section Styling  */
+.qualityfood, .cookingprocess, .donationinfo, .staff-locations {
+    animation: fadeInUp 1s ease-out forwards;
 }
-
-@media only screen and (max-width: 768px){
-    .hidden-content{
-        margin-bottom: 50px;
-        width: 90%;
-    }
-}
-
-.stayTuned{
-    background-color: rgb(188, 211, 176);
-    margin: auto;
-    width: 70%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-} 
 /* Map dot styling */
 .map-dot {
     fill: #24a50a;
@@ -332,26 +144,38 @@ Styling for the right text and left image articles
 }
 
 .map-dot:hover {
-    fill: #24a50a;
+    fill: #1c7a09;
 }
 
 .city-label {
-    font-size: 18px;
-    fill: #333;
-    text-anchor: middle;
+    font-size: 14px;
+    fill: #000;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    font-family: 'Times New Roman', Times, serif;
-    transform: translateY(-5px);
-    transform: translateX(50px);
     font-weight: 900;
 }
 
+.spacemargin {
+    margin-top: 2%;
+}
+#employee-locations-dots g {
+    position: relative;
+}
 
+.city-label {
+    background-color: white;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+    transform: translate(-20px, -10px);  
+}
 
 /* Show label on dot hover */
-.map-dot:hover + .city-label {
+#employee-locations-dots g:hover .city-label {
     opacity: 1;
 }
 
@@ -398,16 +222,16 @@ svg {
 
 /* State Paths */
 path {
-    fill: #f9f9f9;
-    stroke: #000;
-    stroke-width: 0.97;
+    fill: #ffffff !important;
+    stroke: #70b770;
+    stroke-width: 1;
     transition: fill 0.3s ease, stroke 0.3s ease;
     cursor: pointer;
 }
 
 path:hover, path:focus {
-    fill: #ccc;
-    stroke: #333;
+    fill: #f7f7f7 !important;
+    stroke: #29821f;
 }
 
 /* Tooltip Styles */
@@ -446,5 +270,13 @@ path:hover, path:focus {
     .map-instruction {
         font-size: 0.9rem;
     }
+}
+
+.counter {
+    color: #39851b;
+}
+
+.extra {
+    color: #39851b;
 }
 
