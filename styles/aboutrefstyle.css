@@ -26,6 +26,8 @@
 .aboutstatements, .sourcecitations, .documentationinfo {
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 0.5s ease-in-out;
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    white-space: normal; /* Allows text to wrap normally */
     padding-top: 20px;
     padding-bottom: 20px;
     margin:auto;
