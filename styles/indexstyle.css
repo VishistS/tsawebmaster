@@ -53,6 +53,7 @@ Styling for the banner of the website
     padding: 250px 0 200px;
     color: black;
     margin-top:-4%;
+    overflow-x: hidden;
 }
 
 .col-sm-6.bannertext {
