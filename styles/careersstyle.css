@@ -57,7 +57,7 @@ Styling for the banner
 .banner {
     position: relative;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(210, 227, 200, 1)), url(/assets/career_4.jpeg) center center fixed;
-    min-height: 100vh;
+    min-height: 100vh; 
     background-size: cover;
     background-position: center;
     padding: 250px 0 200px;
