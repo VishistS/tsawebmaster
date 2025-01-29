@@ -140,9 +140,48 @@ citySelector.addEventListener('click', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadJobs('new-york');
-    const newYorkButton = document.querySelector(`[data-city="new-york"]`);
-    if (newYorkButton) {
-        newYorkButton.classList.add('active');
+    const defaultCity = 'new-york'; // Set the default city
+    const defaultCityButton = document.querySelector(`[data-city="${defaultCity}"]`);
+    
+    if (defaultCityButton) {
+        defaultCityButton.classList.add('active'); // Highlight the default city button
     }
+
+    loadJobs(defaultCity);
 });
+
+function loadJobs(city) {
+    const jobs = jobData[city] || [];
+    jobsContainer.innerHTML = jobs.map(job => `
+        <div class="job-card">
+            <div class="job-card-inner">
+                <div class="job-card-front">
+                    <h3>${job.icon} ${job.title}</h3>
+                    <p>${job.description}</p>
+                    <button class="more-info">More Info</button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfM6BsyE65WRjKIYPV88o-d7WBJpi5AORD2nO4QyyoJw9z_Jw/viewform?usp=header" class="apply-now">Apply Now</a> 
+                </div>
+                <div class="job-card-back">
+                    <p>${job.details}</p>
+                    <button class="flip-back">Back</button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Add flip functionality for cards
+    const cards = document.querySelectorAll('.job-card');
+    cards.forEach(card => {
+        const moreInfoBtn = card.querySelector('.more-info');
+        const flipBackBtn = card.querySelector('.flip-back');
+        const innerCard = card.querySelector('.job-card-inner');
+
+        moreInfoBtn.addEventListener('click', () => {
+            card.classList.add('flipped');
+        });
+
+        flipBackBtn.addEventListener('click', () => {
+            card.classList.remove('flipped');
+        });
+    });
+}
