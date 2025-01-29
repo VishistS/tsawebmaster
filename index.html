@@ -259,18 +259,18 @@
     <div class="container-fluid">
         <h1><b>Real Flavor, Real Reviews</b></h1>
         <h4><i>Hear from our customer testimonials.</i></h4>
-        <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="7000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="testimonial">
-                        <p class="quote">"Plant-based food this delicious is rare. The flavors are incredible. I’m bringing my friends!"</p>
+                        <p class="quote">"Plant-based food this delicious is rare. The flavors are incredible. I'm bringing my friends!"</p>
                         <h5 class="author">Lisa R. - Chicago, IL</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial">
                         <p class="quote">
-                          "The variety on the menu is fantastic. The vegan stir-fry and mango sorbet are a must-try. Can’t wait to come back!"
+                          "The variety on the menu is fantastic. The vegan stir-fry and mango sorbet are a must-try. Can't wait to come back!"
                         </p>
                         <h5 class="author">Alex T. - Austin, TX
                         </h5>
@@ -278,7 +278,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial">
-                        <p class="quote">"I’m not even vegan, but this place blew me away. The service was excellent, and the food was fresh and flavorful."</p>
+                        <p class="quote">"I'm not even vegan, but this place blew me away. The service was excellent, and the food was fresh and flavorful."</p>
                         <h5 class="author">Jamie L. - New York, NY</h5>
                     </div>
                 </div>
@@ -289,18 +289,17 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
 </section>
 
+<script>
+  const carousel = document.querySelector('#testimonialCarousel');
+  setInterval(() => {
+      const nextCarouselItem = new bootstrap.Carousel(carousel);
+      nextCarouselItem.next();
+  }, 7000);
+</script>
 
      <!--################################################
     Shop/News Discovery Section
@@ -319,7 +318,7 @@
           <div class = "col"></div>
           <div class = "col-sm-auto col-md-10">
             <h1><b>Discover More Goodness</b></h1>
-            <h4><i>We’re more than just a vegan meal. Explore what makes us special!</i></h4>
+            <h4><i>We're more than just a vegan meal. Explore what makes us special!</i></h4>
           </div>
           <div class = "col"></div>
         </div>
