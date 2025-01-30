@@ -142,11 +142,12 @@ header .shopping span{
 .list .item img{
     width:95%;
     height: 260px;
-    border-radius: 20px;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 .list .item .title{
+    margin-top: 15px;
    font-weight: 600; 
 }
 .list .item .price{
