@@ -356,48 +356,6 @@ Styling for the option card
     color: #fff;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: 2px solid var(--secondary_color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.carousel-control-prev-icon::before,
-.carousel-control-next-icon::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 18px;
-    content: '';
-    color: var(--secondary_color);
-    transition: color 0.3s ease;
-}
-
-.carousel-control-prev-icon::before {
-    content: '\f104';
-}
-
-.carousel-control-next-icon::before {
-    content: '\f105';
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: var(--secondary_color);
-}
-
-.carousel-control-prev-icon:hover::before,
-.carousel-control-next-icon:hover::before {
-    color: #fff;
-}
-
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
@@ -427,11 +385,11 @@ Styling for the option card
 }
 
 .carousel.carousel-fade .carousel-item {
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
 .carousel.carousel-fade .carousel-item.active {
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
 .carousel-control-prev,
@@ -481,6 +439,7 @@ Styling for the option card
 #testimonialCarousel { 
     margin-top: 2%;
 }
+
 /* 
 .flip-card {
     background-color: transparent;
