@@ -284,3 +284,12 @@ Styling for the banner
     border: 2px solid var(--third_color); 
 }
 
+@media (max-width: 768px) {
+    #jobs-container {
+        margin-bottom: 400px; /* big space below the job cards */
+      }
+}
+  
+#jobs-container {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
