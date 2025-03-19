@@ -195,7 +195,7 @@ function initApp() {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="assets/${value.image}" />
+            <img id="previewimg" src="assets/${value.image}" />
             <div class="title">${value.name}</div>
             <div class="price">$${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">ADD TO CART</button>
